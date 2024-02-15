@@ -1,0 +1,19 @@
+# APIを叩いた記録集
+{
+  User(name: "felock") {
+    name
+    id
+  }
+}
+
+{
+  Page(page: 1, perPage: 50) {
+    media(seasonYear: 1980, type: ANIME, format: TV, sort: POPULARITY_DESC) {
+      studios(isMain: true) {
+        nodes {
+          name
+        }
+      }
+    }
+  }
+}
