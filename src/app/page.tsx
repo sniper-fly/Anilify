@@ -14,12 +14,35 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { gql } from "@apollo/client";
 
 const formSchema = z.object({
   userName: z.string().min(1, { message: "Please enter a username" }),
 });
 
+const query = gql`
+  query ALL_TIME_POPULAR {
+    Page(page: 1, perPage: 50) {
+      media(type: ANIME, format: TV, sort: POPULARITY_DESC) {
+        title {
+          native
+        }
+        coverImage {
+          extraLarge
+        }
+        studios(isMain: true) {
+          nodes {
+            name
+          }
+        }
+      }
+    }
+  }
+`
+
 export default function Home() {
+  const {loading, error, data} = useQuery(query)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,6 +54,7 @@ export default function Home() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    console.log(data)
   }
 
   return (
