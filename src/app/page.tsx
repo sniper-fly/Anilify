@@ -14,8 +14,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import { gql } from "@/graphql/gql";
+import { useLazyQuery } from "@apollo/client";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   userName: z.string().min(1, { message: "Please enter a username" }),
@@ -45,20 +46,32 @@ const USER_ANIME_LIST = gql(`
 `);
 
 export default function Home() {
-  const { loading, error, data } = useQuery(query);
+  const [getAnime, { loading, error, data }] = useLazyQuery(USER_ANIME_LIST);
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    getAnime({ variables: { userName: values.userName } });
+  }
+
+  //TODO useEffect をhookとして分離する
+  useEffect(() => {
+    if (!loading && !error && data) {
+      // data.MediaListCollection?.lists[0]?.entries[0]?.media
+      // 上記の構造の個々の配列を一つの配列にまとめる
+      const medium = data.MediaListCollection?.lists
+        ?.map((list) => list?.entries?.map((entry) => entry?.media) ?? [])
+        .flat(1); // 空白エントリーはflatで削除される
+      console.log(medium);
+
+      // AnimeTheme API にリクエストを送る
+    }
+  }, [loading, error, data]);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      userName: "",
+      userName: "felock",
     },
   });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-    console.log(data);
-  }
 
   return (
     <Form {...form}>
