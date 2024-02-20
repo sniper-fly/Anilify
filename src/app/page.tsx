@@ -21,19 +21,22 @@ const formSchema = z.object({
   userName: z.string().min(1, { message: "Please enter a username" }),
 });
 
-const query = gql(`
-  query ALL_TIME_POPULAR {
-    Page(page: 1, perPage: 50) {
-      media(type: ANIME, format: TV, sort: POPULARITY_DESC) {
-        title {
-          native
-        }
-        coverImage {
-          extraLarge
-        }
-        studios(isMain: true) {
-          nodes {
-            name
+const USER_ANIME_LIST = gql(`
+  query USER_ANIME_LIST($userName: String!) {
+    MediaListCollection(userName: $userName, type: ANIME) {
+      lists {
+        entries {
+          media {
+            id
+            title {
+              native
+              romaji
+              english
+            }
+            coverImage {
+              extraLarge
+              large
+            }
           }
         }
       }

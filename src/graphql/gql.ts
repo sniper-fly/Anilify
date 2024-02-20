@@ -13,7 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-    "\n  query ALL_TIME_POPULAR {\n    Page(page: 1, perPage: 50) {\n      media(type: ANIME, format: TV, sort: POPULARITY_DESC) {\n        title {\n          native\n        }\n        coverImage {\n          extraLarge\n        }\n        studios(isMain: true) {\n          nodes {\n            name\n          }\n        }\n      }\n    }\n  }\n": types.All_Time_PopularDocument,
+    "\n  query USER_ANIME_LIST($userName: String!) {\n    MediaListCollection(userName: $userName, type: ANIME) {\n      lists {\n        entries {\n          media {\n            id\n            title {\n              native\n              romaji\n              english\n            }\n            coverImage {\n              extraLarge\n              large\n            }\n          }\n        }\n      }\n    }\n  }\n": types.User_Anime_ListDocument,
 };
 
 /**
@@ -33,7 +33,7 @@ export function gql(source: string): unknown;
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  query ALL_TIME_POPULAR {\n    Page(page: 1, perPage: 50) {\n      media(type: ANIME, format: TV, sort: POPULARITY_DESC) {\n        title {\n          native\n        }\n        coverImage {\n          extraLarge\n        }\n        studios(isMain: true) {\n          nodes {\n            name\n          }\n        }\n      }\n    }\n  }\n"): (typeof documents)["\n  query ALL_TIME_POPULAR {\n    Page(page: 1, perPage: 50) {\n      media(type: ANIME, format: TV, sort: POPULARITY_DESC) {\n        title {\n          native\n        }\n        coverImage {\n          extraLarge\n        }\n        studios(isMain: true) {\n          nodes {\n            name\n          }\n        }\n      }\n    }\n  }\n"];
+export function gql(source: "\n  query USER_ANIME_LIST($userName: String!) {\n    MediaListCollection(userName: $userName, type: ANIME) {\n      lists {\n        entries {\n          media {\n            id\n            title {\n              native\n              romaji\n              english\n            }\n            coverImage {\n              extraLarge\n              large\n            }\n          }\n        }\n      }\n    }\n  }\n"): (typeof documents)["\n  query USER_ANIME_LIST($userName: String!) {\n    MediaListCollection(userName: $userName, type: ANIME) {\n      lists {\n        entries {\n          media {\n            id\n            title {\n              native\n              romaji\n              english\n            }\n            coverImage {\n              extraLarge\n              large\n            }\n          }\n        }\n      }\n    }\n  }\n"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};
