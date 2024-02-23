@@ -31,3 +31,67 @@ jsonデータのspotifyキーに取得したデータを結合する
 ## できたらやる
 - AnilistにはあるけどAnimeThemeには登録されていないものに関してのデータを集める
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
+
+## その他
+```typescript
+// ids にはあって allData にないもののexternal_idを抽出 (調査用)
+const gotIds: number[] = allData.map((data) => data.resources[0].external_id);
+const missing = ids.filter(
+  (id) => !gotIds.includes(id)
+);
+missing.forEach((id) => {
+  console.log(`https://anilist.co/anime/${id}/`)
+})
+```
+
+```typescript
+        type animeSong = [
+          {
+            id: number; // anime theme id
+            external_id: number; // 画面に要素を並べる時、keyとして使う
+            site: string; // AniList or MyAnimeList
+            name: string; // anime title
+            animethemes: [
+              {
+                // id: number;
+                title: string; // song title
+                type: string; // OP or ED
+                slug: string; // song slug (ex. OP1, ED2)
+                artists: string[];
+
+                spotify?: [ // 5件ぐらいは表示する
+                  {
+                    uri: string; // プレイリスト追加に必要
+                    name: string; // トラック曲名
+                    artists: string[]; // アーティスト名
+                    linkToOrigin: string; // Spotifyを開くためのリンク
+                    preview_url: string; // プレビュー音源
+                    image: string; // アルバムアート
+                    duration_ms: number; // 再生時間
+                  }
+                ];
+              }
+            ];
+          }
+        ];
+
+        type req2_json = string[] // SpotifyのURIの配列
+
+        // DynamoDB のテーブルに保存する検索結果キャッシュデータ形式
+        type dynamoDB_json = {
+          // id: number; // anime theme id
+          // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
+          title: string; // song title from animetheme (primary key)
+          spotify: [
+            {
+              uri: string;
+              name: string;
+              artists: string[];
+              linkToOrigin: string;
+              preview_url: string;
+              image: string;
+              duration_ms: number;
+            }
+          ];
+        }
+```
