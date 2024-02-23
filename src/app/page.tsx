@@ -62,7 +62,24 @@ export default function Home() {
         .flat(1); // 空白エントリーはflatで削除される
       console.log(medium);
 
+      if (!medium) return;
+
+      // 中身がundefined, nullでないものだけを抽出し、,で区切る
+      const ids = medium.filter((m) => m).map((m) => m!.id);
+      const idStr = ids.join(",");
       // AnimeTheme API にリクエストを送る
+      const allData = [];
+      (async () => {
+        for (let page_num = 1; true; page_num++) {
+          const url = `https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${idStr}&include=animethemes.song.artists,resources&page[size]=100&page[number]=${page_num}`;
+          const res = await fetch(url);
+          const json = await res.json();
+          if (json.anime.length === 0) break;
+
+          allData.push(...json.anime);
+        }
+        console.log(allData);
+      })();
     }
   }, [loading, error, data]);
 
