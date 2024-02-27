@@ -14,6 +14,12 @@
 - UI を作り込む
 - Next.js lambda でデプロイできたらしてみる
 
+## 制御フロー
+- AniListユーザー名入力フォーム、Auth Spotifyボタンを表示する
+- Spotifyの認証ページにリダイレクトする
+- アニメと曲の対応一覧生成
+
+
 
 ## バックエンド要件
 animetheme api のidをprimary keyとして、titleなどを収納する
@@ -33,6 +39,23 @@ jsonデータのspotifyキーに取得したデータを結合する
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
 
 ## その他
+https://github.com/spotify/spotify-web-api-ts-sdk/blob/main/example_next/src/app/page.tsx
+Next.jsでのsdk実装例が載っている
+
+https://developer.spotify.com/dashboard
+spotify app dashboard
+
+https://support.spotify.com/jp/article/spotify-on-other-apps/
+spotifyアプリのアクセス権の管理
+
+https://dev.to/dom_the_dev/how-to-use-the-spotify-api-in-your-react-js-app-50pn
+ここが参考になりそう
+https://developer.spotify.com/documentation/web-playback-sdk/howtos/web-app-player
+
+https://github.com/spotify/spotify-web-api-ts-sdk
+公式のAPI SDK
+https://developer.spotify.com/blog/2023-07-03-typescript-sdk
+
 ```typescript
 // ids にはあって allData にないもののexternal_idを抽出 (調査用)
 const gotIds: number[] = allData.map((data) => data.resources[0].external_id);
