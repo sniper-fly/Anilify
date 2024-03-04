@@ -1,17 +1,8 @@
-'use client'
+"use server";
 
-import { Button } from "@/components/ui/button";
-import { hoge } from "./hoge";
+import Click from "./click";
 // import { SpotifyApi } from "@spotify/web-api-ts-sdk";
 
-export default function Page() {
-  function handleClick() {
-    hoge();
-  }
-
-  return (
-    <>
-      <Button onClick={handleClick}>log</Button>
-    </>
-  );
+export default async function Page() {
+  return <Click />;
 }
