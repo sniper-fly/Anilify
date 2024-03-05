@@ -1,13 +1,18 @@
 ## ステップ
-- spotifyの認証ができるようにする
-- まずはローカルのスクリプトでspotifyに検索をかけて、DynamoDBに保管できる形式に整形する
+- spotifyの認証ができるようにする (3/2)
+- サーバー側で動作するnodeのコードとそうでないものをきちんと分別する (3/4)
+
+- server actionから、spotify検索結果を取得して必要な情報を抜き出す
+- spotify検索結果を格納できるDynamoDBテーブルを作成する
+- server actionからDynamoDB SDKでデータを挿入したり、取得する
 - ローカルからDynamoDBと通信してデータを入れる(もしくは手動で、コンソールからデータを入れる)
-- API gateway とlambdaを連携し、animeSong形式のjsonを受け付けるエンドポイントを作成する
-- lambdaで、受け取ったデータからtitleを抜き出す
-- DynamoDBからデータを取り出す
 - 受け取ったデータをanimeSong配列の適切な場所に結合する
 - リクエストを返す
 - 簡素にUIを作る
+
+<!-- - API gateway とlambdaを連携し、animeSong形式のjsonを受け付けるエンドポイントを作成する -->
+<!-- - lambdaで、受け取ったデータからtitleを抜き出す
+- DynamoDBからデータを取り出す -->
 
 期待通りの画面になったら
 - ローカルからspotifyにひたすら検索をかけまくり、アニメtop1000の曲データをDynamoDBに保管する
@@ -39,6 +44,15 @@ jsonデータのspotifyキーに取得したデータを結合する
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
 
 ## その他
+https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/dynamodb/
+dynamodbのapiリファレンス
+
+https://docs.aws.amazon.com/ja_jp/sdk-for-javascript/v3/developer-guide/javascript_dynamodb_code_examples.html
+Dynamodb での一般的なSDK利用シナリオ
+
+https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/GettingStarted.WriteItem.html
+テーブルへのデータ書き込み
+
 https://github.com/spotify/spotify-web-api-ts-sdk/blob/main/example_next/src/app/page.tsx
 Next.jsでのsdk実装例が載っている
 
