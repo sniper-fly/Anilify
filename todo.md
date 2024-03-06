@@ -2,14 +2,13 @@
 - spotifyの認証ができるようにする (3/2)
 - サーバー側で動作するnodeのコードとそうでないものをきちんと分別する (3/4)
 
-- server actionから、spotify検索結果を取得して必要な情報を抜き出す
 - spotify検索結果を格納できるDynamoDBテーブルを作成する
+- server actionから、spotify検索結果を取得して必要な情報を抜き出す
 - server actionからDynamoDB SDKでデータを挿入したり、取得する
-- ローカルからDynamoDBと通信してデータを入れる(もしくは手動で、コンソールからデータを入れる)
 - 受け取ったデータをanimeSong配列の適切な場所に結合する
-- リクエストを返す
 - 簡素にUIを作る
 
+<!-- - ローカルからDynamoDBと通信してデータを入れる(もしくは手動で、コンソールからデータを入れる) -->
 <!-- - API gateway とlambdaを連携し、animeSong形式のjsonを受け付けるエンドポイントを作成する -->
 <!-- - lambdaで、受け取ったデータからtitleを抜き出す
 - DynamoDBからデータを取り出す -->
@@ -82,53 +81,46 @@ missing.forEach((id) => {
 ```
 
 ```typescript
-        type animeSong = [
-          {
-            id: number; // anime theme id
-            external_id: number; // 画面に要素を並べる時、keyとして使う
-            site: string; // AniList or MyAnimeList
-            name: string; // anime title
-            animethemes: [
-              {
-                // id: number;
-                title: string; // song title
-                type: string; // OP or ED
-                slug: string; // song slug (ex. OP1, ED2)
-                artists: string[];
+type animeSong = [
+  {
+    id: number; // anime theme id
+    external_id: number; // 画面に要素を並べる時、keyとして使う
+    site: string; // AniList or MyAnimeList
+    name: string; // anime title
+    animethemes: [
+      {
+        // id: number;
+        title: string; // song title
+        type: string; // OP or ED
+        slug: string; // song slug (ex. OP1, ED2)
+        artists: string[];
 
-                spotify?: [ // 5件ぐらいは表示する
-                  {
-                    uri: string; // プレイリスト追加に必要
-                    name: string; // トラック曲名
-                    artists: string[]; // アーティスト名
-                    linkToOrigin: string; // Spotifyを開くためのリンク
-                    preview_url: string; // プレビュー音源
-                    image: string; // アルバムアート
-                    duration_ms: number; // 再生時間
-                  }
-                ];
-              }
-            ];
-          }
-        ];
+        spotify?: TrackInfo[];
+      }
+    ];
+  }
+];
 
-        type req2_json = string[] // SpotifyのURIの配列
+// DynamoDB のテーブルに保存する検索結果キャッシュデータ形式
+type dynamoDB_json = {
+  // id: number; // anime theme id
+  // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
+  title: string; // song title from animetheme (primary key)
+  spotify: TrackInfo[];
+};
 
-        // DynamoDB のテーブルに保存する検索結果キャッシュデータ形式
-        type dynamoDB_json = {
-          // id: number; // anime theme id
-          // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
-          title: string; // song title from animetheme (primary key)
-          spotify: [
-            {
-              uri: string;
-              name: string;
-              artists: string[];
-              linkToOrigin: string;
-              preview_url: string;
-              image: string;
-              duration_ms: number;
-            }
-          ];
-        }
+type TrackInfo = {
+  uri: string;
+  name: string;
+  artists: [
+    {
+      name: string;
+      openLink: string;
+    }
+  ];
+  openLink: string;
+  preview_url: string;
+  image: string;
+  duration_ms: number;
+};
 ```
