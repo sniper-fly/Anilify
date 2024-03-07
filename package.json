@@ -13,6 +13,7 @@
     "@apollo/client": "^3.9.4",
     "@apollo/experimental-nextjs-app-support": "^0.8.0",
     "@aws-sdk/client-dynamodb": "^3.528.0",
+    "@aws-sdk/lib-dynamodb": "^3.528.0",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/client-preset": "^4.2.2",
     "@graphql-typed-document-node/core": "^3.2.0",
