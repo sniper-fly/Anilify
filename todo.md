@@ -81,46 +81,11 @@ missing.forEach((id) => {
 ```
 
 ```typescript
-type animeSong = [
-  {
-    id: number; // anime theme id
-    external_id: number; // 画面に要素を並べる時、keyとして使う
-    site: string; // AniList or MyAnimeList
-    name: string; // anime title
-    animethemes: [
-      {
-        // id: number;
-        title: string; // song title
-        type: string; // OP or ED
-        slug: string; // song slug (ex. OP1, ED2)
-        artists: string[];
-
-        spotify?: TrackInfo[];
-      }
-    ];
-  }
-];
-
 // DynamoDB のテーブルに保存する検索結果キャッシュデータ形式
 type dynamoDB_json = {
   // id: number; // anime theme id
   // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
   title: string; // song title from animetheme (primary key)
   spotify: TrackInfo[];
-};
-
-type TrackInfo = {
-  uri: string;
-  name: string;
-  artists: [
-    {
-      name: string;
-      openLink: string;
-    }
-  ];
-  openLink: string;
-  preview_url: string;
-  image: string;
-  duration_ms: number;
 };
 ```
