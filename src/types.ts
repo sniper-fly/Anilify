@@ -1,4 +1,4 @@
-type AnimeSong = [
+export type AnimeSong = [
   {
     id: number; // anime theme id
     external_id: number; // 画面に要素を並べる時、keyとして使う
@@ -16,3 +16,19 @@ type AnimeSong = [
     ];
   }
 ];
+
+export type TrackInfo = {
+  uri: string;
+  name: string;
+  artists: [
+    {
+      name: string;
+      openLink: string;
+    }
+  ];
+  openLink: string;
+  preview_url: string;
+  image: string;
+  duration_ms: number;
+  available_markets: string[]; // ユーザーのprofile.countryと一致しない場合は表示しない
+};
