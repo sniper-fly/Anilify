@@ -1,30 +1,71 @@
 "use server";
 
-import { SpotifyApi } from "@spotify/web-api-ts-sdk";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
-export async function hoge() {
-  const api = SpotifyApi.withClientCredentials(
-    process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!,
-    process.env.SPOTIFY_CLIENT_SECRET!
-  );
+import { SearchCache, TrackInfo } from "@/types";
+import { AccessToken, SpotifyApi } from "@spotify/web-api-ts-sdk";
 
-  // const items = await api.search("結束バンド", ["artist"]);
-  // console.table(
-  //   items.artists.items.map((item) => ({
-  //     name: item.name,
-  //     followers: item.followers.total,
-  //     popularity: item.popularity,
-  //   }))
+export async function hoge(token: AccessToken) {
+  // const api = SpotifyApi.withClientCredentials(
+  //   process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!,
+  //   process.env.SPOTIFY_CLIENT_SECRET!
   // );
 
-  const items = await api.search("Rakuen no Tsubasa", ["track"]);
-  console.log(items.tracks.items[0]);
-  console.log(items.tracks.items[0].album.images);
-  console.log(items.tracks.items[0].artists);
+  const api = SpotifyApi.withAccessToken(
+    process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!,
+    token
+  );
 
-  // これはユーザー認証を必要とする
-  // const items = await api.currentUser.profile();
-  // console.log(items)
+  const query = "dororo";
+  const items = await api.search(query, ["track"]);
+
+  items.tracks.items.forEach((item) => {
+    console.log(item.name);
+    console.log(item.artists);
+    console.log(item.preview_url);
+    console.log(item.popularity);
+    console.log("====================================");
+  });
+  // console.log(items.tracks.items);
+  // console.log(items.tracks.items[0]);
+  // console.log(items.tracks.items[0].album.images);
+  // console.log(items.tracks.items[0].artists);
+
+  // console.log("====================================");
+
+  const item = items.tracks.items[0];
+  // まずはitemを TrackInfo 型に変換する
+  const track: TrackInfo = {
+    uri: item.uri,
+    name: item.name,
+    artists: item.artists.map((artist) => ({
+      name: artist.name,
+      openLink: artist.external_urls.spotify,
+    })),
+    openLink: item.external_urls.spotify,
+    preview_url: item.preview_url,
+    // imageはitem.album.imagesの中から一番hightが小さいものを取得する
+    image: item.album.images.reduce((prev, current) => {
+      return prev.height < current.height ? prev : current;
+    }).url,
+    duration_ms: item.duration_ms,
+    available_markets: item.available_markets,
+  };
+
+  // console.log(track);
+
+  // const dbclient = new DynamoDBClient({ region: "ap-northeast-1" });
+  // const docClient = DynamoDBDocumentClient.from(dbclient);
+  // const cmd = new PutCommand({
+  //   TableName: "SpotifySearchCache",
+  //   Item: {
+  //     query: query,
+  //     tracks: [track],
+  //   },
+  // });
+  // const res = await docClient.send(cmd);
+  // console.log(res)
 }
 
 // {
