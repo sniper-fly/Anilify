@@ -1,7 +1,11 @@
 "use server";
 
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import {
+  PutCommand,
+  BatchGetCommand,
+  DynamoDBDocumentClient,
+} from "@aws-sdk/lib-dynamodb";
 
 import { SearchCache, TrackInfo } from "@/types";
 import { AccessToken, SpotifyApi } from "@spotify/web-api-ts-sdk";
@@ -17,16 +21,21 @@ export async function hoge(token: AccessToken) {
     token
   );
 
-  const query = "dororo";
+  const profile = await api.currentUser.profile();
+  console.log(profile);
+
+  const query = "rakuen no tsubasa";
   const items = await api.search(query, ["track"]);
 
-  items.tracks.items.forEach((item) => {
-    console.log(item.name);
-    console.log(item.artists);
-    console.log(item.preview_url);
-    console.log(item.popularity);
-    console.log("====================================");
-  });
+  // items.tracks.items.forEach((item) => {
+  //   console.log(item.name);
+  //   console.log(item.artists);
+  //   console.log(item.preview_url);
+  //   console.log(item.popularity);
+  //   console.log(item.available_markets)
+  //   console.log("====================================");
+  // });
+
   // console.log(items.tracks.items);
   // console.log(items.tracks.items[0]);
   // console.log(items.tracks.items[0].album.images);
@@ -101,26 +110,45 @@ export async function hoge(token: AccessToken) {
 //   uri: 'spotify:track:5P77DIVI4cnCMMgCVuoOkc'
 // }
 
-// 上記の構造を読み取り、下記のDynamoDBの構造に変換する
+// SearchResults をインメモリで保持し、曲名またはアニメタイトルでTrackInfoを検索できるようにする
+// DynamoDBにキャッシュが存在しない場合はSpotifyAPIを叩いてキャッシュを作成する
+// export async function searchTunes() {
 
-// type dynamoDB_json = {
-//   // id: number; // anime theme id
-//   // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
-//   title: string; // song title from animetheme (primary key)
-//   spotify: [
-//     {
-//       uri: string;
-//       name: string;
-//       artists: [
-//         {
-//           name: string;
-//           openLink: string;
-//         }
-//       ]
-//       openLink: string;
-//       preview_url: string;
-//       image: string;
-//       duration_ms: number;
-//     }
-//   ];
-// }
+// BatchGetCommand でレコードがなかった時、どのようなレスポンスになるか確認する
+// 対応レコードがなかったときは、SpotityAPIを叩いてキャッシュを作成し、
+// SearchResults の適切なキーに追加する
+
+export async function batchGet() {
+  const client = new DynamoDBClient({});
+  const docClient = DynamoDBDocumentClient.from(client);
+
+  const command = new BatchGetCommand({
+    // Each key in this object is the name of a table. This example refers
+    // to a Books table.
+    RequestItems: {
+      SpotifySearchCache: {
+        // Each entry in Keys is an object that specifies a primary key.
+        Keys: [
+          {
+            query: "Rakuen no Tsubasa",
+          },
+          {
+            query: "dororo",
+          },
+          {
+            query: "jiyu no tsubasa", // 存在しないレコード
+          },
+        ],
+        // Only return the "tracks" attributes.
+        // ProjectionExpression: "tracks",
+      },
+    },
+  });
+
+  const response = await docClient.send(command);
+  if (!response.Responses) return;
+  console.log(response.Responses["SpotifySearchCache"]);
+  return response;
+}
+
+// SearchCache[] を SearchResult に変換する
