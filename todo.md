@@ -1,11 +1,12 @@
-## ステップ
+## TODOステップ
 - spotifyの認証ができるようにする (3/2)
 - サーバー側で動作するnodeのコードとそうでないものをきちんと分別する (3/4)
+- spotify検索結果を格納できるDynamoDBテーブルを作成する (3/7)
+- server actionから、spotify検索結果を取得して必要な情報を抜き出す (3/7)
+- server actionからDynamoDB SDKでデータを挿入したり、取得する (3/7)
 
-- spotify検索結果を格納できるDynamoDBテーブルを作成する
-- server actionから、spotify検索結果を取得して必要な情報を抜き出す
-- server actionからDynamoDB SDKでデータを挿入したり、取得する
-- 受け取ったデータをanimeSong配列の適切な場所に結合する
+- Playlistの作成
+- アニメテーマ曲取得から、spotifyの情報表示までつなぎこみ
 - 簡素にUIを作る
 
 <!-- - ローカルからDynamoDBと通信してデータを入れる(もしくは手動で、コンソールからデータを入れる) -->
