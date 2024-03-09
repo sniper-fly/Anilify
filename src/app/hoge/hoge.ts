@@ -5,9 +5,10 @@ import {
   PutCommand,
   BatchGetCommand,
   DynamoDBDocumentClient,
+  BatchExecuteStatementCommand,
 } from "@aws-sdk/lib-dynamodb";
 
-import { SearchCache, TrackInfo } from "@/types";
+import { TrackInfo } from "@/types";
 import { AccessToken, SpotifyApi } from "@spotify/web-api-ts-sdk";
 
 export async function hoge(token: AccessToken) {
@@ -152,3 +153,30 @@ export async function batchGet() {
 }
 
 // SearchCache[] を SearchResult に変換する
+
+// select のcountなどの連番を振れるか確認する
+export async function batchSelect() {
+  const client = new DynamoDBClient({});
+  const docClient = DynamoDBDocumentClient.from(client);
+  const command = new BatchExecuteStatementCommand({
+    Statements: [
+      {
+        Statement: "SELECT query, tracks FROM SpotifySearchCache WHERE query=?",
+        Parameters: ["Rakuen no Tsubasa", "dororo"],
+        ConsistentRead: true,
+      },
+      {
+        Statement: "SELECT * FROM SpotifySearchCache WHERE query=?",
+        Parameters: ["dororo"],
+        ConsistentRead: true,
+      },
+    ],
+  });
+
+  const response = await docClient.send(command);
+
+  if (!response.Responses) return;
+  console.log(response.Responses);
+  // console.log(response.Responses[0].Item!.tracks);
+  return response;
+}
