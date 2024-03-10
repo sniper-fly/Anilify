@@ -148,7 +148,7 @@ export async function batchGet() {
 
   const response = await docClient.send(command);
   if (!response.Responses) return;
-  console.log(response.Responses["SpotifySearchCache"]);
+  console.log(response.Responses["SpotifySearchCache"][0]);
   return response;
 }
 
@@ -179,4 +179,94 @@ export async function batchSelect() {
   console.log(response.Responses);
   // console.log(response.Responses[0].Item!.tracks);
   return response;
+}
+
+export async function createPlaylist(token: AccessToken) {
+  const api = SpotifyApi.withAccessToken(
+    process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!,
+    token
+  );
+  const profile = await api.currentUser.profile();
+  const resPlaylist = await api.playlists.createPlaylist(profile.id, {
+    name: "test",
+    public: false,
+  });
+  // {
+  //   collaborative: false,
+  //   description: null,
+  //   external_urls: {
+  //     spotify: 'https://open.spotify.com/playlist/48IpzPWhaNXJf2WpE117O4'
+  //   },
+  //   followers: { href: null, total: 0 },
+  //   href: 'https://api.spotify.com/v1/playlists/48IpzPWhaNXJf2WpE117O4',
+  //   id: '48IpzPWhaNXJf2WpE117O4',
+  //   images: [],
+  //   primary_color: null,
+  //   name: 'test',
+  //   type: 'playlist',
+  //   uri: 'spotify:playlist:48IpzPWhaNXJf2WpE117O4',
+  //   owner: {
+  //     href: 'https://api.spotify.com/v1/users/de997d2d86d7480fb1bbf8e01da2169c',
+  //     id: 'de997d2d86d7480fb1bbf8e01da2169c',
+  //     type: 'user',
+  //     uri: 'spotify:user:de997d2d86d7480fb1bbf8e01da2169c',
+  //     display_name: null,
+  //     external_urls: {
+  //       spotify: 'https://open.spotify.com/user/de997d2d86d7480fb1bbf8e01da2169c'
+  //     }
+  //   },
+  //   public: true,
+  //   snapshot_id: 'NTMsM2I2MTU4NGIxNzE0ZTQ5ZGE5MWNiM2FlNjUxOGE3OThiNzk4MWRmYw==',
+  //   tracks: {
+  //     limit: 100,
+  //     next: null,
+  //     offset: 0,
+  //     previous: null,
+  //     href: 'https://api.spotify.com/v1/playlists/48IpzPWhaNXJf2WpE117O4/tracks',
+  //     total: 0,
+  //     items: []
+  //   }
+  // }
+
+  // console.log(resPlaylist)
+
+  const client = new DynamoDBClient({});
+  const docClient = DynamoDBDocumentClient.from(client);
+
+  const command = new BatchGetCommand({
+    // Each key in this object is the name of a table. This example refers
+    // to a Books table.
+    RequestItems: {
+      SpotifySearchCache: {
+        // Each entry in Keys is an object that specifies a primary key.
+        Keys: [
+          {
+            query: "Rakuen no Tsubasa",
+          },
+          {
+            query: "dororo",
+          },
+          {
+            query: "jiyu no tsubasa", // 存在しないレコード
+          },
+        ],
+        // Only return the "tracks" attributes.
+        // ProjectionExpression: "tracks",
+      },
+    },
+  });
+
+  const resSearch = await docClient.send(command);
+  if (!resSearch.Responses) return;
+  // [
+  //   { query: 'Rakuen no Tsubasa', tracks: [ [Object] ] },
+  //   { query: 'dororo', tracks: [ [Object] ] }
+  // ]
+
+  // console.log(response.Responses["SpotifySearchCache"]);
+  const addRes = await api.playlists.addItemsToPlaylist(resPlaylist.id, [
+    resSearch.Responses["SpotifySearchCache"][0].tracks[0].uri,
+    resSearch.Responses["SpotifySearchCache"][1].tracks[0].uri,
+  ]);
+  console.log(addRes);
 }
