@@ -34,10 +34,20 @@ export default function Page() {
     })();
   }
 
+  function redirectToHoge() {
+    const sdk = SpotifyApi.withUserAuthorization(
+      process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID!,
+      "http://localhost:3000/hoge",
+      ["user-read-private", "playlist-modify-private", "playlist-modify-public"]
+    );
+    sdk.authenticate();
+  }
+
   return (
     <>
       <Button onClick={() => sdk.authenticate()}>authorize</Button>
       <Button onClick={handleClick}>log</Button>
+      <Button onClick={redirectToHoge}>redirect to /hoge</Button>
     </>
   );
 }
