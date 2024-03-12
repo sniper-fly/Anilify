@@ -13,22 +13,29 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-// 重複している
+// コンポーネントの再利用性を高める目的で分離するのであれば、
+// ホントは呼び出し元で定義するべきだが、今回はここで定義する
 const formSchema = z.object({
   userName: z.string().min(1, { message: "Please enter a username" }),
 });
 
 type Props = {
-  onSubmit: (values: z.infer<typeof formSchema>) => void;
+  findUserAnimeList?: (username: string) => void;
 };
 
-export default function usernameInput({ onSubmit }: Props) {
+export default function usernameInput({ findUserAnimeList }: Props) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       userName: "felock",
     },
   });
+
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    if (findUserAnimeList) {
+      findUserAnimeList(data.userName);
+    }
+  }
 
   return (
     <Form {...form}>

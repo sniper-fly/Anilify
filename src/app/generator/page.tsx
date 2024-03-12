@@ -1,15 +1,9 @@
 "use client";
 
-import { z } from "zod";
 import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
 import { useEffect } from "react";
 import UsernameInput from "./usernameInput";
-
-// 重複している
-const formSchema = z.object({
-  userName: z.string().min(1, { message: "Please enter a username" }),
-});
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -37,9 +31,8 @@ const USER_ANIME_LIST = gql(`
 //TODO useEffect をhookとして分離する
 export default function Home() {
   const [getAnime, { loading, error, data }] = useLazyQuery(USER_ANIME_LIST);
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    getAnime({ variables: { userName: values.userName } });
+  function findUserAnimeList(value: string) {
+    getAnime({ variables: { userName: value } });
   }
 
   // AnimeTheme Api との通信
@@ -73,7 +66,5 @@ export default function Home() {
     }
   }, [loading, error, data]);
 
-  return (
-    <UsernameInput onSubmit={onSubmit} />
-  );
+  return <UsernameInput findUserAnimeList={findUserAnimeList} />;
 }
