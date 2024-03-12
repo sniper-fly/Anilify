@@ -4,40 +4,16 @@
 - spotify検索結果を格納できるDynamoDBテーブルを作成する (3/7)
 - server actionから、spotify検索結果を取得して必要な情報を抜き出す (3/7)
 - server actionからDynamoDB SDKでデータを挿入したり、取得する (3/7)
+- Playlistの作成(3/10)
 
-- Playlistの作成
-- アニメテーマ曲取得から、spotifyの情報表示までつなぎこみ
-- 簡素にUIを作る
-
-<!-- - ローカルからDynamoDBと通信してデータを入れる(もしくは手動で、コンソールからデータを入れる) -->
-<!-- - API gateway とlambdaを連携し、animeSong形式のjsonを受け付けるエンドポイントを作成する -->
-<!-- - lambdaで、受け取ったデータからtitleを抜き出す
-- DynamoDBからデータを取り出す -->
+- Anilist情報を表のように行列にして表示する
+- AnimeTheme情報を行列に追加
+- DynamoDBから取得した情報を行列に追加
 
 期待通りの画面になったら
 - ローカルからspotifyにひたすら検索をかけまくり、アニメtop1000の曲データをDynamoDBに保管する
 - UI を作り込む
 - Next.js lambda でデプロイできたらしてみる
-
-## 制御フロー
-- AniListユーザー名入力フォーム、Auth Spotifyボタンを表示する
-- Spotifyの認証ページにリダイレクトする
-- アニメと曲の対応一覧生成
-
-
-
-## バックエンド要件
-animetheme api のidをprimary keyとして、titleなどを収納する
-
-jsonデータを受け取る
-曲titleを取り出す
-曲id を条件にselectして、spotifyのデータを引き出す
-(DynamoDBに対して N + 1のリクエストが発生しないようにする)
-(
-曲id が事前のDynamoDBキャッシュに存在しなかった場合はSpotifyに検索クエリを投げる
-返ってきたデータを整形しDynamoDBに保存
-)
-jsonデータのspotifyキーに取得したデータを結合する
 
 ## できたらやる
 - AnilistにはあるけどAnimeThemeには登録されていないものに関してのデータを集める
@@ -79,14 +55,4 @@ const missing = ids.filter(
 missing.forEach((id) => {
   console.log(`https://anilist.co/anime/${id}/`)
 })
-```
-
-```typescript
-// DynamoDB のテーブルに保存する検索結果キャッシュデータ形式
-type dynamoDB_json = {
-  // id: number; // anime theme id
-  // titleは重複する場合があるが、spotifyの検索結果は同じになるのでid管理は不要
-  title: string; // song title from animetheme (primary key)
-  spotify: TrackInfo[];
-};
 ```
