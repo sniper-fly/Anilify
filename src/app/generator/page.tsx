@@ -1,23 +1,12 @@
 "use client";
 
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
 import { useEffect } from "react";
+import UsernameInput from "./usernameInput";
 
+// 重複している
 const formSchema = z.object({
   userName: z.string().min(1, { message: "Please enter a username" }),
 });
@@ -45,6 +34,7 @@ const USER_ANIME_LIST = gql(`
   }
 `);
 
+//TODO useEffect をhookとして分離する
 export default function Home() {
   const [getAnime, { loading, error, data }] = useLazyQuery(USER_ANIME_LIST);
 
@@ -52,7 +42,7 @@ export default function Home() {
     getAnime({ variables: { userName: values.userName } });
   }
 
-  //TODO useEffect をhookとして分離する
+  // AnimeTheme Api との通信
   useEffect(() => {
     if (!loading && !error && data) {
       // data.MediaListCollection?.lists[0]?.entries[0]?.media
@@ -83,34 +73,7 @@ export default function Home() {
     }
   }, [loading, error, data]);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      userName: "felock",
-    },
-  });
-
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="userName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="Your AniList username" {...field} />
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Generate</Button>
-      </form>
-    </Form>
+    <UsernameInput onSubmit={onSubmit} />
   );
 }
