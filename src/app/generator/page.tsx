@@ -2,8 +2,10 @@
 
 import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
+import { Medium } from "@/types";
+import { extractMedium } from "@/lib/extractMedium";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -34,37 +36,46 @@ export default function Home() {
   function findUserAnimeList(value: string) {
     getAnime({ variables: { userName: value } });
   }
+  const [medium, setMedium] = useState<Medium>([]);
 
-  // AnimeTheme Api との通信
+  // AniList Api との通信が終わったら、mediumを更新する
   useEffect(() => {
     if (!loading && !error && data) {
-      // data.MediaListCollection?.lists[0]?.entries[0]?.media
-      // 上記の構造の個々の配列を一つの配列にまとめる
-      const medium = data.MediaListCollection?.lists
-        ?.map((list) => list?.entries?.map((entry) => entry?.media) ?? [])
-        .flat(1); // 空白エントリーはflatで削除される
-      console.log(medium);
-
-      if (!medium) return;
-
-      // 中身がundefined, nullでないものだけを抽出し、,で区切る
-      const ids = medium.filter((m) => m).map((m) => m!.id);
-      const idStr = ids.join(",");
-      // AnimeTheme API にリクエストを送る
-      const allData = [];
-      (async () => {
-        for (let page_num = 1; true; page_num++) {
-          const url = `https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${idStr}&include=animethemes.song.artists,resources&page[size]=100&page[number]=${page_num}`;
-          const res = await fetch(url);
-          const json = await res.json();
-          if (json.anime.length === 0) break;
-
-          allData.push(...json.anime);
-        }
-        console.log(allData);
-      })();
+      setMedium(extractMedium(data));
     }
   }, [loading, error, data]);
 
-  return <UsernameInput findUserAnimeList={findUserAnimeList} />;
+  // AnimeTheme API にリクエストを送る
+  useEffect(() => {
+    if (medium.length === 0) return;
+
+    const ids = medium.map((m) => m!.id);
+    const idStr = ids.join(",");
+    // AnimeTheme API にリクエストを送る
+    const allData = [];
+    (async () => {
+      for (let page_num = 1; true; page_num++) {
+        const url = `https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${idStr}&include=animethemes.song.artists,resources&page[size]=100&page[number]=${page_num}`;
+        const res = await fetch(url);
+        const json = await res.json();
+        if (json.anime.length === 0) break;
+
+        allData.push(...json.anime);
+      }
+      console.log(allData);
+    })();
+  }, [medium]);
+
+  return (
+    <>
+      <UsernameInput findUserAnimeList={findUserAnimeList} />
+      {/* mediumを表の形で表示する */}
+      {medium.map((m) => (
+        <div key={m?.id}>
+          <img src={m?.coverImage?.large} alt={m?.title?.romaji} />
+          <p>{m?.title?.romaji}</p>
+        </div>
+      ))}
+    </>
+  );
 }
