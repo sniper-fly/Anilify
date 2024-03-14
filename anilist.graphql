@@ -17,3 +17,37 @@
     }
   }
 }
+
+{
+  MediaListCollection(userName: "felock", type: ANIME) {
+    lists {
+      entries {
+        media {
+          id
+          status
+          title {
+            native
+            romaji
+            english
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  Page(page: 1 perPage: 50) {
+    mediaList(userName: "felock", type: ANIME) {
+      media {
+        id
+        status
+        title {
+          native
+          romaji
+          english
+        }
+      }
+    }
+  }
+}
