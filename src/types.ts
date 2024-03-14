@@ -37,3 +37,19 @@ export type DynamoSearchCache = {
 export type SearchResult = {
   [key: string]: TrackInfo[];
 };
+
+export type Medium = Array<{
+  __typename?: "Media";
+  id: number;
+  title?: {
+    __typename?: "MediaTitle";
+    native?: string | null;
+    romaji?: string | null;
+    english?: string | null;
+  } | null;
+  coverImage?: {
+    __typename?: "MediaCoverImage";
+    extraLarge?: string | null;
+    large?: string | null;
+  } | null;
+} | null>;
