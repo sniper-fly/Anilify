@@ -40,14 +40,10 @@ export default function Home() {
 
   // AniList Api との通信が終わったら、mediumを更新する
   useEffect(() => {
-    if (!loading && !error && data) {
-      setMedium(extractMedium(data));
-    }
-  }, [loading, error, data]);
+    if (loading || error || !data) return;
 
-  // AnimeTheme API にリクエストを送る
-  useEffect(() => {
-    if (medium.length === 0) return;
+    const medium = extractMedium(data);
+    setMedium(medium);
 
     const ids = medium.map((m) => m!.id);
     const idStr = ids.join(",");
@@ -60,11 +56,11 @@ export default function Home() {
         const json = await res.json();
         if (json.anime.length === 0) break;
 
-        allData.push(...json.anime);
+        allData.push(...json.anime); // ここでsetStateする
       }
       console.log(allData);
     })();
-  }, [medium]);
+  }, [loading, error, data]);
 
   return (
     <>

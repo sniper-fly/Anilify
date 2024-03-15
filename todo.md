@@ -7,6 +7,7 @@
 - Playlistの作成(3/10)
 - Anilist情報を表のように行列にして表示する(3/14)
 
+- セキュリティのため起動環境をdockernizedする
 - AnimeTheme情報を行列に追加
 - DynamoDBから取得した情報を行列に追加
 
