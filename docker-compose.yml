@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  next-app:
+    container_name: next-app
+    build:
+      context: ./next-app/docker
+      dockerfile: Dockerfile
+    image: otaku-gpat:1.0
+    command: [npm, run, dev]
+    volumes:
+      - ./next-app:/app
+    ports:
+      - 3000:3000

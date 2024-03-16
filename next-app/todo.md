@@ -6,10 +6,11 @@
 - server actionからDynamoDB SDKでデータを挿入したり、取得する (3/7)
 - Playlistの作成(3/10)
 - Anilist情報を表のように行列にして表示する(3/14)
+- セキュリティのため起動環境をdockernizedする(3/16)
 
-- セキュリティのため起動環境をdockernizedする
 - AnimeTheme情報を行列に追加
 - DynamoDBから取得した情報を行列に追加
+- dockerで ctrl-c したときにコンテナのシャットダウンが遅いのを解消
 
 期待通りの画面になったら
 - ローカルからspotifyにひたすら検索をかけまくり、アニメtop1000の曲データをDynamoDBに保管する
