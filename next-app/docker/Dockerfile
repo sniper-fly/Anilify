@@ -8,7 +8,8 @@ WORKDIR /app
 
 RUN apk add --no-cache \
   su-exec \
-  shadow
+  shadow \
+  tini
 
 # ビルド時、 UID 1000 の node が存在する
 # entrypointで UID/GID の変更を行うため、root でないと実行できない
@@ -19,5 +20,5 @@ ENV HOME=/home/$USER
 
 COPY entrypoint.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["tini", "--", "/entrypoint.sh"]
 CMD ["npm", "run", "dev"]
