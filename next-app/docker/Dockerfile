@@ -15,10 +15,17 @@ RUN apk add --no-cache \
 # entrypointで UID/GID の変更を行うため、root でないと実行できない
 # そのため USER 命令は定義しない
 # USER node
-ENV USER=node
-ENV HOME=/home/$USER
+ARG EXEC_USER=node
 
-COPY entrypoint.sh /
+ENV USER=$EXEC_USER
+ENV HOME=/home/$EXEC_USER
+
+COPY docker/entrypoint.sh /
+COPY package.json .
+COPY package-lock.json .
+
+RUN chown -R $EXEC_USER:$EXEC_USER /app
+RUN su-exec $EXEC_USER npm ci
 
 ENTRYPOINT ["tini", "--", "/entrypoint.sh"]
 CMD ["npm", "run", "dev"]

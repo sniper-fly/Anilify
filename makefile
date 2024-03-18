@@ -1,10 +1,5 @@
-init: build install
-
 build:
 	docker compose build
-
-install:
-	docker compose run next-app npm ci
 
 up:
 	docker compose up
