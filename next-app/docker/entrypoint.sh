@@ -24,7 +24,7 @@ node_module_owner=$(stat -c "%u" ./node_modules)
 node_module_group=$(stat -c "%g" ./node_modules)
 if [ $node_module_owner -ne $uid ] || [ $node_module_group -ne $gid ] ; then
   echo "Fixing node_modules permissions..."
-  chown -R node:node ./node_modules
+  chown -R $USER:$USER ./node_modules
 fi
 
 # このスクリプト自体は root で実行されているので、uid/gid 調整済みの builder ユーザー
