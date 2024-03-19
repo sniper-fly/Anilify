@@ -8,8 +8,7 @@ WORKDIR /app
 
 RUN apk add --no-cache \
   su-exec \
-  shadow \
-  tini
+  shadow
 
 # ビルド時、 UID 1000 の node が存在する
 # entrypointで UID/GID の変更を行うため、root でないと実行できない
@@ -21,11 +20,6 @@ ENV USER=$EXEC_USER
 ENV HOME=/home/$EXEC_USER
 
 COPY docker/entrypoint.sh /
-COPY package.json .
-COPY package-lock.json .
 
-RUN chown -R $EXEC_USER:$EXEC_USER /app
-RUN su-exec $EXEC_USER npm ci
-
-ENTRYPOINT ["tini", "--", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["npm", "run", "dev"]
