@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
 import { Medium } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
+import Image from "next/image";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -68,8 +69,14 @@ export default function Home() {
       {/* mediumを表の形で表示する */}
       {medium.map((m) => (
         <div key={m?.id}>
-          <img src={m?.coverImage?.large} alt={m?.title?.romaji} />
-          <p>{m?.title?.romaji}</p>
+          <Image
+            src={m?.coverImage?.large}
+            alt={m?.title?.romaji}
+            width={200}
+            height={340}
+          />
+          <p>{m?.title?.native}</p>
+          <p>{m?.title?.english}</p>
         </div>
       ))}
     </>

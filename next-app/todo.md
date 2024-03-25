@@ -6,7 +6,7 @@
 - server actionからDynamoDB SDKでデータを挿入したり、取得する (3/7)
 - Playlistの作成(3/10)
 - Anilist情報を表のように行列にして表示する(3/14)
-- セキュリティのため起動環境をdockernizedする(3/16)
+- セキュリティのため起動環境をdockerizeする(3/16)
 
 - AnimeTheme情報を行列に追加
 - DynamoDBから取得した情報を行列に追加
