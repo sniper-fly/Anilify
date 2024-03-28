@@ -7,6 +7,7 @@ import UsernameInput from "./usernameInput";
 import { AnimeInfo, Medium } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
 import Image from "next/image";
+import axios from "axios";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -53,12 +54,23 @@ export default function Home() {
     const allData = [];
     (async () => {
       for (let page_num = 1; true; page_num++) {
-        const url = `https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${idStr}&include=animethemes.song.artists,resources&page[size]=100&page[number]=${page_num}`;
-        const res = await fetch(url);
-        const json = await res.json();
-        if (json.anime.length === 0) break;
-
-        allData.push(...json.anime); // ここでsetStateする
+        const baseUrl = "https://api.animethemes.moe/anime";
+        const res = await axios.get(baseUrl, {
+          params: {
+            filter: {
+              has: "resources",
+              site: "AniList",
+              external_id: idStr,
+            },
+            include: "animethemes.song.artists,resources",
+            page: {
+              size: 100,
+              number: page_num,
+            },
+          },
+        });
+        if (res.data.anime.length === 0) break;
+        allData.push(...res.data.anime); // ここでsetStateする
       }
       console.log(allData);
     })();
@@ -76,7 +88,7 @@ export default function Home() {
         <div key={m?.id} className="mb-4">
           <Image
             src={m?.coverImage?.large} // add fallback image
-            alt={m?.title?.romaji || 'unknown' }
+            alt={m?.title?.romaji || "unknown"}
             width={200}
             height={340}
           />
