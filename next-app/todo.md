@@ -7,6 +7,8 @@
 - Playlistの作成(3/10)
 - Anilist情報を表のように行列にして表示する(3/14)
 - セキュリティのため起動環境をdockerizeする(3/16)
+- Anime型の命名変更
+- fetchの代わりにaxiosを使ってquery paramsをいい感じに管理する
 
 - AnimeTheme情報を行列に追加
 - DynamoDBから取得した情報を行列に追加
@@ -22,6 +24,9 @@
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
 
 ## その他
+https://api-docs.animethemes.moe/wiki/anime/index/
+anime theme api のリファレンス
+
 https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/dynamodb/
 dynamodbのapiリファレンス
 

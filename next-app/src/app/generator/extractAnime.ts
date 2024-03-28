@@ -1,4 +1,4 @@
-import { Anime } from "@/types";
+import { AnimeInfo } from "@/types";
 
 type AnimeThemeJson = {
   id: number;
@@ -46,7 +46,7 @@ type Artist = {
   };
 };
 
-export function extractAnime(json: AnimeThemeJson[]): Anime[] {
+export function extractAnime(json: AnimeThemeJson[]): AnimeInfo[] {
   return json.map((data) => ({
     id: data.id,
     external_id: data.resources[0].external_id,

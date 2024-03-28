@@ -4,7 +4,7 @@ import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
-import { Medium } from "@/types";
+import { AnimeInfo, Medium } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
 import Image from "next/image";
 
@@ -38,6 +38,7 @@ export default function Home() {
     getAnime({ variables: { userName: value } });
   }
   const [medium, setMedium] = useState<Medium>([]);
+  const [animeInfo, setAnimeInfo] = useState<AnimeInfo[]>([]);
 
   // AniList Api との通信が終わったら、mediumを更新する
   useEffect(() => {
@@ -66,12 +67,16 @@ export default function Home() {
   return (
     <>
       <UsernameInput findUserAnimeList={findUserAnimeList} />
+
+      {/* loading iconを表示する */}
+      {loading && <p>Loading...</p>}
+
       {/* mediumを表の形で表示する */}
       {medium.map((m) => (
-        <div key={m?.id}>
+        <div key={m?.id} className="mb-4">
           <Image
-            src={m?.coverImage?.large}
-            alt={m?.title?.romaji}
+            src={m?.coverImage?.large} // add fallback image
+            alt={m?.title?.romaji || 'unknown' }
             width={200}
             height={340}
           />

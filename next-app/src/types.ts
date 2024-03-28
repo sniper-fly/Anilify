@@ -1,4 +1,4 @@
-export type Anime = {
+export type AnimeInfo = {
   id: number; // anime theme id
   external_id: number; // 画面に要素を並べる時、keyとして使う
   site: string; // AniList or MyAnimeList
