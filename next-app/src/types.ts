@@ -1,9 +1,10 @@
 export type AnimeInfo = {
-  id: number; // anime theme id
-  external_id: number; // 画面に要素を並べる時、keyとして使う
-  site: string; // AniList or MyAnimeList
-  name: string; // anime title
-  animethemes: ThemeSong[];
+  [external_id: string]: { // AniList/MAL id
+    id: number; // anime theme id
+    site: string; // AniList or MyAnimeList
+    name: string; // anime title
+    animethemes: ThemeSong[];
+  };
 };
 
 export type ThemeSong = {
