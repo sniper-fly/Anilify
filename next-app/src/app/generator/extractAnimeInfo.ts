@@ -46,21 +46,24 @@ type Artist = {
   };
 };
 
-export function extractAnime(json: AnimeThemeJson[]): AnimeInfo[] {
-  return json.map((data) => ({
-    id: data.id,
-    external_id: data.resources[0].external_id,
-    site: data.resources[0].site,
-    name: data.name,
-    animethemes: data.animethemes.map((theme) => {
-      const song = theme.song;
-      const artists = song.artists.map((artist) => artist.name);
-      return {
-        title: song.title,
-        type: theme.type,
-        slug: theme.slug,
-        artists: artists,
-      };
-    }),
-  }));
+export function extractAnimeInfo(json: AnimeThemeJson[]): AnimeInfo {
+  const animeInfo: AnimeInfo = {};
+  for (const data of json) {
+    animeInfo[data.resources[0].external_id] = {
+      id: data.id,
+      site: data.resources[0].site,
+      name: data.name,
+      animethemes: data.animethemes.map((theme) => {
+        const song = theme.song;
+        const artists = song.artists.map((artist) => artist.name);
+        return {
+          title: song.title,
+          type: theme.type,
+          slug: theme.slug,
+          artists: artists,
+        };
+      }),
+    };
+  }
+  return animeInfo;
 }

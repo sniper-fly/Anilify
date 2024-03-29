@@ -7,10 +7,12 @@
 - Playlistの作成(3/10)
 - Anilist情報を表のように行列にして表示する(3/14)
 - セキュリティのため起動環境をdockerizeする(3/16)
-- Anime型の命名変更
-- fetchの代わりにaxiosを使ってquery paramsをいい感じに管理する
+- Anime型の命名変更(3/28)
+- fetchの代わりにaxiosを使ってquery paramsをいい感じに管理する(3/28)
+- AnimeTheme情報を行列に追加(3/29)
 
-- AnimeTheme情報を行列に追加
+- Next.jsのcache関数を使って他APIとの通信を高速化する
+- 毎度generateするのは面倒なので、デバッグ用のデータを保管する
 - DynamoDBから取得した情報を行列に追加
 - dockerで ctrl-c したときにコンテナのシャットダウンが遅いのを解消
 
