@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
 import { Medium } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
-import Image from "next/image";
 import { useAnimeTheme } from "./useAnimeTheme";
 import AnimeRow from "./animeRow";
+
+// テスト用
+import { exampleMedium, exampleAnimeInfo } from "./exampleObjects";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -58,11 +60,19 @@ export default function Home() {
       {/* loading iconを表示する */}
       {loading && <p>Loading...</p>}
 
-      <AnimeRow
+      {/* <AnimeRow
         medium={medium}
         animeInfo={animeInfo}
         isAnimeThemeLoading={isAnimeThemeLoading}
+      /> */}
+
+      {/* テスト用 */}
+      <AnimeRow
+        medium={exampleMedium}
+        animeInfo={exampleAnimeInfo}
+        isAnimeThemeLoading={false}
       />
+
     </>
   );
 }
