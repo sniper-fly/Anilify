@@ -4,11 +4,10 @@ import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
-import { AnimeInfo, Medium } from "@/types";
+import { Medium } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
 import Image from "next/image";
-import axios from "axios";
-import { extractAnimeInfo } from "./extractAnimeInfo";
+import { useAnimeTheme } from "./useAnimeTheme";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -40,46 +39,16 @@ export default function Home() {
     getAnime({ variables: { userName: value } });
   }
   const [medium, setMedium] = useState<Medium>([]);
-  const [animeInfo, setAnimeInfo] = useState<AnimeInfo>({});
-  const [isAnimeThemeLoading, setIsAnimeThemeLoading] = useState(false);
 
   // AniList Api との通信が終わったら、mediumを更新する
   useEffect(() => {
     if (loading || error || !data) return;
 
-    const medium = extractMedium(data);
-    setMedium(medium);
-
-    // AnimeTheme API にリクエストを送る
-    (async () => {
-      setIsAnimeThemeLoading(true);
-      for (let page_num = 1; true; page_num++) {
-        const baseUrl = "https://api.animethemes.moe/anime";
-        const res = await axios.get(baseUrl, {
-          params: {
-            filter: {
-              has: "resources",
-              site: "AniList",
-              external_id: medium.map((m) => m?.id).join(","), // idカンマ区切り
-            },
-            include: "animethemes.song.artists,resources",
-            page: {
-              size: 100,
-              number: page_num,
-            },
-          },
-        });
-        const rawAnimeJSON = res.data.anime;
-        if (rawAnimeJSON.length === 0) break;
-
-        setAnimeInfo((prev) => ({
-          ...prev,
-          ...extractAnimeInfo(rawAnimeJSON),
-        }));
-      }
-      setIsAnimeThemeLoading(false);
-    })();
+    setMedium(extractMedium(data));
   }, [loading, error, data]);
+
+  // AnimeTheme API にリクエストを送る
+  const [animeInfo, isAnimeThemeLoading] = useAnimeTheme(medium);
 
   return (
     <>
