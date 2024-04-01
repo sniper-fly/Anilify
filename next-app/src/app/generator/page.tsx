@@ -11,6 +11,7 @@ import AnimeRow from "./animeRow";
 
 // テスト用
 import { exampleMedium, exampleAnimeInfo } from "./exampleObjects";
+import useSpotify from "@/lib/useSpotify";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -37,6 +38,8 @@ const USER_ANIME_LIST = gql(`
 
 //TODO useEffect をhookとして分離する
 export default function Home() {
+  useSpotify();
+
   const [getAnime, { loading, error, data }] = useLazyQuery(USER_ANIME_LIST);
   function findUserAnimeList(value: string) {
     getAnime({ variables: { userName: value } });

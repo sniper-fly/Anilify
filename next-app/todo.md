@@ -25,6 +25,10 @@
 - Next.js lambda でデプロイできたらしてみる
 
 ## できたらやる
+https://api-docs.animethemes.moe/wiki/animetheme/index/
+created_at, updated_at 順にsortできるのでこれでanimetheme apiの更新を
+定期的に確認しつつ、更新があった場合にspotify search cacheをためるようにする
+
 - AnilistにはあるけどAnimeThemeには登録されていないものに関してのデータを集める
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
 

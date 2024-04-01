@@ -33,9 +33,9 @@ export default function AnimeRow({
             {/* m.idを使って、animeInfoから情報を取得する */}
             {animeInfo[m.id]?.animethemes.map((theme) => {
               return (
-                <div key={theme.slug}>
+                <div key={theme.title + theme.slug}>
+                  <p>===================</p>
                   <p>{theme.title}</p>
-                  <p>{theme.type}</p>
                   <p>{theme.slug}</p>
                   <p>{theme.artists.join(", ")}</p>
                   {theme.spotify?.map((track) => {
@@ -44,9 +44,6 @@ export default function AnimeRow({
                         <p>{track.name}</p>
                         <p>{track.artists.map((a) => a.name).join(", ")}</p>
                         <img src={track.image} alt={track.name} />
-                        <audio controls>
-                          <source src={track.preview_url} type="audio/mpeg" />
-                        </audio>
                       </div>
                     );
                   })}
