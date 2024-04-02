@@ -10,7 +10,7 @@ import { useAnimeTheme } from "./useAnimeTheme";
 import AnimeRow from "./animeRow";
 
 // テスト用
-import { exampleMedium, exampleAnimeInfo } from "./exampleObjects";
+import { exampleMedium, exampleAnimeInfo } from "@/example/exampleObjects";
 import useSpotify from "@/lib/useSpotify";
 
 const USER_ANIME_LIST = gql(`
