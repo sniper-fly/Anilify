@@ -13,10 +13,13 @@
 - AnimeTheme情報を行列に追加(3/29)
 - useEffectの分離(3/30)
 - 毎度generateするのは面倒なので、デバッグ用のデータを保管する(3/30)
+- TFでDynamoDBのテーブルを作成(4/2)
 
-- Next.jsのcache関数を使って他APIとの通信を高速化する
-- .tsファイルで作成した関数に関してのロジックをテストする
+- DynamoDBにキャッシュを作成
 - DynamoDBから取得した情報を行列に追加
+- .tsファイルで作成した関数に関してのロジックをテストする
+- Next.jsのcache関数を使って他APIとの通信を高速化する
+- DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する
 
 期待通りの画面になったら
 - extractXXX 関数について、use serverを使うべきかuse clientを使うべきか
@@ -31,6 +34,30 @@ created_at, updated_at 順にsortできるのでこれでanimetheme apiの更新
 
 - AnilistにはあるけどAnimeThemeには登録されていないものに関してのデータを集める
 有志から対応データを募ったり、定期的にAnimeThemeを見に行って更新されているか調べる
+
+- spotify検索精度の改善
+https://www.npmjs.com/package/@koozaki/romaji-conv
+曲名にローマ字が含まれていた場合、日本語に変換したほうが検索結果が良い場合がある。
+変換した場合のキャッシュも備えておくべき？
+
+googleの検索結果を利用して、それっぽいものをスクレイピングしてタイトルを取得する
+→検索結果のスクレイピングが禁止されていて難しいかも知れない。
+brave検索エンジンであれば問題なさそう。
+https://search.brave.com/search?q=ishukan+communication+japanese+title&source=web
+例えばこのような ishukan communication のjapanese titleで検索すると
+色々と出てくる。
+Anime Songs Lyrics が正確な日本語のタイトルを掲載しており、
+これを取得することで正確な日本語タイトル変換が可能になる可能性がある
+site検索などで、信頼できるサイトを複数指定し、スクレイピングで日本語タイトルを取得して検索を掛ける
+
+または、AniPlaylistで検索をかけても良さそう。
+曲名+アニメタイトル で検索すると割と正確な結果が出てくる
+もしくはAnimetheme api運営に日本語タイトルの追加などを提案するか
+
+- 検索結果の表示順改善
+ユーザーによって選ばれた回数をカウントし、多く選ばれた方がより上の順位に来るようにすることで
+時間がたつにつれて検索結果が改善されてくる
+曲名、アーティスト情報などのマッチング度を計算してRowの色を変えられるようにしたい
 
 ## その他
 https://api-docs.animethemes.moe/wiki/anime/index/
