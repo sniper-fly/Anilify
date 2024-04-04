@@ -14,8 +14,9 @@
 - useEffectの分離(3/30)
 - 毎度generateするのは面倒なので、デバッグ用のデータを保管する(3/30)
 - TFでDynamoDBのテーブルを作成(4/2)
+- docker環境でもawsのcredentialが使えるようにする(4/3)
+- iam roleの作成とアクセスキーの取得もTerraformで行う(4/4 ~)
 
-- docker環境でもawsのcredentialが使えるようにする
 - DynamoDBにキャッシュを作成
 - DynamoDBから取得した情報を行列に追加
 - .tsファイルで作成した関数に関してのロジックをテストする
