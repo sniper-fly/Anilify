@@ -4,6 +4,7 @@ provider "aws" {
   default_tags {
     tags = {
       name = "anitunes"
+      created_by = "terraform"
     }
   }
 }
