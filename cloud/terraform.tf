@@ -1,11 +1,4 @@
 terraform {
-  # cloud {
-  #   organization = "terraform_tutorial_miroscular"
-  #   workspaces {
-  #     name = 
-  #   }
-  # }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
