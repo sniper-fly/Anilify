@@ -17,7 +17,9 @@
 - docker環境でもawsのcredentialが使えるようにする(4/3)
 - iam roleの作成とアクセスキーの取得もTerraformで行う(4/4 ~ 4/5)
 - DynamoDBにキャッシュを作成(4/6 ~)
-
+  - spotifyに検索を掛ける (4/6)
+  - 検索結果のjsonの一部をDynamoDBに保存する
+  - generator pathから見やすいように、メイドインアビスの検索結果を取得して保存する
 - DynamoDBから取得した情報を行列に追加
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
