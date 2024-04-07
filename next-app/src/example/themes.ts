@@ -1,4 +1,6 @@
-[
+import { ThemeSong } from "@/types";
+
+export const exampleThemesWithSpotify: ThemeSong[] = [
   {
     "title": "Shangri-La",
     "type": "OP",
