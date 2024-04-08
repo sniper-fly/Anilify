@@ -16085,6 +16085,23 @@ export const exampleAnimeInfo: AnimeInfo = {
 export const exampleMedium: Medium = [
   {
     __typename: "Media",
+    id: 75,
+    title: {
+      __typename: "MediaTitle",
+      native: "蒼穹のファフナー",
+      romaji: "Soukyuu no Fafner",
+      english: "Fafner",
+    },
+    coverImage: {
+      __typename: "MediaCoverImage",
+      extraLarge:
+        "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx75-ZE4KQgvN8qRs.jpg",
+      large:
+        "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx75-ZE4KQgvN8qRs.jpg",
+    },
+  },
+  {
+    __typename: "Media",
     id: 104051,
     title: {
       __typename: "MediaTitle",
@@ -27398,23 +27415,6 @@ export const exampleMedium: Medium = [
         "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116267-CSAkFXN2Zsai.jpg",
       large:
         "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx116267-CSAkFXN2Zsai.jpg",
-    },
-  },
-  {
-    __typename: "Media",
-    id: 75,
-    title: {
-      __typename: "MediaTitle",
-      native: "蒼穹のファフナー",
-      romaji: "Soukyuu no Fafner",
-      english: "Fafner",
-    },
-    coverImage: {
-      __typename: "MediaCoverImage",
-      extraLarge:
-        "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx75-ZE4KQgvN8qRs.jpg",
-      large:
-        "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx75-ZE4KQgvN8qRs.jpg",
     },
   },
   {
