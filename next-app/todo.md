@@ -19,17 +19,24 @@
 - DynamoDBにキャッシュを作成(4/6 ~)
   - spotifyに検索を掛ける (4/6)
   - 検索結果のjsonの一部をDynamoDBに保存する
-  - generator pathから見やすいように、メイドインアビスの検索結果を取得して保存する
 - DynamoDBから取得した情報を行列に追加
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
 - DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する
 
 期待通りの画面になったら
+- S3から大量のデータをDynamoDBにimportする
+https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/S3DataImport.HowItWorks.html
+https://dev.classmethod.jp/articles/dynamodb-import-from-s3-export-to-s3/
+
 - extractXXX 関数について、use serverを使うべきかuse clientを使うべきか
 - ローカルからspotifyにひたすら検索をかけまくり、アニメtop1000の曲データをDynamoDBに保管する
 - UI を作り込む
 - Next.js lambda でデプロイできたらしてみる
+
+## DB最適化
+https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/bp-use-s3-too.html
+大きな属性値をS3に保存する
 
 ## できたらやる
 https://api-docs.animethemes.moe/wiki/animetheme/index/
