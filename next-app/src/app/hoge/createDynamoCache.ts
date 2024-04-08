@@ -6,9 +6,7 @@ import {
   DynamoDBDocumentClient,
   BatchWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
-// import { exampleAnimeInfo } from "@/example/exampleObjects";
-// import { DynamoSearchCache, TrackInfo } from "@/types";
-import { exampleThemesWithSpotify } from "@/example/themes";
+import { exampleSearchResult } from "@/example/searchResult";
 
 export default async function createDynamoCache() {
   const client = new DynamoDBClient({ region: "ap-northeast-1" });
@@ -18,26 +16,35 @@ export default async function createDynamoCache() {
   // その後、DynamoDBに書き込むために BatchWriteCommand のパラメータに変換
   const params = {
     RequestItems: {
-      AniTunesSpotifySearchCache: exampleThemesWithSpotify.map((theme) => {
-        return {
-          PutRequest: {
-            Item: {
-              query: theme.title,
-              tracks: theme.spotify,
+      AniTunesSpotifySearchCache: Object.entries(exampleSearchResult).map(
+        ([query, themes]) => {
+          return {
+            PutRequest: {
+              Item: {
+                query,
+                tracks: themes,
+              },
             },
-          },
-        };
-      }),
+          };
+        }
+      ),
     },
   };
 
-  console.log(params)
-  console.log(params.RequestItems.AniTunesSpotifySearchCache[0].PutRequest.Item)
+  // console.log(params)
+  // console.log(params.RequestItems.AniTunesSpotifySearchCache[0])
+  // console.log(params.RequestItems.AniTunesSpotifySearchCache.length)
+  // console.log(params.RequestItems.AniTunesSpotifySearchCache[0].PutRequest.Item.tracks)
 
-  // try {
-  //   const data = await ddbDocClient.send(new BatchWriteCommand(params));
-  //   console.log(data);
-  // } catch (err) {
-  //   console.error(err);
-  // }
+  try {
+    const data = await ddbDocClient.send(new BatchWriteCommand(params));
+    console.log(data);
+    console.log("====================================");
+    console.log("====================================");
+    console.log("DynamoDBにデータを書き込みました");
+    console.log("====================================");
+    console.log("====================================");
+  } catch (err) {
+    console.error(err);
+  }
 }
