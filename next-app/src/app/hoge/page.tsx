@@ -1,6 +1,6 @@
 import { Click } from "./click";
 import { batchGet, batchSelect, createPlaylist, hoge } from "./hoge";
-import { createDynamoCache } from "./createDynamoCache";
+import { createDynamoCache, getDynamoCache } from "./handleDynamoCache";
 import searchSongs from "./searchSongs";
 
 export default async function Page() {
@@ -12,6 +12,7 @@ export default async function Page() {
       <Click action={createPlaylist}>create test playlist</Click>
       <Click action={createDynamoCache}>create dynamo cache</Click>
       <Click action={searchSongs}>search songs</Click>
+      <Click action={getDynamoCache}>get dynamo cache</Click>
     </>
   );
 }

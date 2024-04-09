@@ -7,6 +7,7 @@ import {
   BatchWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { exampleSearchResult } from "@/example/searchResult";
+import { exampleThemesWithSpotify } from "@/example/themes";
 
 export async function createDynamoCache() {
   const client = new DynamoDBClient({ region: "ap-northeast-1" });
@@ -42,6 +43,36 @@ export async function createDynamoCache() {
     console.log("====================================");
     console.log("====================================");
     console.log("DynamoDBにデータを書き込みました");
+    console.log("====================================");
+    console.log("====================================");
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+export async function getDynamoCache() {
+  const client = new DynamoDBClient({ region: "ap-northeast-1" });
+  const ddbDocClient = DynamoDBDocumentClient.from(client);
+
+  // exampleSearchResult の name を元にDynamoDBからデータを取得
+  const params = {
+    RequestItems: {
+      AniTunesSpotifySearchCache: {
+        Keys: Object.keys(exampleSearchResult).map((theme) => {
+          return {
+            query: theme,
+          };
+        })
+      },
+    },
+  };
+
+  try {
+    const data = await ddbDocClient.send(new BatchGetCommand(params));
+    console.log(data.Responses?.AniTunesSpotifySearchCache);
+    console.log("====================================");
+    console.log("====================================");
+    console.log("DynamoDBからデータを取得しました");
     console.log("====================================");
     console.log("====================================");
   } catch (err) {
