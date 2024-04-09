@@ -18,7 +18,8 @@
 - iam roleの作成とアクセスキーの取得もTerraformで行う(4/4 ~ 4/5)
 - DynamoDBにキャッシュを作成(4/6 ~)
   - spotifyに検索を掛ける (4/6)
-  - 検索結果のjsonの一部をDynamoDBに保存する
+  - 検索結果のjsonの一部をDynamoDBに保存する (4/8)
+
 - DynamoDBから取得した情報を行列に追加
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
@@ -37,6 +38,9 @@ https://dev.classmethod.jp/articles/dynamodb-import-from-s3-export-to-s3/
 ## DB最適化
 https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/bp-use-s3-too.html
 大きな属性値をS3に保存する
+
+https://dev.classmethod.jp/articles/optimize-costs-of-dynamodb/
+料金最適化
 
 ## できたらやる
 https://api-docs.animethemes.moe/wiki/animetheme/index/

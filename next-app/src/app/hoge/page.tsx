@@ -1,6 +1,6 @@
 import { Click } from "./click";
 import { batchGet, batchSelect, createPlaylist, hoge } from "./hoge";
-import createDynamoCache from "./createDynamoCache";
+import { createDynamoCache } from "./createDynamoCache";
 import searchSongs from "./searchSongs";
 
 export default async function Page() {

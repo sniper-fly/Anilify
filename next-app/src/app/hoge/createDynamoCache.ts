@@ -2,13 +2,13 @@
 
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
-  // BatchGetCommand,
+  BatchGetCommand,
   DynamoDBDocumentClient,
   BatchWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { exampleSearchResult } from "@/example/searchResult";
 
-export default async function createDynamoCache() {
+export async function createDynamoCache() {
   const client = new DynamoDBClient({ region: "ap-northeast-1" });
   const ddbDocClient = DynamoDBDocumentClient.from(client);
 
