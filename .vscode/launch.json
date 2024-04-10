@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "name": "Next.js: debug server-side",
+    //   "type": "node-terminal",
+    //   "request": "launch",
+    //   "command": "make up"
+    // },
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node",
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/next-app/",
+      "remoteRoot": "/app",
+      "sourceMaps": true,
+      "trace":true
+      // "protocol": "inspector",
+    },
+    {
+      "name": "Next.js: debug client-side",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/next-app/"
+    },
+    {
+      "name": "Next.js: debug full stack",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "make up",
+      "localRoot": "${workspaceFolder}/next-app/",
+      "remoteRoot": "/app/",
+      "sourceMaps": true,
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}
