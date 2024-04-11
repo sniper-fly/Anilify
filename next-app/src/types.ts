@@ -13,7 +13,7 @@ export type ThemeSong = {
   type: string; // OP or ED
   slug: string; // song slug (ex. OP1, ED2)
   artists: string[];
-  spotify?: TrackInfo[];
+  // spotify?: TrackInfo[];
 };
 
 export type TrackInfo = {
@@ -28,11 +28,6 @@ export type TrackInfo = {
   image: string;
   duration_ms: number;
   available_markets: string[]; // ユーザーのprofile.countryと一致しない場合は表示しない
-};
-
-export type DynamoSearchCache = {
-  query: string;
-  tracks: TrackInfo[];
 };
 
 export type SearchResult = {
