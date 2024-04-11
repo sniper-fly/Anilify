@@ -20,7 +20,13 @@
   - spotifyに検索を掛ける (4/6)
   - 検索結果のjsonの一部をDynamoDBに保存する (4/8)
 
-- DynamoDBから取得した情報を行列に追加
+- DynamoDBから取得した情報を行列に追加(4/11)
+  - AnimeInfoの変更を検知して、SearchResult型のオブジェクトを作成する
+  - animeInfo情報をparamsに変換する関数
+  - getDynamoCacheからparams変換機能を排除、paramsを受け取ってリクエストを受け取るだけ
+  (テスタビリティの考慮)
+  - 受け取ったレスポンスをSearchResultに変換する関数
+  - SearchResultを元に画面を構成
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
 - DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する
