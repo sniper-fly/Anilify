@@ -67,15 +67,6 @@ export async function getDynamoCache() {
     },
   };
 
-  try {
-    const data = await ddbDocClient.send(new BatchGetCommand(params));
-    console.log(data.Responses?.AniTunesSpotifySearchCache);
-    console.log("====================================");
-    console.log("====================================");
-    console.log("DynamoDBからデータを取得しました");
-    console.log("====================================");
-    console.log("====================================");
-  } catch (err) {
-    console.error(err);
-  }
+  const data = await ddbDocClient.send(new BatchGetCommand(params));
+  return data.Responses?.AniTunesSpotifySearchCache;
 }
