@@ -14,12 +14,16 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "port": 9229,
+      "port": 9230,
       "address": "localhost",
       "localRoot": "${workspaceFolder}/next-app/",
       "remoteRoot": "/app",
-      "sourceMaps": true,
-      "trace":true
+      // "resolveSourceMapLocations": [
+      //   "${workspaceFolder}/next-app/**",
+      //   "!**/node_modules/**"
+      // ],
+      // "sourceMaps": true,
+      // "trace":true
       // "protocol": "inspector",
     },
     {
