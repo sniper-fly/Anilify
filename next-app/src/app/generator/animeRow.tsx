@@ -1,10 +1,11 @@
-import { AnimeInfo, Medium } from "@/types";
+import { AnimeInfo, Medium, SearchResult } from "@/types";
 import Image from "next/image";
 
 type Props = {
   medium: Medium;
   animeInfo: AnimeInfo;
   isAnimeThemeLoading: boolean;
+  searchResult: SearchResult;
 };
 
 export default function AnimeRow({

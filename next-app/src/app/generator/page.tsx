@@ -13,6 +13,7 @@ import searchTrackInfo from "./searchTrackInfo";
 
 // テスト用
 import { exampleMedium, exampleAnimeInfo } from "@/example/exampleObjects";
+import { exampleSearchResult } from "@/example/searchResult";
 
 const USER_ANIME_LIST = gql(`
   query USER_ANIME_LIST($userName: String!) {
@@ -103,6 +104,7 @@ export default function Home() {
         medium={exampleMedium}
         animeInfo={exampleAnimeInfo}
         isAnimeThemeLoading={false}
+        searchResult={exampleSearchResult}
       />
     </>
   );

@@ -6,8 +6,8 @@ import { AnimeInfo, SearchResult } from "@/types";
 import { chunkArray } from "@/lib/utils";
 
 export default async function searchTrackInfo(animeInfo: AnimeInfo) {
-  // member は100個まで
   const titles = extractDistinctTitles(animeInfo);
+  // 最大で100件のクエリまでしか検索できないため、100件ごとに分割
   const chunkedTitles = chunkArray(titles, 100);
   const searchCaches = [];
   for (const chunk of chunkedTitles) {
