@@ -1,8 +1,9 @@
 "use server";
 
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { BatchGetCommand, BatchGetCommandInput, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import { AnimeInfo, SearchResult } from "@/types";
 import { chunkArray } from "@/lib/utils";
-import getTrack from "./getTrack";
 
 export default async function searchTrackInfo(animeInfo: AnimeInfo) {
   const titles = extractDistinctTitles(animeInfo);
@@ -11,12 +12,7 @@ export default async function searchTrackInfo(animeInfo: AnimeInfo) {
   const searchCaches = [];
   for (const chunk of chunkedTitles) {
     const params = convertToBatchGetParams(chunk);
-    console.log("first fetch")
-    const items = await getTrack(params);
-    console.log("first fetch complete.")
-    console.log("second fetch")
-    const hoge = await getTrack(params);
-    console.log("second fetch complete.")
+    const items = await fetchTrack(params);
     if (!items || items.length === 0) continue;
 
     searchCaches.push(...items);
@@ -24,6 +20,13 @@ export default async function searchTrackInfo(animeInfo: AnimeInfo) {
   if (searchCaches.length === 0) return {};
 
   return convertToSearchResult(searchCaches);
+}
+
+async function fetchTrack(params: BatchGetCommandInput) {
+  const client = new DynamoDBClient({ region: "ap-northeast-1" });
+  const ddbDocClient = DynamoDBDocumentClient.from(client);
+  const data = await ddbDocClient.send(new BatchGetCommand(params));
+  return data.Responses?.AniTunesSpotifySearchCache;
 }
 
 function convertToSearchResult(caches: any[]) {

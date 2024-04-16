@@ -75,7 +75,7 @@ export default function Home() {
 
   function handleClick() {
     (async () => {
-      const res = await searchTrackInfo(exampleAnimeInfo);
+      const res = await searchTrackInfo(animeInfo);
       console.log(res);
     })();
   }
