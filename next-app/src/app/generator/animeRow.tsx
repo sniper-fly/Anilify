@@ -19,7 +19,7 @@ export default function AnimeRow({
         if (!m) return null;
         return (
           <div key={m.id} className="flex flex-row my-5">
-            <div className="ml-3">
+            <div className="ml-3 w-40">
               <Image
                 src={m?.coverImage?.large} // add fallback image
                 alt={m?.title?.romaji || "unknown"}
@@ -27,7 +27,7 @@ export default function AnimeRow({
                 height={340}
               />
             </div>
-            <div className="ml-3">
+            <div className="ml-3 w-40">
               <p>{m?.title?.native}</p>
               <p>{m?.title?.english}</p>
             </div>
@@ -40,9 +40,9 @@ export default function AnimeRow({
               {animeInfo[m.id]?.animethemes.map((theme) => {
                 return (
                   <div key={theme.title + theme.slug} className="flex flex-row ml-3">
-                    <p>{theme.slug}</p>
-                    <p>{theme.title}</p>
-                    <p>{theme.artists.join(", ")}</p>
+                    <p className="w-12">{theme.slug}</p>
+                    <p className="ml-3 w-36">{theme.title}</p>
+                    <p className="ml-3 w-36">{theme.artists.join(", ")}</p>
                   </div>
                 );
               })}
