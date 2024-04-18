@@ -15,11 +15,18 @@ export default function AnimeRow({
 }: Props) {
   return (
     <>
+      <div className="flex flex-row pl-3 gap-3 sticky top-0 bg-slate-600 text-white text-center">
+        <div className="w-40">Image</div>
+        <div className="w-40">Anime title</div>
+        <div className="w-16">Type</div>
+        <div className="w-36">Song</div>
+        <div className="w-36">Artist</div>
+      </div>
       {medium.map((m) => {
         if (!m) return null;
         return (
-          <div key={m.id} className="flex flex-row my-5">
-            <div className="ml-3 w-40">
+          <div key={m.id} className="flex flex-row my-5 gap-3 pl-3">
+            <div className="w-40">
               <Image
                 src={m?.coverImage?.large} // add fallback image
                 alt={m?.title?.romaji || "unknown"}
@@ -27,7 +34,7 @@ export default function AnimeRow({
                 height={340}
               />
             </div>
-            <div className="ml-3 w-40">
+            <div className="w-40">
               <p>{m?.title?.native}</p>
               <p>{m?.title?.english}</p>
             </div>
@@ -39,10 +46,10 @@ export default function AnimeRow({
             <div>
               {animeInfo[m.id]?.animethemes.map((theme) => {
                 return (
-                  <div key={theme.title + theme.slug} className="flex flex-row ml-3">
-                    <p className="w-12">{theme.slug}</p>
-                    <p className="ml-3 w-36">{theme.title}</p>
-                    <p className="ml-3 w-36">{theme.artists.join(", ")}</p>
+                  <div key={theme.title + theme.slug} className="flex flex-row gap-3">
+                    <p className="w-16">{theme.slug}</p>
+                    <p className="w-36">{theme.title}</p>
+                    <p className="w-36">{theme.artists.join(", ")}</p>
                   </div>
                 );
               })}
