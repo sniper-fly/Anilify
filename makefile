@@ -10,3 +10,6 @@ down:
 # node userとして sh を実行
 sh:
 	docker compose exec next-app su-exec node sh
+
+test:
+	docker compose exec next-app su-exec node npm run test
