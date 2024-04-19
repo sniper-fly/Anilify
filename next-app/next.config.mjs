@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/file/anilistcdn/media/anime/cover/medium/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        port: '',
+        pathname: '/image/**',
+      }
     ]
   }
 };
