@@ -12,15 +12,17 @@ export default function AnimeRow({
   medium,
   animeInfo,
   isAnimeThemeLoading,
+  searchResult,
 }: Props) {
   return (
     <>
-      <div className="sticky top-0 flex flex-row gap-3 bg-slate-600 pl-3 text-center text-white">
+      <div className="sticky top-0 flex flex-row gap-3 bg-slate-600 pl-3 text-white">
         <div className="w-40">Image</div>
         <div className="w-40">Anime title</div>
         <div className="w-16">Type</div>
         <div className="w-36">Song</div>
         <div className="w-36">Artist</div>
+        <div className="w-48">Songs on Spotify</div>
       </div>
       {medium.map((m) => {
         if (!m) return null;
@@ -51,6 +53,9 @@ export default function AnimeRow({
                     <p className="w-16">{theme.slug}</p>
                     <p className="w-36">{theme.title}</p>
                     <p className="w-36">{theme.artists.join(", ")}</p>
+                    <p className="w-48 flex flex-col">
+                      {searchResult[theme.title]?.map(t => <p>{t.name}</p>)}
+                    </p>
                   </div>
                 );
               })}
