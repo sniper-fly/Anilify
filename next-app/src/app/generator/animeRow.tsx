@@ -53,8 +53,18 @@ export default function AnimeRow({
                     <p className="w-16">{theme.slug}</p>
                     <p className="w-36">{theme.title}</p>
                     <p className="w-36">{theme.artists.join(", ")}</p>
-                    <p className="w-48 flex flex-col">
-                      {searchResult[theme.title]?.map(t => <p>{t.name}</p>)}
+                    <p className="flex w-80 flex-col">
+                      {searchResult[theme.title]?.map((t) => (
+                        <p>
+                          {t.name}
+                          <Image
+                            src={t.image}
+                            alt={t.name}
+                            width={40}
+                            height={40}
+                          />
+                        </p>
+                      ))}
                     </p>
                   </div>
                 );
