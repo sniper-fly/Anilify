@@ -23,10 +23,9 @@ export default function AnimeRow({
   searchResult,
 }: Props) {
   const ImageW = "w-40";
-  const AnimeTitleW = "w-40";
+  const AnimeTitleW = "w-48";
   const TypeW = "w-16";
-  const SongW = "w-36";
-  const ArtistW = "w-36";
+  const SongW = "w-48";
   const StreamW = "w-48";
 
   return (
@@ -36,7 +35,6 @@ export default function AnimeRow({
         <div className={AnimeTitleW}>Anime title</div>
         <div className={TypeW}>Type</div>
         <div className={SongW}>Song</div>
-        <div className={ArtistW}>Artist</div>
         <div className={StreamW}>Songs on Spotify</div>
       </div>
       {medium.map((m) => {
@@ -65,11 +63,13 @@ export default function AnimeRow({
                     key={theme.title + theme.slug}
                     className="flex flex-row gap-3"
                   >
-                    <p className={TypeW}>{theme.slug}</p>
-                    <p className={SongW}>{theme.title}</p>
-                    <p className={ArtistW}>
-                      {joinAppropriate(theme.artists)}
-                    </p>
+                    <div className={TypeW}>{theme.slug}</div>
+                    <div className={SongW}>
+                      <p>{theme.title}</p>
+                      <p className="text-gray-500">
+                        {joinAppropriate(theme.artists)}
+                      </p>
+                    </div>
                     <div className="flex w-80 flex-col">
                       {searchResult[theme.title]?.slice(0, 3).map((t) => (
                         <div>
