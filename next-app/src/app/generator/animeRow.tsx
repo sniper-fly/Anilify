@@ -70,17 +70,24 @@ export default function AnimeRow({
                         {joinAppropriate(theme.artists)}
                       </p>
                     </div>
-                    <div className="flex w-80 flex-col">
+                    <div className="flex w-80 flex-col gap-3">
                       {searchResult[theme.title]?.slice(0, 3).map((t) => (
-                        <div>
-                          {t.name}
-                          <Image
-                            src={t.image}
-                            alt={t.name}
-                            width={40}
-                            height={40}
-                            className="rounded"
-                          />
+                        <div className="flex flex-row gap-3">
+                          <div>
+                            <Image
+                              src={t.image}
+                              alt={t.name}
+                              width={40}
+                              height={40}
+                              className="rounded"
+                            />
+                          </div>
+                          <div>
+                            <p>{t.name}</p>
+                            <p className="text-gray-500">
+                              {joinAppropriate(t.artists.map((v) => v.name))}
+                            </p>
+                          </div>
                         </div>
                       ))}
                     </div>
