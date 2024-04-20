@@ -22,11 +22,11 @@ export default function AnimeRow({
   isAnimeThemeLoading,
   searchResult,
 }: Props) {
-  const ImageW = "w-40";
-  const AnimeTitleW = "w-48";
-  const TypeW = "w-16";
-  const SongW = "w-48";
-  const StreamW = "w-48";
+  const ImageW = "w-40" + " "; // 以降でクラスを問題なく追加できるようスペース追加
+  const AnimeTitleW = "w-48" + " ";
+  const TypeW = "w-16" + " ";
+  const SongW = "w-48" + " ";
+  const StreamW = "w-48" + " ";
 
   return (
     <>
@@ -47,6 +47,7 @@ export default function AnimeRow({
                 alt={m?.title?.romaji || "unknown"}
                 width={200}
                 height={340}
+                className="rounded"
               />
             </div>
             <div className={AnimeTitleW}>
