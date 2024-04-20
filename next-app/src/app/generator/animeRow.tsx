@@ -8,6 +8,14 @@ type Props = {
   searchResult: SearchResult;
 };
 
+function truncate(str: string, n: number) {
+  return str.length > n ? str.substr(0, n - 1) + "..." : str;
+}
+
+function joinAppropriate(artists: string[]) {
+  return truncate(artists.join(", "), 40);
+}
+
 export default function AnimeRow({
   medium,
   animeInfo,
@@ -59,7 +67,9 @@ export default function AnimeRow({
                   >
                     <p className={TypeW}>{theme.slug}</p>
                     <p className={SongW}>{theme.title}</p>
-                    <p className={ArtistW}>{theme.artists.join(", ")}</p>
+                    <p className={ArtistW}>
+                      {joinAppropriate(theme.artists)}
+                    </p>
                     <div className="flex w-80 flex-col">
                       {searchResult[theme.title]?.slice(0, 3).map((t) => (
                         <div>
