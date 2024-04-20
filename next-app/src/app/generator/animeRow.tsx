@@ -14,21 +14,28 @@ export default function AnimeRow({
   isAnimeThemeLoading,
   searchResult,
 }: Props) {
+  const ImageW = "w-40";
+  const AnimeTitleW = "w-40";
+  const TypeW = "w-16";
+  const SongW = "w-36";
+  const ArtistW = "w-36";
+  const StreamW = "w-48";
+
   return (
     <>
       <div className="sticky top-0 flex flex-row gap-3 bg-slate-600 pl-3 text-white">
-        <div className="w-40">Image</div>
-        <div className="w-40">Anime title</div>
-        <div className="w-16">Type</div>
-        <div className="w-36">Song</div>
-        <div className="w-36">Artist</div>
-        <div className="w-48">Songs on Spotify</div>
+        <div className={ImageW}>Image</div>
+        <div className={AnimeTitleW}>Anime title</div>
+        <div className={TypeW}>Type</div>
+        <div className={SongW}>Song</div>
+        <div className={ArtistW}>Artist</div>
+        <div className={StreamW}>Songs on Spotify</div>
       </div>
       {medium.map((m) => {
         if (!m) return null;
         return (
           <div key={m.id} className="my-5 flex flex-row gap-3 pl-3">
-            <div className="w-40">
+            <div className={ImageW}>
               <Image
                 src={m?.coverImage?.large} // add fallback image
                 alt={m?.title?.romaji || "unknown"}
@@ -36,7 +43,7 @@ export default function AnimeRow({
                 height={340}
               />
             </div>
-            <div className="w-40">
+            <div className={AnimeTitleW}>
               <p>{m?.title?.native}</p>
               <p>{m?.title?.english}</p>
             </div>
@@ -50,9 +57,9 @@ export default function AnimeRow({
                     key={theme.title + theme.slug}
                     className="flex flex-row gap-3"
                   >
-                    <p className="w-16">{theme.slug}</p>
-                    <p className="w-36">{theme.title}</p>
-                    <p className="w-36">{theme.artists.join(", ")}</p>
+                    <p className={TypeW}>{theme.slug}</p>
+                    <p className={SongW}>{theme.title}</p>
+                    <p className={ArtistW}>{theme.artists.join(", ")}</p>
                     <div className="flex w-80 flex-col">
                       {searchResult[theme.title]?.slice(0, 3).map((t) => (
                         <div>
