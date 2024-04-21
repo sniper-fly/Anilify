@@ -40,7 +40,7 @@ export default function AnimeRow({
       {medium.map((media) => {
         if (!media) return null;
         return (
-          <div key={media.id} className="my-5 flex flex-row gap-3 pl-3">
+          <div key={media.id} className="py-3 flex flex-row gap-3 pl-3">
             <div className={ImageW}>
               <Image
                 src={media?.coverImage?.large} // add fallback image
@@ -71,15 +71,15 @@ export default function AnimeRow({
                         {joinAppropriate(theme.artists)}
                       </p>
                     </div>
-                    <div className="flex w-80 flex-col gap-3">
+                    <div className="flex w-80 flex-col">
                       {searchResult[theme.title]?.slice(0, 3).map((track) => (
-                        <div className="flex flex-row gap-3" key={track.uri}>
+                        <div className="flex flex-row p-2 items-center gap-2" key={track.uri}>
                           <div>
                             <Image
                               src={track.image}
                               alt={track.name}
-                              width={40}
-                              height={40}
+                              width={43}
+                              height={43}
                               className="rounded"
                             />
                           </div>
