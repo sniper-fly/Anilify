@@ -37,28 +37,28 @@ export default function AnimeRow({
         <div className={SongW}>Song</div>
         <div className={StreamW}>Songs on Spotify</div>
       </div>
-      {medium.map((m) => {
-        if (!m) return null;
+      {medium.map((media) => {
+        if (!media) return null;
         return (
-          <div key={m.id} className="my-5 flex flex-row gap-3 pl-3">
+          <div key={media.id} className="my-5 flex flex-row gap-3 pl-3">
             <div className={ImageW}>
               <Image
-                src={m?.coverImage?.large} // add fallback image
-                alt={m?.title?.romaji || "unknown"}
+                src={media?.coverImage?.large} // add fallback image
+                alt={media?.title?.romaji || "unknown"}
                 width={200}
                 height={340}
                 className="rounded"
               />
             </div>
             <div className={AnimeTitleW}>
-              <p>{m?.title?.native}</p>
-              <p>{m?.title?.english}</p>
+              <p>{media?.title?.native}</p>
+              <p>{media?.title?.english}</p>
             </div>
             {/* animetheme apiと通信中はloading iconを表示する */}
-            {isAnimeThemeLoading && !animeInfo[m.id] && <p>Loading...</p>}
+            {isAnimeThemeLoading && !animeInfo[media.id] && <p>Loading...</p>}
             {/* m.idを使って、animeInfoから情報を取得する */}
             <div>
-              {animeInfo[m.id]?.animethemes.map((theme) => {
+              {animeInfo[media.id]?.animethemes.map((theme) => {
                 return (
                   <div
                     key={theme.title + theme.slug}
@@ -72,21 +72,21 @@ export default function AnimeRow({
                       </p>
                     </div>
                     <div className="flex w-80 flex-col gap-3">
-                      {searchResult[theme.title]?.slice(0, 3).map((t) => (
-                        <div className="flex flex-row gap-3">
+                      {searchResult[theme.title]?.slice(0, 3).map((track) => (
+                        <div className="flex flex-row gap-3" key={track.uri}>
                           <div>
                             <Image
-                              src={t.image}
-                              alt={t.name}
+                              src={track.image}
+                              alt={track.name}
                               width={40}
                               height={40}
                               className="rounded"
                             />
                           </div>
                           <div>
-                            <p>{t.name}</p>
+                            <p>{track.name}</p>
                             <p className="text-gray-500">
-                              {joinAppropriate(t.artists.map((v) => v.name))}
+                              {joinAppropriate(track.artists.map((v) => v.name))}
                             </p>
                           </div>
                         </div>
