@@ -4,7 +4,7 @@ import { gql } from "@/graphql/gql";
 import { useLazyQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
 import UsernameInput from "./usernameInput";
-import { Medium, SearchResult } from "@/types";
+import { Media, SearchResult } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
 import { useAnimeTheme } from "./useAnimeTheme";
 import AnimeTable from "./AnimeTable";
@@ -46,7 +46,7 @@ export default function Home() {
   function findUserAnimeList(value: string) {
     getAnime({ variables: { userName: value } });
   }
-  const [medium, setMedium] = useState<Medium>([]);
+  const [medium, setMedium] = useState<Media[]>([]);
   const [searchResult, setSearchResult] = useState<SearchResult>({});
 
   // AniList Api との通信が終わったら、mediumを更新する

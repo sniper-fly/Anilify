@@ -1,8 +1,8 @@
-import { AnimeInfo, Medium, SearchResult } from "@/types";
+import { AnimeInfo, Media, SearchResult } from "@/types";
 import Image from "next/image";
 
 type Props = {
-  medium: Medium;
+  medium: Media[];
   animeInfo: AnimeInfo;
   isAnimeThemeLoading: boolean;
   searchResult: SearchResult;

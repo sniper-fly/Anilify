@@ -1,4 +1,4 @@
-import { AnimeInfo, Medium } from "@/types";
+import { AnimeInfo, Media } from "@/types";
 
 export const exampleAnimeInfo: AnimeInfo = {
   "75": {
@@ -16082,7 +16082,7 @@ export const exampleAnimeInfo: AnimeInfo = {
   },
 };
 
-export const exampleMedium: Medium = [
+export const exampleMedium: Media[] = [
   {
     __typename: "Media",
     id: 75,

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { AnimeInfo, Medium } from "@/types";
+import { AnimeInfo, Media } from "@/types";
 import { extractAnimeInfo } from "./extractAnimeInfo";
 
-export function useAnimeTheme(medium: Medium): [AnimeInfo, boolean] {
+export function useAnimeTheme(medium: Media): [AnimeInfo, boolean] {
   const [animeInfo, setAnimeInfo] = useState<AnimeInfo>({});
   const [loading, setLoading] = useState(false);
 

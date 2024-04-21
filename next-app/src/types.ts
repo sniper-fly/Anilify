@@ -47,4 +47,4 @@ type extractTypeName<T, __typename> = T extends
     : extractTypeName<U, __typename>
   : never;
 
-export type Medium = extractTypeName<User_Anime_ListQuery, "Media">[];
+export type Media = extractTypeName<User_Anime_ListQuery, "Media">;

@@ -1,8 +1,8 @@
 import { User_Anime_ListQuery } from "@/graphql/graphql";
-import { Medium } from "@/types";
+import { Media } from "@/types";
 
-export function extractMedium(data: User_Anime_ListQuery): Medium {
-  const medium: Medium = [];
+export function extractMedium(data: User_Anime_ListQuery): Media[] {
+  const medium: Media[] = [];
 
   const lists = data.MediaListCollection?.lists;
   if (!lists) return medium;
