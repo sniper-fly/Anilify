@@ -7,7 +7,7 @@ import UsernameInput from "./usernameInput";
 import { Medium, SearchResult } from "@/types";
 import { extractMedium } from "@/lib/extractMedium";
 import { useAnimeTheme } from "./useAnimeTheme";
-import AnimeRow from "./animeRow";
+import AnimeTable from "./AnimeTable";
 import useSpotify from "@/lib/useSpotify";
 import searchTrackInfo from "./searchTrackInfo";
 
@@ -100,7 +100,7 @@ export default function Home() {
       /> */}
 
       {/* テスト用 */}
-      <AnimeRow
+      <AnimeTable
         medium={exampleMedium}
         animeInfo={exampleAnimeInfo}
         isAnimeThemeLoading={false}

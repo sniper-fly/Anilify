@@ -25,8 +25,10 @@
     - getDynamoCacheからparams変換機能を排除、paramsを受け取ってリクエストを受け取るだけ
     (テスタビリティの考慮)
     - 受け取ったレスポンスをSearchResultに変換する関数
+  - SearchResultを元に画面を構成(4/14 ~ 4/21)
 
-  - SearchResultを元に画面を構成(4/14 ~)
+- リファクタリング
+  - Medium 型ではなくMedia型にしてMedia[]として宣言する
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
 - DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する

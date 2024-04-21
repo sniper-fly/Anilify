@@ -16,7 +16,7 @@ function joinAppropriate(artists: string[]) {
   return truncate(artists.join(", "), 40);
 }
 
-export default function AnimeRow({
+export default function AnimeTable({
   medium,
   animeInfo,
   isAnimeThemeLoading,
