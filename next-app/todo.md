@@ -26,9 +26,11 @@
     (テスタビリティの考慮)
     - 受け取ったレスポンスをSearchResultに変換する関数
   - SearchResultを元に画面を構成(4/14 ~ 4/21)
-
-- リファクタリング
+- リファクタリング(4/21)
   - Medium 型ではなくMedia型にしてMedia[]として宣言する
+  - ネストを下げる
+
+- 将来の持続可能なDB作成について、とにかく案を書きなぐってまとめる
 - .tsファイルで作成した関数に関してのロジックをテストする
 - Next.jsのcache関数を使って他APIとの通信を高速化する
 - DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する
@@ -49,6 +51,18 @@ https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/bp-use-s3
 
 https://dev.classmethod.jp/articles/optimize-costs-of-dynamodb/
 料金最適化
+
+- 曲のタイトルだけでなく、アニメタイトルを含めた検索で精度を上げたい
+- プレイリストに追加された回数を記録してレコメンデーションに活かしたい
+- animetheme apiでupdateがあったら項目を更新したい
+- anime song lyrics にjapanese titleの掲載があったら検索に利用したい
+- OP曲以外のキャラソンも追加候補として加えられるようにしたい
+
+- 例えば、ユーザーが独自に検索クエリを指定して曲を追加した場合、どこにデータを紐付ける？
+- アニメタイトルで曲を検索した場合に、タイトルにも曲を紐づけたい
+
+プライマリーキーとして使えるのはexternal_idのみ
+AniList, MyAnimeListと両対応するにはどちらのカラムも必要
 
 ## できたらやる
 https://api-docs.animethemes.moe/wiki/animetheme/index/
@@ -83,6 +97,21 @@ site検索などで、信頼できるサイトを複数指定し、スクレイ�
 曲名、アーティスト情報などのマッチング度を計算してRowの色を変えられるようにしたい
 
 ## その他
+anime theme apiの各アニメソングに対するリンクの取得方法
+https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=97986&include=animethemes.song.artists,resources,animethemes.animethemeentries.videos.videoscript&page[size]=1&page[number]=1
+上記のようなリンクに対して、
+include=animethemes.song.artists,resources,animethemes.animethemeentries.videos.videoscript
+ここがポイント
+(ex)
+https://animethemes.moe/anime/urusei_yatsura_2022/ED2
+
+```
+"animethemes.moe/anime"
++ anime.slug
++ anime_theme.slug
++ videos.tags
+```
+
 https://api-docs.animethemes.moe/wiki/anime/index/
 anime theme api のリファレンス
 

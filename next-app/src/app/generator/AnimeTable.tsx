@@ -69,7 +69,7 @@ function AnimeRow({
     <div key={media.id} className="flex flex-row gap-3 py-3 pl-3">
       <div className={ImageW}>
         <Image
-          src={media?.coverImage?.large} // add fallback image
+          src={media?.coverImage?.large || ""} // add fallback image
           alt={media?.title?.romaji || "unknown"}
           width={200}
           height={340}
@@ -85,7 +85,7 @@ function AnimeRow({
       <div>
         {animeInfo[media.id]?.animethemes.map((theme) => {
           return (
-            <div key={theme.title + theme.slug} className="flex flex-row gap-3">
+            <div key={theme.title + theme.slug} className="flex flex-row gap-3 mb-3">
               <div className={TypeW}>{theme.slug}</div>
               <div className={SongW}>
                 <p>{theme.title}</p>

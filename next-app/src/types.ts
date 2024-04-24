@@ -48,3 +48,38 @@ type extractTypeName<T, __typename> = T extends
   : never;
 
 export type Media = extractTypeName<User_Anime_ListQuery, "Media">;
+
+type newTable = {
+  id: number;
+  anilist_id: number;
+  myanimelist_id: number;
+  anime_title: string;
+  songs: [
+    {
+      // 曲名による検索結果かどうか アニメタイトルで検索された場合はfalse
+      searched_by_song: boolean;
+      query: string; // animetheme api から取得する titleというより検索クエリ？
+      jp_title?: string;
+      slug?: string;
+      artists?: string[];
+      streaming: {
+        [provider: string]: [ // provider = spotify, apple music etc.
+          {
+            uri: string;
+            name: string;
+            artists: string[];
+            open_link: string;
+            preview_url: string;
+            image: string;
+            duration_ms: number;
+            available_markets: string[];
+
+            added_count: number; // ユーザーがプレイリストに追加した回数を記録してレコメンドに活かす
+            is_official: boolean; // 公式の音楽かどうか
+            vote_as_official: number; // ユーザーが公式として投票した回数
+          }
+        ];
+      };
+    },
+  ];
+};
