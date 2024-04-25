@@ -58,12 +58,13 @@ type newTable = {
     {
       // 曲名による検索結果かどうか アニメタイトルで検索された場合はfalse
       searched_by_song: boolean;
-      query: string; // animetheme api から取得する titleというより検索クエリ？
+      title: string; // animetheme api から取得する曲名またはアニメ名(英語)
       jp_title?: string;
       slug?: string;
       artists?: string[];
       streaming: {
-        [provider: string]: [ // provider = spotify, apple music etc.
+        [provider: string]: [
+          // provider = spotify, apple music etc.
           {
             uri: string;
             name: string;
@@ -77,9 +78,58 @@ type newTable = {
             added_count: number; // ユーザーがプレイリストに追加した回数を記録してレコメンドに活かす
             is_official: boolean; // 公式の音楽かどうか
             vote_as_official: number; // ユーザーが公式として投票した回数
-          }
+          },
         ];
       };
     },
   ];
+};
+
+type anime = {
+  id: number;
+  anilist_id: number;
+  myanimelist_id: number;
+  title: string;
+};
+
+type song = {
+  id: number;
+  anime_id: number;
+  title: string;
+  jp_title?: string;
+  slug?: string;
+  artists?: string[];
+};
+
+type streaming = {
+  id: number;
+  song_id: number;
+  provider: string;
+  uri: string;
+
+  name: string;
+  artists: string[];
+  open_link: string;
+  preview_url: string;
+  image: string;
+  duration_ms: number;
+
+  added_count: number; // ユーザーがプレイリストに追加した回数を記録してレコメンドに活かす
+  is_official: boolean; // 公式の音楽かどうか
+  vote_as_official: number; // ユーザーが公式として投票した回数
+};
+
+type artists = {
+  id: number;
+  name: string;
+  image: string;
+  spotify_uri: string;
+  apple_music_uri: string;
+  youtube_uri: string;
+};
+
+type available_markets = {
+  id: number;
+  streaming_id: number;
+  country: string;
 };
