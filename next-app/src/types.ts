@@ -17,6 +17,8 @@ export type ThemeSong = {
   type: string; // OP or ED
   slug: string; // song slug (ex. OP1, ED2)
   artists: string[];
+  link: string; // animethemes.moe url
+  videoLink: string; // video data url
   // spotify?: TrackInfo[];
 };
 

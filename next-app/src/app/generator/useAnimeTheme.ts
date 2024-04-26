@@ -21,7 +21,8 @@ export function useAnimeTheme(medium: Media[]): [AnimeInfo, boolean] {
               site: "AniList",
               external_id: medium.map((m) => m?.id).join(","), // idカンマ区切り
             },
-            include: "animethemes.song.artists,resources",
+            include:
+              "animethemes.song.artists,resources,animethemes.animethemeentries.videos",
             page: {
               size: 100,
               number: page_num,
@@ -40,5 +41,5 @@ export function useAnimeTheme(medium: Media[]): [AnimeInfo, boolean] {
     })();
   }, [medium]);
 
-  return [ animeInfo, loading ];
+  return [animeInfo, loading];
 }
