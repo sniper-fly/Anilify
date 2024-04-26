@@ -6,6 +6,7 @@ export type AnimeInfo = {
     id: number; // anime theme id
     site: string; // AniList or MyAnimeList
     name: string; // anime title
+    slug: string;
     animethemes: ThemeSong[];
   };
 };

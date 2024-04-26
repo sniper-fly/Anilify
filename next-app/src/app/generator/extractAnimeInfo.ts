@@ -53,6 +53,7 @@ export function extractAnimeInfo(json: AnimeThemeJson[]): AnimeInfo {
       id: data.id,
       site: data.resources[0].site,
       name: data.name,
+      slug: data.slug,
       animethemes: data.animethemes.map((theme) => {
         const song = theme.song;
         const artists = song.artists.map((artist) => artist.name);

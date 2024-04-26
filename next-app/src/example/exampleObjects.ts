@@ -5,6 +5,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2724,
     site: "AniList",
     name: "Soukyuu no Fafner: Dead Aggressor",
+    slug: "soukyuu_no_fafner_dead_aggressor",
     animethemes: [
       {
         title: "Shangri-La",
@@ -24,6 +25,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1939,
     site: "AniList",
     name: "Mobile Suit Gundam Seed",
+    slug: "mobile_suit_gundam_seed",
     animethemes: [
       {
         title: "INVOKE",
@@ -115,6 +117,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2267,
     site: "AniList",
     name: "Planetes",
+    slug: "planetes",
     animethemes: [
       {
         title: "Dive in the Sky",
@@ -134,6 +137,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1993,
     site: "AniList",
     name: "Mushishi",
+    slug: "mushishi",
     animethemes: [
       {
         title: "The Sore Feet Song",
@@ -147,6 +151,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2968,
     site: "AniList",
     name: "Tokyo Godfathers",
+    slug: "tokyo_godfathers",
     animethemes: [
       {
         title: "No. 9",
@@ -160,6 +165,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2799,
     site: "AniList",
     name: "Suzumiya Haruhi no Yuuutsu",
+    slug: "suzumiya_haruhi_no_yuuutsu",
     animethemes: [
       {
         title: "Koi no Mikuru Densetsu",
@@ -185,6 +191,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3089,
     site: "AniList",
     name: "Utawarerumono",
+    slug: "utawarerumono",
     animethemes: [
       {
         title: "Musouka",
@@ -204,6 +211,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 918,
     site: "AniList",
     name: "Gintama",
+    slug: "gintama",
     animethemes: [
       {
         title: "Pray",
@@ -403,6 +411,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1147,
     site: "AniList",
     name: "Higurashi no Naku Koro ni",
+    slug: "higurashi_no_naku_koro_ni",
     animethemes: [
       {
         title: "Higurashi no Naku Koro ni",
@@ -422,6 +431,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3463,
     site: "AniList",
     name: "Oishinbo",
+    slug: "oishinbo",
     animethemes: [
       {
         title: "YOU",
@@ -453,6 +463,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 579,
     site: "AniList",
     name: "Death Note",
+    slug: "death_note",
     animethemes: [
       {
         title: "THE WORLD",
@@ -490,6 +501,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 503,
     site: "AniList",
     name: "Code Geass: Hangyaku no Lelouch",
+    slug: "code_geass_hangyaku_no_lelouch",
     animethemes: [
       {
         title: "COLORS",
@@ -527,6 +539,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 388,
     site: "AniList",
     name: "Byousoku 5 Centimeter",
+    slug: "byousoku_5_centimeter",
     animethemes: [
       {
         title: "One more time, one more chance",
@@ -540,6 +553,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 343,
     site: "AniList",
     name: "Bokurano",
+    slug: "bokurano",
     animethemes: [
       {
         title: "Uninstall",
@@ -565,6 +579,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1149,
     site: "AniList",
     name: "Higurashi no Naku Koro ni Kai",
+    slug: "higurashi_no_naku_koro_ni_kai",
     animethemes: [
       {
         title: "Naraku no Hana",
@@ -584,6 +599,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2890,
     site: "AniList",
     name: "Tengen Toppa Gurren Lagann",
+    slug: "tengen_toppa_gurren_lagann",
     animethemes: [
       {
         title: "Sorairo Days",
@@ -615,6 +631,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 586,
     site: "AniList",
     name: "Dennou Coil",
+    slug: "dennou_coil",
     animethemes: [
       {
         title: "Prism",
@@ -634,6 +651,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 486,
     site: "AniList",
     name: "Clannad",
+    slug: "clannad",
     animethemes: [
       {
         title: "Megumeru ~cuckool mix 2007~",
@@ -653,6 +671,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2494,
     site: "AniList",
     name: "School Days",
+    slug: "school_days",
     animethemes: [
       {
         title: "Innocent Blue",
@@ -714,6 +733,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 507,
     site: "AniList",
     name: "Code Geass: Hangyaku no Lelouch R2",
+    slug: "code_geass_hangyaku_no_lelouch_r2",
     animethemes: [
       {
         title: "02~O-Two~",
@@ -745,6 +765,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1737,
     site: "AniList",
     name: "Macross F",
+    slug: "macross_f",
     animethemes: [
       {
         title: "Triangler",
@@ -842,6 +863,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1152,
     site: "AniList",
     name: "Higurashi no Naku Koro ni Rei",
+    slug: "higurashi_no_naku_koro_ni_rei",
     animethemes: [
       {
         title: "Super Scription of Data",
@@ -861,6 +883,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 487,
     site: "AniList",
     name: "Clannad: After Story",
+    slug: "clannad_after_story",
     animethemes: [
       {
         title: "Toki wo Kizamu Uta",
@@ -886,6 +909,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2984,
     site: "AniList",
     name: "Toradora!",
+    slug: "toradora",
     animethemes: [
       {
         title: "Pre-Parade",
@@ -923,6 +947,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2957,
     site: "AniList",
     name: "Toaru Majutsu no Index",
+    slug: "toaru_majutsu_no_index",
     animethemes: [
       {
         title: "PSI-missing",
@@ -954,6 +979,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 824,
     site: "AniList",
     name: "Ga-Rei: Zero",
+    slug: "ga_rei_zero",
     animethemes: [
       {
         title: "Paradise Lost",
@@ -973,6 +999,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 218,
     site: "AniList",
     name: "Bakemonogatari",
+    slug: "bakemonogatari",
     animethemes: [
       {
         title: "staple stable",
@@ -1016,6 +1043,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 797,
     site: "AniList",
     name: "Fullmetal Alchemist: Brotherhood",
+    slug: "fullmetal_alchemist_brotherhood",
     animethemes: [
       {
         title: "again",
@@ -1083,6 +1111,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1135,
     site: "AniList",
     name: "Higashi no Eden",
+    slug: "higashi_no_eden",
     animethemes: [
       {
         title: "FALLING DOWN",
@@ -1102,6 +1131,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1367,
     site: "AniList",
     name: "K-On!",
+    slug: "k_on",
     animethemes: [
       {
         title: "Cagayake! GIRLS",
@@ -1137,6 +1167,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2953,
     site: "AniList",
     name: "Toaru Kagaku no Railgun",
+    slug: "toaru_kagaku_no_railgun",
     animethemes: [
       {
         title: "only my railgun",
@@ -1174,6 +1205,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 488,
     site: "AniList",
     name: "Clannad: After Story - Mou Hitotsu no Sekai, Kyou-hen",
+    slug: "clannad_after_story_mou_hitotsu_no_sekai_kyou_hen",
     animethemes: [
       {
         title: "Toki wo Kizamu Uta",
@@ -1193,6 +1225,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1136,
     site: "AniList",
     name: "Higashi no Eden Movie I: The King of Eden",
+    slug: "higashi_no_eden_movie_i_the_king_of_eden",
     animethemes: [
       {
         title: "invisible",
@@ -1212,6 +1245,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 122,
     site: "AniList",
     name: "Angel Beats!",
+    slug: "angel_beats",
     animethemes: [
       {
         title: "My Soul, Your Beats!",
@@ -1249,6 +1283,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1137,
     site: "AniList",
     name: "Higashi no Eden Movie II: Paradise Lost",
+    slug: "higashi_no_eden_movie_ii_paradise_lost",
     animethemes: [
       {
         title: "future nova",
@@ -1268,6 +1303,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2798,
     site: "AniList",
     name: "Suzumiya Haruhi no Shoushitsu",
+    slug: "suzumiya_haruhi_no_shoushitsu",
     animethemes: [
       {
         title: "Bouken Desho Desho?",
@@ -1287,6 +1323,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 923,
     site: "AniList",
     name: "Gintama Movie 1: Shinyaku Benizakura-hen",
+    slug: "gintama_movie_1_shinyaku_benizakura_hen",
     animethemes: [
       {
         title: "Bokutachi no Kisetsu",
@@ -1306,6 +1343,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3196,
     site: "AniList",
     name: "Yojouhan Shinwa Taikei",
+    slug: "yojouhan_shinwa_taikei",
     animethemes: [
       {
         title: "Maigo Inu to Ame no Beat",
@@ -1331,6 +1369,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1369,
     site: "AniList",
     name: "K-On!!",
+    slug: "k_on_2010",
     animethemes: [
       {
         title: "GO! GO! MANIAC",
@@ -1362,6 +1401,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2522,
     site: "AniList",
     name: "Seitokai Yakuindomo",
+    slug: "seitokai_yakuindomo",
     animethemes: [
       {
         title: "Yamato Nadeshiko Education",
@@ -1381,6 +1421,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2184,
     site: "AniList",
     name: "Ore no Imouto ga Konnani Kawaii Wake ga Nai",
+    slug: "ore_no_imouto_ga_konnani_kawaii_wake_ga_nai",
     animethemes: [
       {
         title: "irony",
@@ -1467,6 +1508,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2954,
     site: "AniList",
     name: "Toaru Kagaku no Railgun: Misaka-san wa Ima Chuumoku no Mato Desu kara",
+    slug: "toaru_kagaku_no_railgun_misaka_san_wa_ima_chuumoku_no_mato_desu_kara",
     animethemes: [
       {
         title: "future gazer",
@@ -1486,6 +1528,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2761,
     site: "AniList",
     name: "Steins;Gate",
+    slug: "steinsgate",
     animethemes: [
       {
         title: "Hacking to the Gate",
@@ -1523,6 +1566,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1065,
     site: "AniList",
     name: "Hanasaku Iroha",
+    slug: "hanasaku_iroha",
     animethemes: [
       {
         title: "Hana no Iro",
@@ -1584,6 +1628,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1368,
     site: "AniList",
     name: "K-On! Movie",
+    slug: "k_on_movie",
     animethemes: [
       {
         title: "Ichiban Ippai",
@@ -1603,6 +1648,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1780,
     site: "AniList",
     name: "Mahou Shoujo Madoka★Magica",
+    slug: "mahou_shoujo_madokamagica",
     animethemes: [
       {
         title: "Connect",
@@ -1634,6 +1680,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2936,
     site: "AniList",
     name: "Tiger & Bunny",
+    slug: "tiger_bunny",
     animethemes: [
       {
         title: "Orion wo Nazoru",
@@ -1671,6 +1718,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 919,
     site: "AniList",
     name: "Gintama'",
+    slug: "gintama_2011",
     animethemes: [
       {
         title: "Tougenkyou Alien",
@@ -1726,6 +1774,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 135,
     site: "AniList",
     name: "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+    slug: "ano_hi_mita_hana_no_namae_wo_bokutachi_wa_mada_shiranai",
     animethemes: [
       {
         title: "Aoi Shiori",
@@ -1763,6 +1812,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 755,
     site: "AniList",
     name: "Fate/Zero",
+    slug: "fatezero",
     animethemes: [
       {
         title: "oath sign",
@@ -1782,6 +1832,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1151,
     site: "AniList",
     name: "Higurashi no Naku Koro ni Kira",
+    slug: "higurashi_no_naku_koro_ni_kira",
     animethemes: [
       {
         title: "Happy! Lucky! Dochy!",
@@ -1819,6 +1870,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3250,
     site: "AniList",
     name: "Yuru Yuri",
+    slug: "yuru_yuri",
     animethemes: [
       {
         title: "Yuriyurarararayuruyuri Daijiken",
@@ -1848,6 +1900,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1425,
     site: "AniList",
     name: "Kamisama no Memochou",
+    slug: "kamisama_no_memochou",
     animethemes: [
       {
         title: "Kawaru Mirai",
@@ -1873,6 +1926,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1857,
     site: "AniList",
     name: "Mawaru Penguindrum",
+    slug: "mawaru_penguindrum",
     animethemes: [
       {
         title: "Nornir",
@@ -1952,6 +2006,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 994,
     site: "AniList",
     name: "Guilty Crown",
+    slug: "guilty_crown",
     animethemes: [
       {
         title: "Euterpe",
@@ -1989,6 +2044,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1205,
     site: "AniList",
     name: "Hunter x Hunter",
+    slug: "hunter_x_hunter_2011",
     animethemes: [
       {
         title: "departure!",
@@ -2038,6 +2094,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 137,
     site: "AniList",
     name: "Another",
+    slug: "another",
     animethemes: [
       {
         title: "Kyoumu Densen",
@@ -2057,6 +2114,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2763,
     site: "AniList",
     name: "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+    slug: "steinsgate_movie_fuka_ryouiki_no_deja_vu",
     animethemes: [
       {
         title: "Anata no Eranda Kono Toki wo",
@@ -2076,6 +2134,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2079,
     site: "AniList",
     name: "Nisemonogatari",
+    slug: "nisemonogatari",
     animethemes: [
       {
         title: "Futakotome",
@@ -2107,6 +2166,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 756,
     site: "AniList",
     name: "Fate/Zero 2nd Season",
+    slug: "fatezero_2nd_season",
     animethemes: [
       {
         title: "to the beginning",
@@ -2138,6 +2198,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2801,
     site: "AniList",
     name: "Sword Art Online",
+    slug: "sword_art_online",
     animethemes: [
       {
         title: "crossing field",
@@ -2169,6 +2230,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1035,
     site: "AniList",
     name: "Haiyore! Nyaruko-san",
+    slug: "haiyore_nyaruko_san",
     animethemes: [
       {
         title: "Taiyou Iwaku Moeyo Chaos",
@@ -2188,6 +2250,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1783,
     site: "AniList",
     name: "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
+    slug: "mahou_shoujo_madokamagica_movie_3_hangyaku_no_monogatari",
     animethemes: [
       {
         title: "Colorful",
@@ -2207,6 +2270,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1217,
     site: "AniList",
     name: "Hyouka",
+    slug: "hyouka",
     animethemes: [
       {
         title: "Yasashisa no Riyuu",
@@ -2238,6 +2302,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2169,
     site: "AniList",
     name: "Ookami Kodomo no Ame to Yuki",
+    slug: "ookami_kodomo_no_ame_to_yuki",
     animethemes: [
       {
         title: "Okaa-san no Uta",
@@ -2251,6 +2316,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2459,
     site: "AniList",
     name: "Sakasama no Patema",
+    slug: "sakasama_no_patema",
     animethemes: [
       {
         title: "Patema Inverse",
@@ -2264,6 +2330,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2637,
     site: "AniList",
     name: "Shinsekai yori",
+    slug: "shinsekai_yori",
     animethemes: [
       {
         title: "Yuki ni Saku Hana",
@@ -2289,6 +2356,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2315,
     site: "AniList",
     name: "Psycho Pass",
+    slug: "psycho_pass",
     animethemes: [
       {
         title: "abnormalize",
@@ -2320,6 +2388,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1682,
     site: "AniList",
     name: "Little Busters!",
+    slug: "little_busters",
     animethemes: [
       {
         title: "Little Busters! ~TV animation ver.~",
@@ -2357,6 +2426,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2471,
     site: "AniList",
     name: "Sakurasou no Pet na Kanojo",
+    slug: "sakurasou_no_pet_na_kanojo",
     animethemes: [
       {
         title: "Kimi ga Yume wo Tsuretekita",
@@ -2400,6 +2470,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 930,
     site: "AniList",
     name: "Girls und Panzer",
+    slug: "girls_und_panzer",
     animethemes: [
       {
         title: "DreamRiser",
@@ -2419,6 +2490,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1066,
     site: "AniList",
     name: "Hanasaku Iroha: Home Sweet Home",
+    slug: "hanasaku_iroha_home_sweet_home",
     animethemes: [
       {
         title: "Kagefumi",
@@ -2432,6 +2504,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3169,
     site: "AniList",
     name: "Yama no Susume",
+    slug: "yama_no_susume",
     animethemes: [
       {
         title: "Staccato Days",
@@ -2445,6 +2518,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1749,
     site: "AniList",
     name: "Magi: The Labyrinth of Magic",
+    slug: "magi_the_labyrinth_of_magic",
     animethemes: [
       {
         title: "V.I.P",
@@ -2476,6 +2550,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1333,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken",
+    slug: "jojo_no_kimyou_na_bouken",
     animethemes: [
       {
         title: "JoJo ~Sono Chi no Sadame~",
@@ -2501,6 +2576,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 471,
     site: "AniList",
     name: "Chuunibyou demo Koi ga Shitai!",
+    slug: "chuunibyou_demo_koi_ga_shitai",
     animethemes: [
       {
         title: "Sparkling Daydream",
@@ -2520,6 +2596,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3160,
     site: "AniList",
     name: "Yahari Ore no Seishun Love Comedy wa Machigatteiru",
+    slug: "yahari_ore_no_seishun_love_comedy_wa_machigatteiru",
     animethemes: [
       {
         title: "Yukitoki",
@@ -2551,6 +2628,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 743,
     site: "AniList",
     name: "Fate/kaleid liner Prisma☆Illya",
+    slug: "fatekaleid_liner_prismaillya",
     animethemes: [
       {
         title: "starlog",
@@ -2572,10 +2650,87 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "15051": {
+    id: 1705,
+    site: "AniList",
+    name: "Love Live! School Idol Project",
+    slug: "love_live_school_idol_project",
+    animethemes: [
+      {
+        title: "Bokura wa Ima no Naka de",
+        type: "OP",
+        slug: "OP1",
+        artists: ["μ's"],
+      },
+      {
+        title: "Susume→Tomorrow",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Aya Uchida", "Suzuko Mimori", "Emi Nitta"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED2",
+        artists: ["Aya Uchida", "Suzuko Mimori", "Emi Nitta"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED3",
+        artists: ["μ's"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED4",
+        artists: ["Pile", "Yurika Kubo", "Riho Iida"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED5",
+        artists: ["Sora Tokui"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED6",
+        artists: [
+          "Aya Uchida",
+          "Pile",
+          "Sora Tokui",
+          "Suzuko Mimori",
+          "Yurika Kubo",
+          "Emi Nitta",
+          "Riho Iida",
+        ],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED7",
+        artists: ["Yoshino Nanjou", "Aina Kusuda"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED8",
+        artists: ["Aya Uchida"],
+      },
+      {
+        title: "Kitto Seishun ga Kikoeru",
+        type: "ED",
+        slug: "ED9",
+        artists: ["Emi Nitta"],
+      },
+    ],
+  },
   "15335": {
     id: 924,
     site: "AniList",
     name: "Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien Nare",
+    slug: "gintama_movie_2_kanketsu_hen_yorozuya_yo_eien_nare",
     animethemes: [
       {
         title: "Genjou Destruction",
@@ -2595,6 +2750,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 922,
     site: "AniList",
     name: "Gintama': Enchousen",
+    slug: "gintama_enchousen",
     animethemes: [
       {
         title: "LET'S GO OUT",
@@ -2644,6 +2800,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 573,
     site: "AniList",
     name: "Date A Live",
+    slug: "date_a_live",
     animethemes: [
       {
         title: "Date A Live",
@@ -2681,6 +2838,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2046,
     site: "AniList",
     name: "Nekomonogatari: Kuro",
+    slug: "nekomonogatari_kuro",
     animethemes: [
       {
         title: "perfect slumbers",
@@ -2700,6 +2858,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1037,
     site: "AniList",
     name: "Haiyore! Nyaruko-san W",
+    slug: "haiyore_nyaruko_san_w",
     animethemes: [
       {
         title: "Koi wa Chaos wo Shimobenari",
@@ -2749,6 +2908,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1088,
     site: "AniList",
     name: "Hataraku Maou-sama!",
+    slug: "hataraku_maou_sama",
     animethemes: [
       {
         title: "ZERO!!",
@@ -2780,6 +2940,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2955,
     site: "AniList",
     name: "Toaru Kagaku no Railgun S",
+    slug: "toaru_kagaku_no_railgun_s",
     animethemes: [
       {
         title: "sister's noise",
@@ -2823,6 +2984,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2005,
     site: "AniList",
     name: "Nagi no Asukara",
+    slug: "nagi_no_asukara",
     animethemes: [
       {
         title: "lull ~Soshite Bokura wa~",
@@ -2854,6 +3016,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1703,
     site: "AniList",
     name: "Love Lab",
+    slug: "love_lab",
     animethemes: [
       {
         title: "Love Shitai!",
@@ -2883,6 +3046,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2840,
     site: "AniList",
     name: "Tamako Market",
+    slug: "tamako_market",
     animethemes: [
       {
         title: "Dramatic Market Ride",
@@ -2908,6 +3072,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2611,
     site: "AniList",
     name: "Shingeki no Kyojin",
+    slug: "shingeki_no_kyojin",
     animethemes: [
       {
         title: "Guren no Yumiya",
@@ -2939,6 +3104,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1525,
     site: "AniList",
     name: "Kiniro Mosaic",
+    slug: "kiniro_mosaic",
     animethemes: [
       {
         title: "Jumping!!",
@@ -2958,6 +3124,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1598,
     site: "AniList",
     name: "Kotonoha no Niwa",
+    slug: "kotonoha_no_niwa",
     animethemes: [
       {
         title: "Rain",
@@ -2971,6 +3138,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1960,
     site: "AniList",
     name: "Monogatari Series: Second Season",
+    slug: "monogatari_series_second_season",
     animethemes: [
       {
         title: "chocolate insomnia",
@@ -2994,7 +3162,7 @@ export const exampleAnimeInfo: AnimeInfo = {
         title: "Kogarashi Sentiment",
         type: "OP",
         slug: "OP4-TV",
-        artists: ["Chiwa Saitou", "Shin`ichirou Miki"],
+        artists: ["Chiwa Saitou", "Shinichirou Miki"],
       },
       {
         title: "Ai wo Utae",
@@ -3048,7 +3216,7 @@ export const exampleAnimeInfo: AnimeInfo = {
         title: "Kogarashi Sentiment",
         type: "OP",
         slug: "OP6-BD",
-        artists: ["Chiwa Saitou", "Shin`ichirou Miki"],
+        artists: ["Chiwa Saitou", "Shinichirou Miki"],
       },
       {
         title: "Ai wo Utae",
@@ -3074,6 +3242,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2101,
     site: "AniList",
     name: "Non Non Biyori",
+    slug: "non_non_biyori",
     animethemes: [
       {
         title: "Nanairo Biyori",
@@ -3098,6 +3267,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 985,
     site: "AniList",
     name: "Grisaia no Kajitsu",
+    slug: "grisaia_no_kajitsu",
     animethemes: [
       {
         title: "Rakuen no Tsubasa",
@@ -3147,6 +3317,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3033,
     site: "AniList",
     name: "Uchouten Kazoku",
+    slug: "uchouten_kazoku",
     animethemes: [
       {
         title: "Uchouten Jinsei",
@@ -3172,6 +3343,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1748,
     site: "AniList",
     name: "Magi: The Kingdom of Magic",
+    slug: "magi_the_kingdom_of_magic",
     animethemes: [
       {
         title: "ANNIVERSARY",
@@ -3203,6 +3375,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1655,
     site: "AniList",
     name: "Kyoukai no Kanata",
+    slug: "kyoukai_no_kanata",
     animethemes: [
       {
         title: "Kyoukai no Kanata",
@@ -3222,6 +3395,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2615,
     site: "AniList",
     name: "Shingeki no Kyojin OVA",
+    slug: "shingeki_no_kyojin_ova",
     animethemes: [
       {
         title: "Guren no Yumiya",
@@ -3241,6 +3415,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 934,
     site: "AniList",
     name: "Girls und Panzer Movie",
+    slug: "girls_und_panzer_movie",
     animethemes: [
       {
         title: "Senshadou Koushinkyoku",
@@ -3260,6 +3435,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 933,
     site: "AniList",
     name: "Girls und Panzer: Kore ga Hontou no Anzio-sen Desu",
+    slug: "girls_und_panzer_kore_ga_hontou_no_anzio_sen_desu",
     animethemes: [
       {
         title: "Enter Enter MISSION!",
@@ -3273,6 +3449,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 474,
     site: "AniList",
     name: "Chuunibyou demo Koi ga Shitai! Ren",
+    slug: "chuunibyou_demo_koi_ga_shitai_ren",
     animethemes: [
       {
         title: "VOICE",
@@ -3292,6 +3469,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1498,
     site: "AniList",
     name: "Kill la Kill",
+    slug: "kill_la_kill",
     animethemes: [
       {
         title: "Sirius",
@@ -3323,6 +3501,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2827,
     site: "AniList",
     name: "Takanashi Rikka Kai: Chuunibyou demo Koi ga Shitai! Movie",
+    slug: "takanashi_rikka_kai_chuunibyou_demo_koi_ga_shitai_movie",
     animethemes: [
       {
         title: "-Across the line-",
@@ -3332,10 +3511,91 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "19111": {
+    id: 1706,
+    site: "AniList",
+    name: "Love Live! School Idol Project 2nd Season",
+    slug: "love_live_school_idol_project_2nd_season",
+    animethemes: [
+      {
+        title: "Sore wa Bokutachi no Kiseki",
+        type: "OP",
+        slug: "OP1",
+        artists: ["μ's"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Sora Tokui", "Yoshino Nanjou", "Aina Kusuda"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED2",
+        artists: ["μ's"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED3",
+        artists: ["Sora Tokui"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED4",
+        artists: ["Riho Iida"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED5",
+        artists: ["Pile", "Yurika Kubo", "Riho Iida"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED6",
+        artists: ["Aya Uchida", "Suzuko Mimori", "Emi Nitta"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED7",
+        artists: ["Pile", "Yoshino Nanjou", "Aina Kusuda"],
+      },
+      {
+        title: "Snow halation",
+        type: "ED",
+        slug: "ED8",
+        artists: ["μ's"],
+      },
+      {
+        title: "Donna Toki mo Zutto",
+        type: "ED",
+        slug: "ED9",
+        artists: ["Emi Nitta"],
+      },
+      {
+        title: "Bokura wa Ima no Naka de",
+        type: "ED",
+        slug: "ED10",
+        artists: ["μ's"],
+      },
+      {
+        title: "Happy maker!",
+        type: "ED",
+        slug: "ED11",
+        artists: ["μ's"],
+      },
+    ],
+  },
   "19163": {
     id: 574,
     site: "AniList",
     name: "Date A Live II",
+    slug: "date_a_live_ii",
     animethemes: [
       {
         title: "Trust in you",
@@ -3355,6 +3615,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 753,
     site: "AniList",
     name: "Fate/stay night: Unlimited Blade Works (TV)",
+    slug: "fatestay_night_unlimited_blade_works_tv",
     animethemes: [
       {
         title: "ideal white",
@@ -3380,6 +3641,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2677,
     site: "AniList",
     name: "Sidonia no Kishi",
+    slug: "sidonia_no_kishi",
     animethemes: [
       {
         title: "Sidonia",
@@ -3399,6 +3661,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2081,
     site: "AniList",
     name: "No Game No Life",
+    slug: "no_game_no_life",
     animethemes: [
       {
         title: "This game",
@@ -3424,6 +3687,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2523,
     site: "AniList",
     name: "Seitokai Yakuindomo*",
+    slug: "seitokai_yakuindomo_2014",
     animethemes: [
       {
         title: "Hanasaku☆Saikyou Legend Days",
@@ -3443,6 +3707,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1793,
     site: "AniList",
     name: "Mahouka Koukou no Rettousei",
+    slug: "mahouka_koukou_no_rettousei",
     animethemes: [
       {
         title: "Rising Hope",
@@ -3474,6 +3739,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1030,
     site: "AniList",
     name: "Haikyuu!!",
+    slug: "haikyuu",
     animethemes: [
       {
         title: "Imagination",
@@ -3505,6 +3771,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1334,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
+    slug: "jojo_no_kimyou_na_bouken_part_3_stardust_crusaders",
     animethemes: [
       {
         title: "STAND PROUD",
@@ -3524,6 +3791,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1883,
     site: "AniList",
     name: "Mikakunin de Shinkoukei",
+    slug: "mikakunin_de_shinkoukei",
     animethemes: [
       {
         title: "Tomadoi→Recipe",
@@ -3549,6 +3817,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3170,
     site: "AniList",
     name: "Yama no Susume Second Season",
+    slug: "yama_no_susume_second_season",
     animethemes: [
       {
         title: "Natsu-iro Present",
@@ -3586,6 +3855,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2316,
     site: "AniList",
     name: "Psycho Pass 2",
+    slug: "psycho_pass_2",
     animethemes: [
       {
         title: "Enigmatic Feeling",
@@ -3605,6 +3875,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 950,
     site: "AniList",
     name: "Gochuumon wa Usagi Desu ka?",
+    slug: "gochuumon_wa_usagi_desu_ka",
     animethemes: [
       {
         title: "Daydream café",
@@ -3642,6 +3913,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2839,
     site: "AniList",
     name: "Tamako Love Story",
+    slug: "tamako_love_story",
     animethemes: [
       {
         title: "Koi no Uta",
@@ -3667,6 +3939,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2964,
     site: "AniList",
     name: "Tokyo Ghoul",
+    slug: "tokyo_ghoul",
     animethemes: [
       {
         title: "unravel",
@@ -3686,6 +3959,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2436,
     site: "AniList",
     name: "Saenai Heroine no Sodatekata",
+    slug: "saenai_heroine_no_sodatekata",
     animethemes: [
       {
         title: "Kimiiro Signal",
@@ -3705,6 +3979,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2583,
     site: "AniList",
     name: "Shigatsu wa Kimi no Uso",
+    slug: "shigatsu_wa_kimi_no_uso",
     animethemes: [
       {
         title: "Hikaru nara",
@@ -3742,6 +4017,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 869,
     site: "AniList",
     name: "Gekkan Shoujo Nozaki-kun",
+    slug: "gekkan_shoujo_nozaki_kun",
     animethemes: [
       {
         title: "Kimi ja Nakya Dame Mitai",
@@ -3761,6 +4037,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2104,
     site: "AniList",
     name: "Non Non Biyori Repeat",
+    slug: "non_non_biyori_repeat",
     animethemes: [
       {
         title: "Kodama Kotodama",
@@ -3785,6 +4062,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3162,
     site: "AniList",
     name: "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
+    slug: "yahari_ore_no_seishun_love_comedy_wa_machigatteiru_zoku",
     animethemes: [
       {
         title: "Harumodoki",
@@ -3816,6 +4094,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 250,
     site: "AniList",
     name: "Barakamon",
+    slug: "barakamon",
     animethemes: [
       {
         title: "Rashisa",
@@ -3835,6 +4114,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3148,
     site: "AniList",
     name: "World Trigger",
+    slug: "world_trigger",
     animethemes: [
       {
         title: "GIRIGIRI",
@@ -3860,6 +4140,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 562,
     site: "AniList",
     name: "Danna ga Nani wo Itteiru ka Wakaranai Ken",
+    slug: "danna_ga_nani_wo_itteiru_ka_wakaranai_ken",
     animethemes: [
       {
         title: "Iikagen ni Shite, Anata",
@@ -3879,6 +4160,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 827,
     site: "AniList",
     name: "Gakkou Gurashi!",
+    slug: "gakkou_gurashi",
     animethemes: [
       {
         title: "Friend Shitai",
@@ -3926,6 +4208,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2678,
     site: "AniList",
     name: "Sidonia no Kishi: Daikyuu Wakusei Seneki",
+    slug: "sidonia_no_kishi_daikyuu_wakusei_seneki",
     animethemes: [
       {
         title: "Kishi Shinkoukyoku",
@@ -3945,6 +4228,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2017,
     site: "AniList",
     name: "Nanatsu no Taizai",
+    slug: "nanatsu_no_taizai",
     animethemes: [
       {
         title: "Netsujou no Spectrum",
@@ -3976,6 +4260,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 751,
     site: "AniList",
     name: "Fate/stay night Movie: Heaven's Feel - I. Presage Flower",
+    slug: "fatestay_night_movie_heavens_feel_i_presage_flower",
     animethemes: [
       {
         title: "Hana no Uta",
@@ -3989,6 +4274,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 754,
     site: "AniList",
     name: "Fate/stay night: Unlimited Blade Works 2nd Season",
+    slug: "fatestay_night_unlimited_blade_works_2nd_season",
     animethemes: [
       {
         title: "Brave Shine",
@@ -4020,6 +4306,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1335,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders 2nd Season",
+    slug: "jojo_no_kimyou_na_bouken_part_3_stardust_crusaders_2nd_season",
     animethemes: [
       {
         title: "JoJo: Sono Chi no Kioku ~end of THE WORLD~",
@@ -4051,6 +4338,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2641,
     site: "AniList",
     name: "Shirobako",
+    slug: "shirobako",
     animethemes: [
       {
         title: "I'm Sorry EXODUS",
@@ -4094,6 +4382,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2411,
     site: "AniList",
     name: "Rolling☆Girls",
+    slug: "rollinggirls",
     animethemes: [
       {
         title: "Hito ni Yasashiku",
@@ -4131,6 +4420,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1036,
     site: "AniList",
     name: "Haiyore! Nyaruko-san F",
+    slug: "haiyore_nyaruko_san_f",
     animethemes: [
       {
         title: "Haiyore Once Nyagain",
@@ -4150,6 +4440,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2215,
     site: "AniList",
     name: "Owari no Seraph",
+    slug: "owari_no_seraph",
     animethemes: [
       {
         title: "X.U.",
@@ -4169,6 +4460,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2210,
     site: "AniList",
     name: "Overlord",
+    slug: "overlord",
     animethemes: [
       {
         title: "Clattanoia",
@@ -4188,6 +4480,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2965,
     site: "AniList",
     name: "Tokyo Ghoul √A",
+    slug: "tokyo_ghoul_a",
     animethemes: [
       {
         title: "Munou",
@@ -4207,6 +4500,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1717,
     site: "AniList",
     name: "Lupin III",
+    slug: "lupin_iii_2015",
     animethemes: [
       {
         title: "THEME FROM LUPIN III 2015",
@@ -4226,6 +4520,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1122,
     site: "AniList",
     name: "Hibike! Euphonium",
+    slug: "hibike_euphonium",
     animethemes: [
       {
         title: "DREAM SOLISTER",
@@ -4257,6 +4552,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 680,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka",
     animethemes: [
       {
         title: "Hey World",
@@ -4282,6 +4578,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1566,
     site: "AniList",
     name: "Koe no Katachi",
+    slug: "koe_no_katachi",
     animethemes: [
       {
         title: "My Generation",
@@ -4301,6 +4598,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2616,
     site: "AniList",
     name: "Shingeki no Kyojin Season 2",
+    slug: "shingeki_no_kyojin_season_2",
     animethemes: [
       {
         title: "Shinzou wo Sasageyo!",
@@ -4320,6 +4618,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1657,
     site: "AniList",
     name: "Kyoukai no Kanata Movie: I'll Be Here - Mirai-hen",
+    slug: "kyoukai_no_kanata_movie_ill_be_here_mirai_hen",
     animethemes: [
       {
         title: "Aitakatta Sora",
@@ -4333,6 +4632,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1580,
     site: "AniList",
     name: "Kokoro ga Sakebitagatterunda.",
+    slug: "kokoro_ga_sakebitagatterunda",
     animethemes: [
       {
         title: "Ima, Hanashitai Dareka ga Iru",
@@ -4346,6 +4646,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1165,
     site: "AniList",
     name: "Himouto! Umaru-chan",
+    slug: "himouto_umaru_chan",
     animethemes: [
       {
         title: "Kakushinteki☆Metamaruphose!",
@@ -4365,6 +4666,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 858,
     site: "AniList",
     name: "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
+    slug: "gate_jieitai_kanochi_nite_kaku_tatakaeri",
     animethemes: [
       {
         title: "GATE: Sore wa Akatsuki no you ni",
@@ -4384,6 +4686,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 920,
     site: "AniList",
     name: "Gintama°",
+    slug: "gintama_2015",
     animethemes: [
       {
         title: "DAYxDAY",
@@ -4439,6 +4742,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 430,
     site: "AniList",
     name: "Charlotte",
+    slug: "charlotte",
     animethemes: [
       {
         title: "Bravely You",
@@ -4464,6 +4768,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 563,
     site: "AniList",
     name: "Danna ga Nani wo Itteiru ka Wakaranai Ken 2 Sure-me",
+    slug: "danna_ga_nani_wo_itteiru_ka_wakaranai_ken_2_sure_me",
     animethemes: [
       {
         title: "Yuruganu Futari ~Ai no Sanka~",
@@ -4489,6 +4794,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 986,
     site: "AniList",
     name: "Grisaia no Meikyuu: Caprice no Mayu 0",
+    slug: "grisaia_no_meikyuu_caprice_no_mayu_0",
     animethemes: [
       {
         title: "Grimm",
@@ -4502,6 +4808,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 987,
     site: "AniList",
     name: "Grisaia no Rakuen",
+    slug: "grisaia_no_rakuen",
     animethemes: [
       {
         title: "Setsuna no Kajitsu",
@@ -4539,6 +4846,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 951,
     site: "AniList",
     name: "Gochuumon wa Usagi Desu ka??",
+    slug: "gochuumon_wa_usagi_desu_ka_2015",
     animethemes: [
       {
         title: "no poi!",
@@ -4576,6 +4884,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2376,
     site: "AniList",
     name: "ReLIFE",
+    slug: "relife",
     animethemes: [
       {
         title: "Button",
@@ -4667,6 +4976,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2146,
     site: "AniList",
     name: "One Punch Man",
+    slug: "one_punch_man",
     animethemes: [
       {
         title: "THE HERO !! ~Okoreru Kobushi ni Hi wo Tsukero~",
@@ -4692,6 +5002,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2762,
     site: "AniList",
     name: "Steins;Gate 0",
+    slug: "steinsgate_0",
     animethemes: [
       {
         title: "Fatima",
@@ -4741,6 +5052,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2438,
     site: "AniList",
     name: "Saenai Heroine no Sodatekata ♭: Koi to Junjou no Service Kai",
+    slug: "saenai_heroine_no_sodatekata_koi_to_junjou_no_service_kai",
     animethemes: [
       {
         title: "Stella Breeze",
@@ -4760,6 +5072,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1608,
     site: "AniList",
     name: "Koutetsujou no Kabaneri",
+    slug: "koutetsujou_no_kabaneri",
     animethemes: [
       {
         title: "KABANERI OF THE IRON FORTRESS",
@@ -4785,6 +5098,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 232,
     site: "AniList",
     name: "Bakuon!!",
+    slug: "bakuon",
     animethemes: [
       {
         title: "FEEL×ALIVE",
@@ -4816,6 +5130,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1590,
     site: "AniList",
     name: "Kono Subarashii Sekai ni Shukufuku wo!",
+    slug: "kono_subarashii_sekai_ni_shukufuku_wo",
     animethemes: [
       {
         title: "fantastic dreamer",
@@ -4835,6 +5150,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 329,
     site: "AniList",
     name: "Boku dake ga Inai Machi",
+    slug: "boku_dake_ga_inai_machi",
     animethemes: [
       {
         title: "Re:Re:",
@@ -4854,6 +5170,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2608,
     site: "AniList",
     name: "Shingeki! Kyojin Chuugakkou",
+    slug: "shingeki_kyojin_chuugakkou",
     animethemes: [
       {
         title: "Seishun wa Hanabi no You ni",
@@ -4873,6 +5190,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 373,
     site: "AniList",
     name: "Bungou Stray Dogs",
+    slug: "bungou_stray_dogs",
     animethemes: [
       {
         title: "Trash Candy",
@@ -4892,6 +5210,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2361,
     site: "AniList",
     name: "Re:Zero kara Hajimeru Isekai Seikatsu",
+    slug: "rezero_kara_hajimeru_isekai_seikatsu",
     animethemes: [
       {
         title: "Redo",
@@ -4947,6 +5266,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 546,
     site: "AniList",
     name: "Dagashi Kashi",
+    slug: "dagashi_kashi",
     animethemes: [
       {
         title: "Checkmate!?",
@@ -4966,6 +5286,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2021,
     site: "AniList",
     name: "Nanatsu no Taizai: Seisen no Shirushi",
+    slug: "nanatsu_no_taizai_seisen_no_shirushi",
     animethemes: [
       {
         title: "CLASSIC",
@@ -4985,6 +5306,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1747,
     site: "AniList",
     name: "Magi: Sinbad no Bouken (TV)",
+    slug: "magi_sinbad_no_bouken_tv",
     animethemes: [
       {
         title: "Spotlight",
@@ -5004,6 +5326,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1552,
     site: "AniList",
     name: "Kizumonogatari II: Nekketsu-hen",
+    slug: "kizumonogatari_ii_nekketsu_hen",
     animethemes: [
       {
         title: "étoile et toi",
@@ -5017,6 +5340,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1553,
     site: "AniList",
     name: "Kizumonogatari III: Reiketsu-hen",
+    slug: "kizumonogatari_iii_reiketsu_hen",
     animethemes: [
       {
         title: "étoile et toi [édition le blanc]",
@@ -5030,6 +5354,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 233,
     site: "AniList",
     name: "Bakuon!! OVA",
+    slug: "bakuon_ova",
     animethemes: [
       {
         title: "Baikubu Kanyuu no Uta ～Mou Konna Norimono Iyada～",
@@ -5043,6 +5368,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1336,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
+    slug: "jojo_no_kimyou_na_bouken_part_4_diamond_wa_kudakenai",
     animethemes: [
       {
         title: "Crazy Noisy Bizarre Town",
@@ -5080,6 +5406,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2058,
     site: "AniList",
     name: "New Game!",
+    slug: "new_game",
     animethemes: [
       {
         title: "SAKURA Skip",
@@ -5105,6 +5432,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1123,
     site: "AniList",
     name: "Hibike! Euphonium 2",
+    slug: "hibike_euphonium_2",
     animethemes: [
       {
         title: "Soundscape",
@@ -5136,6 +5464,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1917,
     site: "AniList",
     name: "Mob Psycho 100",
+    slug: "mob_psycho_100",
     animethemes: [
       {
         title: "99",
@@ -5167,6 +5496,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1510,
     site: "AniList",
     name: "Kimi no Na wa.",
+    slug: "kimi_no_na_wa",
     animethemes: [
       {
         title: "Yume Tourou",
@@ -5198,6 +5528,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1614,
     site: "AniList",
     name: "Koyomimonogatari",
+    slug: "koyomimonogatari",
     animethemes: [
       {
         title: "whiz",
@@ -5211,6 +5542,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3208,
     site: "AniList",
     name: "Youjo Senki",
+    slug: "youjo_senki",
     animethemes: [
       {
         title: "JINGO JUNGLE",
@@ -5236,6 +5568,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3041,
     site: "AniList",
     name: "Uchuu Patrol Luluco",
+    slug: "uchuu_patrol_luluco",
     animethemes: [
       {
         title: "Cry Max do Heijitsu",
@@ -5261,6 +5594,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 684,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Gaiden: Sword Oratoria",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka_gaiden_sword_oratoria",
     animethemes: [
       {
         title: "RE-ILLUSION",
@@ -5280,6 +5614,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1591,
     site: "AniList",
     name: "Kono Subarashii Sekai ni Shukufuku wo! 2",
+    slug: "kono_subarashii_sekai_ni_shukufuku_wo_2",
     animethemes: [
       {
         title: "TOMORROW",
@@ -5299,6 +5634,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1643,
     site: "AniList",
     name: "Kuzu no Honkai",
+    slug: "kuzu_no_honkai",
     animethemes: [
       {
         title: "Uso no Hibana",
@@ -5318,6 +5654,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 752,
     site: "AniList",
     name: "Fate/stay night Movie: Heaven's Feel - II. Lost Butterfly",
+    slug: "fatestay_night_movie_heavens_feel_ii_lost_butterfly",
     animethemes: [
       {
         title: "I beg you",
@@ -5331,6 +5668,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3329,
     site: "AniList",
     name: "Fate/stay night Movie: Heaven's Feel - III. Spring Song",
+    slug: "fatestay_night_movie_heavens_feel_iii_spring_song",
     animethemes: [
       {
         title: "Haru wa Yuku",
@@ -5344,6 +5682,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2265,
     site: "AniList",
     name: "Planetarian: Chiisana Hoshi no Yume",
+    slug: "planetarian_chiisana_hoshi_no_yume",
     animethemes: [
       {
         title: "Twinkle Starlight",
@@ -5363,6 +5702,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1557,
     site: "AniList",
     name: "Kobayashi-san Chi no Maid Dragon",
+    slug: "kobayashi_san_chi_no_maid_dragon",
     animethemes: [
       {
         title: "Aozora no Rhapsody",
@@ -5382,6 +5722,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1539,
     site: "AniList",
     name: "Kishibe Rohan wa Ugokanai",
+    slug: "kishibe_rohan_wa_ugokanai",
     animethemes: [
       {
         title: "Theme of Kishibe Rohan wa Ugokana",
@@ -5401,6 +5742,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3103,
     site: "AniList",
     name: "Violet Evergarden",
+    slug: "violet_evergarden",
     animethemes: [
       {
         title: "Sincerely",
@@ -5426,6 +5768,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1850,
     site: "AniList",
     name: "Masamune-kun no Revenge",
+    slug: "masamune_kun_no_revenge",
     animethemes: [
       {
         title: "Wagamama MIRROR HEART",
@@ -5451,6 +5794,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2082,
     site: "AniList",
     name: "No Game No Life: Zero",
+    slug: "no_game_no_life_zero",
     animethemes: [
       {
         title: "THERE IS A REASON",
@@ -5464,6 +5808,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 244,
     site: "AniList",
     name: "BanG Dream!",
+    slug: "bang_dream",
     animethemes: [
       {
         title: "Tokimeki Experience!",
@@ -5495,6 +5840,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1296,
     site: "AniList",
     name: "Isekai Shokudou",
+    slug: "isekai_shokudou",
     animethemes: [
       {
         title: "One In A Billion",
@@ -5514,6 +5860,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2147,
     site: "AniList",
     name: "One Punch Man 2nd Season",
+    slug: "one_punch_man_2nd_season",
     animethemes: [
       {
         title: "Seijaku no Apostle",
@@ -5533,6 +5880,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 482,
     site: "AniList",
     name: "Citrus",
+    slug: "citrus",
     animethemes: [
       {
         title: "Azalea",
@@ -5552,6 +5900,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2056,
     site: "AniList",
     name: "Netsuzou TRap",
+    slug: "netsuzou_trap",
     animethemes: [
       {
         title: "Blue Bud Blue",
@@ -5589,6 +5938,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2149,
     site: "AniList",
     name: "One Room",
+    slug: "one_room",
     animethemes: [
       {
         title: "Harumachi Clover",
@@ -5614,6 +5964,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 502,
     site: "AniList",
     name: "Code Geass: Fukkatsu no Lelouch",
+    slug: "code_geass_fukkatsu_no_lelouch",
     animethemes: [
       {
         title: "Kono Sekai de",
@@ -5633,6 +5984,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 219,
     site: "AniList",
     name: "Baki",
+    slug: "baki",
     animethemes: [
       {
         title: "BEASTFUL",
@@ -5664,6 +6016,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 921,
     site: "AniList",
     name: "Gintama.",
+    slug: "gintama_2017",
     animethemes: [
       {
         title: "Kagerou",
@@ -5683,6 +6036,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3205,
     site: "AniList",
     name: "Yoru wa Mijikashi Arukeyo Otome",
+    slug: "yoru_wa_mijikashi_arukeyo_otome",
     animethemes: [
       {
         title: "Kouya wo Aruke",
@@ -5696,6 +6050,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1611,
     site: "AniList",
     name: "Koutetsujou no Kabaneri Movie 3: Unato Kessen",
+    slug: "koutetsujou_no_kabaneri_movie_3_unato_kessen",
     animethemes: [
       {
         title: "Sakase ya Sakase",
@@ -5709,6 +6064,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 308,
     site: "AniList",
     name: "Black Clover (TV)",
+    slug: "black_clover_tv",
     animethemes: [
       {
         title: "Haruka Mirai",
@@ -5878,6 +6234,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1740,
     site: "AniList",
     name: "Made in Abyss",
+    slug: "made_in_abyss",
     animethemes: [
       {
         title: "Underground River",
@@ -5915,6 +6272,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1695,
     site: "AniList",
     name: "Lost Song",
+    slug: "lost_song",
     animethemes: [
       {
         title: "Utaeba Soko ni Kimi ga Iru kara",
@@ -5940,6 +6298,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3012,
     site: "AniList",
     name: "Tsuki ga Kirei",
+    slug: "tsuki_ga_kirei",
     animethemes: [
       {
         title: "Imakoko",
@@ -5959,6 +6318,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3794,
     site: "AniList",
     name: "Seitokai Yakuindomo Movie",
+    slug: "seitokai_yakuindomo_movie",
     animethemes: [
       {
         title: "Hanasaku☆Saikyou Legend Days",
@@ -5978,6 +6338,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2059,
     site: "AniList",
     name: "New Game!!",
+    slug: "new_game_2017",
     animethemes: [
       {
         title: "STEP by STEP UP↑↑↑↑",
@@ -6003,6 +6364,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1401,
     site: "AniList",
     name: "Kakegurui",
+    slug: "kakegurui",
     animethemes: [
       {
         title: "Deal with the devil",
@@ -6028,6 +6390,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1573,
     site: "AniList",
     name: "Koi wa Ameagari no You ni",
+    slug: "koi_wa_ameagari_no_you_ni",
     animethemes: [
       {
         title: "Nostalgic Rainfall",
@@ -6047,6 +6410,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1795,
     site: "AniList",
     name: "Mahoutsukai no Yome",
+    slug: "mahoutsukai_no_yome",
     animethemes: [
       {
         title: "Here",
@@ -6084,6 +6448,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2211,
     site: "AniList",
     name: "Overlord II",
+    slug: "overlord_ii",
     animethemes: [
       {
         title: "GO CRY GO",
@@ -6109,6 +6474,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3248,
     site: "AniList",
     name: "Yuru Camp△",
+    slug: "yuru_camp",
     animethemes: [
       {
         title: "SHINY DAYS",
@@ -6128,6 +6494,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 600,
     site: "AniList",
     name: "Devilman: Crybaby",
+    slug: "devilman_crybaby",
     animethemes: [
       {
         title: "MAN HUMAN (DEVILMAN crybaby Ver.)",
@@ -6147,6 +6514,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2307,
     site: "AniList",
     name: "Princess Principal",
+    slug: "princess_principal",
     animethemes: [
       {
         title: "The Other Side of the Wall",
@@ -6166,6 +6534,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3060,
     site: "AniList",
     name: "Uma Musume: Pretty Derby",
+    slug: "uma_musume_pretty_derby",
     animethemes: [
       {
         title: "Make Debut!",
@@ -6263,6 +6632,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2350,
     site: "AniList",
     name: "Ramen Daisuki Koizumi-san",
+    slug: "ramen_daisuki_koizumi_san",
     animethemes: [
       {
         title: "FEELING AROUND",
@@ -6282,6 +6652,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2654,
     site: "AniList",
     name: "Shoujo☆Kageki Revue Starlight",
+    slug: "shoujokageki_revue_starlight",
     animethemes: [
       {
         title: "Hoshi no Dialogue",
@@ -6357,6 +6728,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3217,
     site: "AniList",
     name: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+    slug: "youkoso_jitsuryoku_shijou_shugi_no_kyoushitsu_e",
     animethemes: [
       {
         title: "Caste Room",
@@ -6376,6 +6748,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2102,
     site: "AniList",
     name: "Non Non Biyori Movie: Vacation",
+    slug: "non_non_biyori_movie_vacation",
     animethemes: [
       {
         title: "Ao no Rakugaki",
@@ -6400,6 +6773,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3171,
     site: "AniList",
     name: "Yama no Susume Third Season",
+    slug: "yama_no_susume_third_season",
     animethemes: [
       {
         title: "Chiheisen Stride",
@@ -6419,6 +6793,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2618,
     site: "AniList",
     name: "Shingeki no Kyojin Season 3",
+    slug: "shingeki_no_kyojin_season_3",
     animethemes: [
       {
         title: "Red Swan",
@@ -6438,6 +6813,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2861,
     site: "AniList",
     name: "Tate no Yuusha no Nariagari",
+    slug: "tate_no_yuusha_no_nariagari",
     animethemes: [
       {
         title: "RISE",
@@ -6475,6 +6851,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2656,
     site: "AniList",
     name: "Shoujo Shuumatsu Ryokou",
+    slug: "shoujo_shuumatsu_ryokou",
     animethemes: [
       {
         title: "Ugoku, Ugoku",
@@ -6500,6 +6877,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 570,
     site: "AniList",
     name: "Darling in the FranXX",
+    slug: "darling_in_the_franxx",
     animethemes: [
       {
         title: "KISS OF DEATH (Produced by HYDE)",
@@ -6555,6 +6933,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2751,
     site: "AniList",
     name: "SSSS.Gridman",
+    slug: "ssssgridman",
     animethemes: [
       {
         title: "UNION",
@@ -6574,6 +6953,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2314,
     site: "AniList",
     name: "Promare",
+    slug: "promare",
     animethemes: [
       {
         title: "Inferno",
@@ -6593,6 +6973,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2716,
     site: "AniList",
     name: "Sora yori mo Tooi Basho",
+    slug: "sora_yori_mo_tooi_basho",
     animethemes: [
       {
         title: "The Girls Are Alright!",
@@ -6623,6 +7004,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2490,
     site: "AniList",
     name: "Sayonara no Asa ni Yakusoku no Hana wo Kazarou",
+    slug: "sayonara_no_asa_ni_yakusoku_no_hana_wo_kazarou",
     animethemes: [
       {
         title: "Viator",
@@ -6636,6 +7018,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1448,
     site: "AniList",
     name: "Karakai Jouzu no Takagi-san",
+    slug: "karakai_jouzu_no_takagi_san",
     animethemes: [
       {
         title: "Iwanai kedo ne.",
@@ -6691,6 +7074,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2019,
     site: "AniList",
     name: "Nanatsu no Taizai: Imashime no Fukkatsu",
+    slug: "nanatsu_no_taizai_imashime_no_fukkatsu",
     animethemes: [
       {
         title: "Howling",
@@ -6722,6 +7106,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2022,
     site: "AniList",
     name: "Nanatsu no Taizai Movie: Tenkuu no Torawarebito",
+    slug: "nanatsu_no_taizai_movie_tenkuu_no_torawarebito",
     animethemes: [
       {
         title: "Sora Tobira",
@@ -6735,6 +7120,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 961,
     site: "AniList",
     name: "Golden Kamuy",
+    slug: "golden_kamuy",
     animethemes: [
       {
         title: "Winding Road",
@@ -6754,6 +7140,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 925,
     site: "AniList",
     name: "Gintama: Porori-hen",
+    slug: "gintama_porori_hen",
     animethemes: [
       {
         title: "VS",
@@ -6773,6 +7160,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3671,
     site: "AniList",
     name: "Sidonia no Kishi: Ai Tsumugu Hoshi",
+    slug: "sidonia_no_kishi_ai_tsumugu_hoshi",
     animethemes: [
       {
         title: "Hikari no Disco",
@@ -6786,6 +7174,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 180,
     site: "AniList",
     name: "Asagao to Kase-san.",
+    slug: "asagao_to_kase_san",
     animethemes: [
       {
         title: "Asu e no Tobira",
@@ -6799,6 +7188,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 931,
     site: "AniList",
     name: "Girls und Panzer das Finale",
+    slug: "girls_und_panzer_das_finale",
     animethemes: [
       {
         title: "Grand symphony",
@@ -6810,7 +7200,7 @@ export const exampleAnimeInfo: AnimeInfo = {
         title: "Enter Enter MISSION! Saishuushou ver.",
         type: "ED",
         slug: "ED1",
-        artists: ["Ai Kayano", "Mai Fuchigami", "Yuka Iguchi"],
+        artists: ["Ankou Team"],
       },
     ],
   },
@@ -6818,6 +7208,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2365,
     site: "AniList",
     name: "Re:Zero kara Hajimeru Isekai Seikatsu: Memory Snow",
+    slug: "rezero_kara_hajimeru_isekai_seikatsu_memory_snow",
     animethemes: [
       {
         title: "White White Snow",
@@ -6831,6 +7222,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2150,
     site: "AniList",
     name: "One Room 2nd Season",
+    slug: "one_room_2nd_season",
     animethemes: [
       {
         title: "Aozora Morning Glory",
@@ -6856,6 +7248,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1686,
     site: "AniList",
     name: "Liz to Aoi Tori",
+    slug: "liz_to_aoi_tori",
     animethemes: [
       {
         title: "Girls, Dance, Staircase",
@@ -6875,6 +7268,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2966,
     site: "AniList",
     name: "Tokyo Ghoul:re",
+    slug: "tokyo_ghoulre",
     animethemes: [
       {
         title: "asphyxia",
@@ -6894,6 +7288,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 242,
     site: "AniList",
     name: "Banana Fish",
+    slug: "banana_fish",
     animethemes: [
       {
         title: "found & lost",
@@ -6925,6 +7320,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1741,
     site: "AniList",
     name: "Made in Abyss Movie: Fukaki Tamashii no Reimei",
+    slug: "made_in_abyss_movie_fukaki_tamashii_no_reimei",
     animethemes: [
       {
         title: "The Return of Made in Abyss",
@@ -6944,6 +7340,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3058,
     site: "AniList",
     name: "Ultraman",
+    slug: "ultraman",
     animethemes: [
       {
         title: "Sight Over The Battle",
@@ -6957,6 +7354,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 174,
     site: "AniList",
     name: "Arifureta Shokugyou de Sekai Saikyou",
+    slug: "arifureta_shokugyou_de_sekai_saikyou",
     animethemes: [
       {
         title: "FLARE",
@@ -6976,6 +7374,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 575,
     site: "AniList",
     name: "Date A Live III",
+    slug: "date_a_live_iii",
     animethemes: [
       {
         title: "I swear",
@@ -6995,6 +7394,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 926,
     site: "AniList",
     name: "Gintama.: Shirogane no Tamashii-hen",
+    slug: "gintama_shirogane_no_tamashii_hen",
     animethemes: [
       {
         title: "Katte ni My Soul",
@@ -7014,6 +7414,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3303,
     site: "AniList",
     name: "Zoku Owarimonogatari",
+    slug: "zoku_owarimonogatari",
     animethemes: [
       {
         title: "07734",
@@ -7033,6 +7434,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1402,
     site: "AniList",
     name: "Kakegurui××",
+    slug: "kakegurui_2019",
     animethemes: [
       {
         title: "Kono Yubi Tomare",
@@ -7052,6 +7454,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 863,
     site: "AniList",
     name: "Gegege no Kitarou",
+    slug: "gegege_no_kitarou",
     animethemes: [
       {
         title: "Gegege no Kitarou",
@@ -7113,6 +7516,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 187,
     site: "AniList",
     name: "Asobi Asobase",
+    slug: "asobi_asobase",
     animethemes: [
       {
         title: "Suripisu",
@@ -7132,6 +7536,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 948,
     site: "AniList",
     name: "Goblin Slayer",
+    slug: "goblin_slayer",
     animethemes: [
       {
         title: "Rightfully",
@@ -7163,6 +7568,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 685,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka_movie_orion_no_ya",
     animethemes: [
       {
         title: "Onaji Sora no Shita de",
@@ -7176,6 +7582,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 681,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka_ii",
     animethemes: [
       {
         title: "HELLO to DREAM",
@@ -7195,6 +7602,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2905,
     site: "AniList",
     name: "Tensei shitara Slime Datta Ken",
+    slug: "tensei_shitara_slime_datta_ken",
     animethemes: [
       {
         title: "Nameless Story",
@@ -7226,6 +7634,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 350,
     site: "AniList",
     name: "Boogiepop wa Warawanai",
+    slug: "boogiepop_wa_warawanai",
     animethemes: [
       {
         title: "shadowgraph",
@@ -7251,6 +7660,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2518,
     site: "AniList",
     name: "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+    slug: "seishun_buta_yarou_wa_bunny_girl_senpai_no_yume_wo_minai",
     animethemes: [
       {
         title: "Kimi no Sei",
@@ -7306,6 +7716,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 309,
     site: "AniList",
     name: "Black Fox",
+    slug: "black_fox",
     animethemes: [
       {
         title: "BLACKFOX",
@@ -7319,6 +7730,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1918,
     site: "AniList",
     name: "Mob Psycho 100 II",
+    slug: "mob_psycho_100_ii",
     animethemes: [
       {
         title: "99.9",
@@ -7356,6 +7768,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 643,
     site: "AniList",
     name: "Dororo",
+    slug: "dororo",
     animethemes: [
       {
         title: "Kaen",
@@ -7387,6 +7800,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3102,
     site: "AniList",
     name: "Vinland Saga",
+    slug: "vinland_saga",
     animethemes: [
       {
         title: "MUKANJYO",
@@ -7418,6 +7832,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1081,
     site: "AniList",
     name: "Happy Sugar Life",
+    slug: "happy_sugar_life",
     animethemes: [
       {
         title: "One Room Sugar Life",
@@ -7443,6 +7858,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1821,
     site: "AniList",
     name: "Majutsushi Orphen Hagure Tabi",
+    slug: "majutsushi_orphen_hagure_tabi",
     animethemes: [
       {
         title: "Calling U",
@@ -7462,6 +7878,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2212,
     site: "AniList",
     name: "Overlord III",
+    slug: "overlord_iii",
     animethemes: [
       {
         title: "VORACITY",
@@ -7481,6 +7898,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3159,
     site: "AniList",
     name: "Yagate Kimi ni Naru",
+    slug: "yagate_kimi_ni_naru",
     animethemes: [
       {
         title: "Kimi ni Furete",
@@ -7506,6 +7924,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2642,
     site: "AniList",
     name: "Shirobako Movie",
+    slug: "shirobako_movie",
     animethemes: [
       {
         title: "Shikatanai no de Yareyare",
@@ -7525,6 +7944,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3542,
     site: "AniList",
     name: "Princess Principal: Crown Handler Movie 1",
+    slug: "princess_principal_crown_handler_movie_1",
     animethemes: [
       {
         title: "LIES & TIES",
@@ -7544,6 +7964,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3680,
     site: "AniList",
     name: "Chikyuugai Shounen Shoujo",
+    slug: "chikyuugai_shounen_shoujo",
     animethemes: [
       {
         title: "Oarana",
@@ -7557,6 +7978,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3166,
     site: "AniList",
     name: "Yakusoku no Neverland",
+    slug: "yakusoku_no_neverland",
     animethemes: [
       {
         title: "Touch Off",
@@ -7582,6 +8004,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 504,
     site: "AniList",
     name: "Code Geass: Hangyaku no Lelouch I - Koudou",
+    slug: "code_geass_hangyaku_no_lelouch_i_koudou",
     animethemes: [
       {
         title: "COLORS",
@@ -7601,6 +8024,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 505,
     site: "AniList",
     name: "Code Geass: Hangyaku no Lelouch II - Handou",
+    slug: "code_geass_hangyaku_no_lelouch_ii_handou",
     animethemes: [
       {
         title: "Yuukyou Seishunka",
@@ -7620,6 +8044,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 506,
     site: "AniList",
     name: "Code Geass: Hangyaku no Lelouch III - Oudou",
+    slug: "code_geass_hangyaku_no_lelouch_iii_oudou",
     animethemes: [
       {
         title: "WORLD END",
@@ -7639,6 +8064,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1386,
     site: "AniList",
     name: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+    slug: "kaguya_sama_wa_kokurasetai_tensai_tachi_no_renai_zunousen",
     animethemes: [
       {
         title: "Love Dramatic feat. Rikka Ihara",
@@ -7664,6 +8090,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1502,
     site: "AniList",
     name: "Kimetsu no Yaiba",
+    slug: "kimetsu_no_yaiba",
     animethemes: [
       {
         title: "Gurenge",
@@ -7689,6 +8116,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 927,
     site: "AniList",
     name: "Gintama.: Shirogane no Tamashii-hen 2",
+    slug: "gintama_shirogane_no_tamashii_hen_2",
     animethemes: [
       {
         title: "I Wanna Be...",
@@ -7708,6 +8136,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1124,
     site: "AniList",
     name: "Hibike! Euphonium Movie 3: Chikai no Finale",
+    slug: "hibike_euphonium_movie_3_chikai_no_finale",
     animethemes: [
       {
         title: "Blast!",
@@ -7721,6 +8150,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2967,
     site: "AniList",
     name: "Tokyo Ghoul:re 2nd Season",
+    slug: "tokyo_ghoulre_2nd_season",
     animethemes: [
       {
         title: "katharsis",
@@ -7740,6 +8170,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3129,
     site: "AniList",
     name: "Watashi ni Tenshi ga Maiorita!",
+    slug: "watashi_ni_tenshi_ga_maiorita",
     animethemes: [
       {
         title: "Kimama na Tenshi-tachi",
@@ -7759,6 +8190,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1337,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
+    slug: "jojo_no_kimyou_na_bouken_part_5_ougon_no_kaze",
     animethemes: [
       {
         title: "Fighting Gold",
@@ -7790,6 +8222,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1592,
     site: "AniList",
     name: "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu",
+    slug: "kono_subarashii_sekai_ni_shukufuku_wo_kurenai_densetsu",
     animethemes: [
       {
         title: "My Home Town",
@@ -7809,6 +8242,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 962,
     site: "AniList",
     name: "Golden Kamuy 2nd Season",
+    slug: "golden_kamuy_2nd_season",
     animethemes: [
       {
         title: "Reimei",
@@ -7828,6 +8262,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3557,
     site: "AniList",
     name: "Violet Evergarden Movie",
+    slug: "violet_evergarden_movie",
     animethemes: [
       {
         title: "WILL",
@@ -7847,6 +8282,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3061,
     site: "AniList",
     name: "Uma Musume: Pretty Derby - BNW no Chikai",
+    slug: "uma_musume_pretty_derby_bnw_no_chikai",
     animethemes: [
       {
         title: "Make Debut!",
@@ -7896,6 +8332,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 968,
     site: "AniList",
     name: "Gotoubun no Hanayome",
+    slug: "gotoubun_no_hanayome",
     animethemes: [
       {
         title: "Gotoubun no Kimochi",
@@ -7915,6 +8352,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3306,
     site: "AniList",
     name: "Zombieland Saga",
+    slug: "zombieland_saga",
     animethemes: [
       {
         title: "Temptation from the Hell",
@@ -7978,6 +8416,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1750,
     site: "AniList",
     name: "Magia Record: Mahou Shoujo Madoka☆Magica Gaiden",
+    slug: "magia_record_mahou_shoujo_madokamagica_gaiden",
     animethemes: [
       {
         title: "Gomakashi",
@@ -8003,6 +8442,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2519,
     site: "AniList",
     name: "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+    slug: "seishun_buta_yarou_wa_yumemiru_shoujo_no_yume_wo_minai",
     animethemes: [
       {
         title: "Fukashigi no Karte movie ver.",
@@ -8023,6 +8463,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1294,
     site: "AniList",
     name: "Isekai Quartet",
+    slug: "isekai_quartet",
     animethemes: [
       {
         title: "Isekai Quartet",
@@ -8049,10 +8490,31 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "104460": {
+    id: 4297,
+    site: "AniList",
+    name: "Yuru Camp△ Movie",
+    slug: "yuru_camp_movie",
+    animethemes: [
+      {
+        title: "Sun Is Coming Up",
+        type: "OP",
+        slug: "OP1",
+        artists: ["Asaka"],
+      },
+      {
+        title: "Mimosa",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Eri Sasaki"],
+      },
+    ],
+  },
   "104461": {
     id: 1118,
     site: "AniList",
     name: "Heya Camp△",
+    slug: "heya_camp",
     animethemes: [
       {
         title: "The Sunshower",
@@ -8066,6 +8528,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2956,
     site: "AniList",
     name: "Toaru Kagaku no Railgun T",
+    slug: "toaru_kagaku_no_railgun_t",
     animethemes: [
       {
         title: "final phase",
@@ -8097,6 +8560,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2191,
     site: "AniList",
     name: "Ore wo Suki nano wa Omae dake ka yo",
+    slug: "ore_wo_suki_nano_wa_omae_dake_ka_yo",
     animethemes: [
       {
         title: "Papapa",
@@ -8116,6 +8580,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2619,
     site: "AniList",
     name: "Shingeki no Kyojin Season 3 Part 2",
+    slug: "shingeki_no_kyojin_season_3_part_2",
     animethemes: [
       {
         title: "Shoukei to Shikabane no Michi",
@@ -8135,6 +8600,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2200,
     site: "AniList",
     name: "Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta...",
+    slug: "otome_game_no_hametsu_flag_shika_nai_akuyaku_reijou_ni_tensei_shiteshimatta",
     animethemes: [
       {
         title: "Otome no Route wa Hitotsu ja Nai!",
@@ -8154,6 +8620,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2876,
     site: "AniList",
     name: "Tejina-senpai",
+    slug: "tejina_senpai",
     animethemes: [
       {
         title: "FANTASTIC ILLUSION",
@@ -8173,6 +8640,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1343,
     site: "AniList",
     name: "Joshikousei no Mudazukai",
+    slug: "joshikousei_no_mudazukai",
     animethemes: [
       {
         title: "Wa! Moon! dass! cry!",
@@ -8198,6 +8666,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2607,
     site: "AniList",
     name: "Shinchou Yuusha: Kono Yuusha ga Ore Tueee Kuse ni Shinchou Sugiru",
+    slug: "shinchou_yuusha_kono_yuusha_ga_ore_tueee_kuse_ni_shinchou_sugiru",
     animethemes: [
       {
         title: "TIT FOR TAT",
@@ -8223,6 +8692,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 708,
     site: "AniList",
     name: "Enen no Shouboutai",
+    slug: "enen_no_shouboutai",
     animethemes: [
       {
         title: "Inferno",
@@ -8254,6 +8724,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 652,
     site: "AniList",
     name: "Dr. Stone",
+    slug: "dr_stone",
     animethemes: [
       {
         title: "Good Morning World!",
@@ -8285,6 +8756,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 784,
     site: "AniList",
     name: "Fruits Basket",
+    slug: "fruits_basket_2019",
     animethemes: [
       {
         title: "Again",
@@ -8316,6 +8788,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 21,
     site: "AniList",
     name: "7 Seeds",
+    slug: "7_seeds",
     animethemes: [
       {
         title: "Ark",
@@ -8335,6 +8808,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1109,
     site: "AniList",
     name: "Hello World",
+    slug: "hello_world",
     animethemes: [
       {
         title: "Opening Theme feat. AAAMYYY",
@@ -8354,6 +8828,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2895,
     site: "AniList",
     name: "Tenki no Ko",
+    slug: "tenki_no_ko",
     animethemes: [
       {
         title: "Daijoubu (Movie edit)",
@@ -8373,6 +8848,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1302,
     site: "AniList",
     name: "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.",
+    slug: "itai_no_wa_iya_nano_de_bougyoryoku_ni_kyokufuri_shitai_to_omoimasu",
     animethemes: [
       {
         title: "Kyuukyoku Unbalance!",
@@ -8392,6 +8868,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1449,
     site: "AniList",
     name: "Karakai Jouzu no Takagi-san 2",
+    slug: "karakai_jouzu_no_takagi_san_2",
     animethemes: [
       {
         title: "Zero Centimeter",
@@ -8453,6 +8930,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1646,
     site: "AniList",
     name: "Kyokou Suiri",
+    slug: "kyokou_suiri",
     animethemes: [
       {
         title: "Mononoke in the Fiction",
@@ -8472,6 +8950,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 932,
     site: "AniList",
     name: "Girls und Panzer das Finale Part 2",
+    slug: "girls_und_panzer_das_finale_part_2",
     animethemes: [
       {
         title: "Grand symphony",
@@ -8483,7 +8962,7 @@ export const exampleAnimeInfo: AnimeInfo = {
         title: "Enter Enter MISSION! Saishuushou ver.",
         type: "ED",
         slug: "ED1",
-        artists: ["Ai Kayano", "Mai Fuchigami", "Yuka Iguchi"],
+        artists: ["Ankou Team"],
       },
     ],
   },
@@ -8491,6 +8970,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 679,
     site: "AniList",
     name: "Dumbbell Nan Kilo Moteru?",
+    slug: "dumbbell_nan_kilo_moteru",
     animethemes: [
       {
         title: "Onegai Muscle",
@@ -8516,6 +8996,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3701,
     site: "AniList",
     name: "Cider no You ni Kotoba ga Wakiagaru",
+    slug: "cider_no_you_ni_kotoba_ga_wakiagaru",
     animethemes: [
       {
         title: "Cider no You ni Kotoba ga Wakiagaru",
@@ -8529,6 +9010,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1430,
     site: "AniList",
     name: "Kanata no Astra",
+    slug: "kanata_no_astra",
     animethemes: [
       {
         title: "star*frost",
@@ -8554,6 +9036,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1459,
     site: "AniList",
     name: "Katsute Kami Datta Kemono-tachi e",
+    slug: "katsute_kami_datta_kemono_tachi_e",
     animethemes: [
       {
         title: "Sacrifice",
@@ -8573,6 +9056,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3418,
     site: "AniList",
     name: "Kobayashi-san Chi no Maid Dragon S",
+    slug: "kobayashi_san_chi_no_maid_dragon_s",
     animethemes: [
       {
         title: "Ai no Supreme",
@@ -8604,6 +9088,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2305,
     site: "AniList",
     name: "Princess Connect! Re:Dive",
+    slug: "princess_connect_redive",
     animethemes: [
       {
         title: "Lost Princess",
@@ -8629,6 +9114,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2734,
     site: "AniList",
     name: "Sounan Desu ka?",
+    slug: "sounan_desu_ka",
     animethemes: [
       {
         title: "Koko wa Doko",
@@ -8653,6 +9139,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1182,
     site: "AniList",
     name: "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen",
+    slug: "honzuki_no_gekokujou_shisho_ni_naru_tame_ni_wa_shudan_wo_erandeiraremasen",
     animethemes: [
       {
         title: "Masshiro",
@@ -8672,6 +9159,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1318,
     site: "AniList",
     name: "Jibaku Shounen Hanako-kun",
+    slug: "jibaku_shounen_hanako_kun",
     animethemes: [
       {
         title: "No.7",
@@ -8691,6 +9179,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1995,
     site: "AniList",
     name: "Mushoku Tensei: Isekai Ittara Honki Dasu",
+    slug: "mushoku_tensei_isekai_ittara_honki_dasu",
     animethemes: [
       {
         title: "Tabibito no Uta",
@@ -8716,6 +9205,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3161,
     site: "AniList",
     name: "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
+    slug: "yahari_ore_no_seishun_love_comedy_wa_machigatteiru_kan",
     animethemes: [
       {
         title: "Megumi no Ame",
@@ -8753,6 +9243,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2906,
     site: "AniList",
     name: "Tensei shitara Slime Datta Ken 2nd Season",
+    slug: "tensei_shitara_slime_datta_ken_2nd_season",
     animethemes: [
       {
         title: "Storyteller",
@@ -8772,6 +9263,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 220,
     site: "AniList",
     name: "Baki 2nd Season",
+    slug: "baki_2nd_season",
     animethemes: [
       {
         title: "Jounetsu wa Oboeteiru",
@@ -8791,6 +9283,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2708,
     site: "AniList",
     name: "Sora no Aosa wo Shiru Hito yo",
+    slug: "sora_no_aosa_wo_shiru_hito_yo",
     animethemes: [
       {
         title: "Aoi",
@@ -8804,6 +9297,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 949,
     site: "AniList",
     name: "Goblin Slayer: Goblin's Crown",
+    slug: "goblin_slayer_goblins_crown",
     animethemes: [
       {
         title: "Static",
@@ -8817,6 +9311,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2362,
     site: "AniList",
     name: "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
+    slug: "rezero_kara_hajimeru_isekai_seikatsu_2nd_season",
     animethemes: [
       {
         title: "Realize",
@@ -8836,6 +9331,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2020,
     site: "AniList",
     name: "Nanatsu no Taizai: Kamigami no Gekirin",
+    slug: "nanatsu_no_taizai_kamigami_no_gekirin",
     animethemes: [
       {
         title: "ROB THE FRONTIER",
@@ -8867,6 +9363,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3063,
     site: "AniList",
     name: "Umayon",
+    slug: "umayon",
     animethemes: [
       {
         title: "Pyoitto♪Hallelujah!",
@@ -8904,6 +9401,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1194,
     site: "AniList",
     name: "Houkago Teibou Nisshi",
+    slug: "houkago_teibou_nisshi",
     animethemes: [
       {
         title: "SEA HORIZON",
@@ -8923,6 +9421,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3193,
     site: "AniList",
     name: "Yesterday wo Utatte",
+    slug: "yesterday_wo_utatte",
     animethemes: [
       {
         title: "Kago no Naka ni Tori",
@@ -8948,6 +9447,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3104,
     site: "AniList",
     name: "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
+    slug: "violet_evergarden_gaiden_eien_to_jidou_shuki_ningyou",
     animethemes: [
       {
         title: "Amy",
@@ -8961,6 +9461,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 969,
     site: "AniList",
     name: "Gotoubun no Hanayome ∬",
+    slug: "gotoubun_no_hanayome_2021",
     animethemes: [
       {
         title: "Gotoubun no Katachi",
@@ -8986,6 +9487,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 45,
     site: "AniList",
     name: "Adachi to Shimamura",
+    slug: "adachi_to_shimamura",
     animethemes: [
       {
         title: "Kimi ni Aeta Hi",
@@ -9005,6 +9507,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 700,
     site: "AniList",
     name: "Eizouken ni wa Te wo Dasu na!",
+    slug: "eizouken_ni_wa_te_wo_dasu_na",
     animethemes: [
       {
         title: "Easy Breezy",
@@ -9024,6 +9527,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2103,
     site: "AniList",
     name: "Non Non Biyori Nonstop",
+    slug: "non_non_biyori_nonstop",
     animethemes: [
       {
         title: "Tsugihagi Moyou",
@@ -9048,6 +9552,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1979,
     site: "AniList",
     name: "Mugen no Juunin: Immortal",
+    slug: "mugen_no_juunin_immortal",
     animethemes: [
       {
         title: "SURVIVE OF VISION",
@@ -9067,6 +9572,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1295,
     site: "AniList",
     name: "Isekai Quartet 2nd Season",
+    slug: "isekai_quartet_2nd_season",
     animethemes: [
       {
         title: "Isekai Showtime",
@@ -9102,6 +9608,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2620,
     site: "AniList",
     name: "Shingeki no Kyojin: The Final Season",
+    slug: "shingeki_no_kyojin_the_final_season",
     animethemes: [
       {
         title: "Boku no Sensou",
@@ -9121,6 +9628,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 582,
     site: "AniList",
     name: "Deca-Dence",
+    slug: "deca_dence",
     animethemes: [
       {
         title: "Theater of Life",
@@ -9140,6 +9648,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 963,
     site: "AniList",
     name: "Golden Kamuy 3rd Season",
+    slug: "golden_kamuy_3rd_season",
     animethemes: [
       {
         title: "Grey",
@@ -9159,6 +9668,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3347,
     site: "AniList",
     name: "Zombieland Saga: Revenge",
+    slug: "zombieland_saga_revenge",
     animethemes: [
       {
         title:
@@ -9221,6 +9731,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3744,
     site: "AniList",
     name: "Tate no Yuusha no Nariagari Season 2",
+    slug: "tate_no_yuusha_no_nariagari_season_2",
     animethemes: [
       {
         title: "Yuzurenai",
@@ -9240,6 +9751,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4164,
     site: "AniList",
     name: "Tate no Yuusha no Nariagari Season 3",
+    slug: "tate_no_yuusha_no_nariagari_season_3",
     animethemes: [
       {
         title: "SIN",
@@ -9265,6 +9777,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1839,
     site: "AniList",
     name: "Maoujou de Oyasumi",
+    slug: "maoujou_de_oyasumi",
     animethemes: [
       {
         title: "Kaimin! Anmin! Suya Rhyst Seikatsu",
@@ -9284,6 +9797,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3363,
     site: "AniList",
     name: "Date A Bullet: Dead or Bullet",
+    slug: "date_a_bullet_dead_or_bullet",
     animethemes: [
       {
         title: "Infermata",
@@ -9303,6 +9817,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 683,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka III",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka_iii",
     animethemes: [
       {
         title: "over and over",
@@ -9322,6 +9837,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 682,
     site: "AniList",
     name: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II OVA",
+    slug: "dungeon_ni_deai_wo_motomeru_no_wa_machigatteiru_darou_ka_ii_ova",
     animethemes: [
       {
         title: "Tropical☆Vacation",
@@ -9335,6 +9851,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1807,
     site: "AniList",
     name: "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e",
+    slug: "maou_gakuin_no_futekigousha_shijou_saikyou_no_maou_no_shiso_tensei_shite_shison_tachi_no_gakkou_e",
     animethemes: [
       {
         title: "Seikai Fuseikai",
@@ -9360,6 +9877,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2067,
     site: "AniList",
     name: "Nihon Chinbotsu 2020",
+    slug: "nihon_chinbotsu_2020",
     animethemes: [
       {
         title: "a life",
@@ -9379,6 +9897,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1812,
     site: "AniList",
     name: "Majo no Tabitabi",
+    slug: "majo_no_tabitabi",
     animethemes: [
       {
         title: "Literature",
@@ -9398,6 +9917,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1387,
     site: "AniList",
     name: "Kaguya-sama wa Kokurasetai?: Tensai-tachi no Renai Zunousen",
+    slug: "kaguya_sama_wa_kokurasetai_tensai_tachi_no_renai_zunousen_2020",
     animethemes: [
       {
         title: "DADDY! DADDY! DO! feat. Airi Suzuki",
@@ -9417,6 +9937,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1514,
     site: "AniList",
     name: "Kimi to Boku no Saigo no Senjou, Aruiwa Sekai ga Hajimaru Seisen",
+    slug: "kimi_to_boku_no_saigo_no_senjou_aruiwa_sekai_ga_hajimaru_seisen",
     animethemes: [
       {
         title: "Against.",
@@ -9436,6 +9957,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 22,
     site: "AniList",
     name: "7 Seeds 2nd Season",
+    slug: "7_seeds_2nd_season",
     animethemes: [
       {
         title: "From The Seeds",
@@ -9461,6 +9983,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3414,
     site: "AniList",
     name: "Uramichi Oniisan",
+    slug: "uramichi_oniisan",
     animethemes: [
       {
         title: "ABC Taisou",
@@ -9480,6 +10003,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1407,
     site: "AniList",
     name: "Kakushigoto",
+    slug: "kakushigoto",
     animethemes: [
       {
         title: "Chiisana Hibi",
@@ -9499,6 +10023,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1347,
     site: "AniList",
     name: "Jujutsu Kaisen",
+    slug: "jujutsu_kaisen",
     animethemes: [
       {
         title: "Kaikai Kitan",
@@ -9530,6 +10055,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3477,
     site: "AniList",
     name: "Josee to Tora to Sakana-tachi",
+    slug: "josee_to_tora_to_sakana_tachi",
     animethemes: [
       {
         title: "Take Me Far Away",
@@ -9549,6 +10075,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1183,
     site: "AniList",
     name: "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 2nd Season",
+    slug: "honzuki_no_gekokujou_shisho_ni_naru_tame_ni_wa_shudan_wo_erandeiraremasen_2nd_season",
     animethemes: [
       {
         title: "Tsumujikaze",
@@ -9568,6 +10095,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3551,
     site: "AniList",
     name: "Ousama Ranking",
+    slug: "ousama_ranking",
     animethemes: [
       {
         title: "BOY",
@@ -9599,6 +10127,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1437,
     site: "AniList",
     name: "Kanojo, Okarishimasu",
+    slug: "kanojo_okarishimasu",
     animethemes: [
       {
         title: "Centimeter",
@@ -9630,6 +10159,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 653,
     site: "AniList",
     name: "Dr. Stone: Stone Wars",
+    slug: "dr_stone_stone_wars",
     animethemes: [
       {
         title: "Rakuen",
@@ -9649,6 +10179,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3322,
     site: "AniList",
     name: "SSSS.Dynazenon",
+    slug: "ssssdynazenon",
     animethemes: [
       {
         title: "Strobe Memory",
@@ -9668,6 +10199,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3401,
     site: "AniList",
     name: "Bokutachi no Remake",
+    slug: "bokutachi_no_remake",
     animethemes: [
       {
         title: "Koko kara Saki wa Uta ni Naranai",
@@ -9687,6 +10219,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3149,
     site: "AniList",
     name: "World Trigger 2nd Season",
+    slug: "world_trigger_2nd_season",
     animethemes: [
       {
         title: "Force",
@@ -9706,6 +10239,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3264,
     site: "AniList",
     name: "Yuukoku no Moriarty",
+    slug: "yuukoku_no_moriarty",
     animethemes: [
       {
         title: "DYING WISH",
@@ -9725,6 +10259,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3480,
     site: "AniList",
     name: "Gintama: The Final",
+    slug: "gintama_the_final",
     animethemes: [
       {
         title: "Wadachi",
@@ -9738,6 +10273,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3360,
     site: "AniList",
     name: "Hige wo Soru. Soshite Joshikousei wo Hirou.",
+    slug: "hige_wo_soru_soshite_joshikousei_wo_hirou",
     animethemes: [
       {
         title: "Omoide Shiritori",
@@ -9757,6 +10293,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 709,
     site: "AniList",
     name: "Enen no Shouboutai: Ni no Shou",
+    slug: "enen_no_shouboutai_ni_no_shou",
     animethemes: [
       {
         title: "SPARK-AGAIN",
@@ -9794,6 +10331,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1620,
     site: "AniList",
     name: "Kuma Kuma Kuma Bear",
+    slug: "kuma_kuma_kuma_bear",
     animethemes: [
       {
         title: "Itsuka no Kioku",
@@ -9819,6 +10357,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1148,
     site: "AniList",
     name: "Higurashi no Naku Koro ni Gou",
+    slug: "higurashi_no_naku_koro_ni_gou",
     animethemes: [
       {
         title: "I believe what you said",
@@ -9850,6 +10389,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3371,
     site: "AniList",
     name: "Fumetsu no Anata e",
+    slug: "fumetsu_no_anata_e",
     animethemes: [
       {
         title: "PINK BLOOD",
@@ -9869,6 +10409,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3838,
     site: "AniList",
     name: "Made in Abyss: Retsujitsu no Ougonkyou",
+    slug: "made_in_abyss_retsujitsu_no_ougonkyou",
     animethemes: [
       {
         title: "Katachi",
@@ -9894,6 +10435,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2008,
     site: "AniList",
     name: "Nakitai Watashi wa Neko wo Kaburu",
+    slug: "nakitai_watashi_wa_neko_wo_kaburu",
     animethemes: [
       {
         title: "Hana ni Bourei",
@@ -9913,6 +10455,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3092,
     site: "AniList",
     name: "Uzaki-chan wa Asobitai!",
+    slug: "uzaki_chan_wa_asobitai",
     animethemes: [
       {
         title: "Nadame Sukashi Negotiation",
@@ -9932,6 +10475,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1412,
     site: "AniList",
     name: "Kami no Tou",
+    slug: "kami_no_tou",
     animethemes: [
       {
         title: "TOP -Japanese ver.-",
@@ -9963,6 +10507,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2151,
     site: "AniList",
     name: "One Room 3rd Season",
+    slug: "one_room_3rd_season",
     animethemes: [
       {
         title: "Taiyou to Rainbow",
@@ -10000,6 +10545,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 6,
     site: "AniList",
     name: "100-man no Inochi no Ue ni Ore wa Tatteiru",
+    slug: "100_man_no_inochi_no_ue_ni_ore_wa_tatteiru",
     animethemes: [
       {
         title: "Anti world",
@@ -10025,6 +10571,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2980,
     site: "AniList",
     name: "Tonikaku Kawaii",
+    slug: "tonikaku_kawaii",
     animethemes: [
       {
         title: "Koi no Uta (feat. Tsukasa Yuzaki)",
@@ -10044,6 +10591,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3356,
     site: "AniList",
     name: "Sentouin, Hakenshimasu!",
+    slug: "sentouin_hakenshimasu",
     animethemes: [
       {
         title: "No.6",
@@ -10063,6 +10611,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3348,
     site: "AniList",
     name: "86",
+    slug: "86",
     animethemes: [
       {
         title: "3-pun 29-byou",
@@ -10088,6 +10637,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3755,
     site: "AniList",
     name: "Date A Live IV",
+    slug: "date_a_live_iv",
     animethemes: [
       {
         title: "OveR",
@@ -10107,6 +10657,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3331,
     site: "AniList",
     name: "Tensura Nikki: Tensei shitara Slime Datta Ken",
+    slug: "tensura_nikki_tensei_shitara_slime_datta_ken",
     animethemes: [
       {
         title: "Brand new diary",
@@ -10137,6 +10688,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3413,
     site: "AniList",
     name: "Tensei shitara Slime Datta Ken 2nd Season Part 2",
+    slug: "tensei_shitara_slime_datta_ken_2nd_season_part_2",
     animethemes: [
       {
         title: "Like Flames",
@@ -10156,6 +10708,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3994,
     site: "AniList",
     name: "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu. 2",
+    slug: "itai_no_wa_iya_nano_de_bougyoryoku_ni_kyokufuri_shitai_to_omoimasu_2",
     animethemes: [
       {
         title: "Kyuukyoku Unbalance!",
@@ -10181,6 +10734,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1985,
     site: "AniList",
     name: "Munou na Nana",
+    slug: "munou_na_nana",
     animethemes: [
       {
         title: "Broken Sky",
@@ -10200,6 +10754,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3402,
     site: "AniList",
     name: "Genjitsu Shugi Yuusha no Oukoku Saikenki",
+    slug: "genjitsu_shugi_yuusha_no_oukoku_saikenki",
     animethemes: [
       {
         title: "HELLO HORIZON",
@@ -10219,6 +10774,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1423,
     site: "AniList",
     name: "Kamisama ni Natta Hi",
+    slug: "kamisama_ni_natta_hi",
     animethemes: [
       {
         title: "Kimi to Iu Shinwa",
@@ -10244,6 +10800,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2363,
     site: "AniList",
     name: "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
+    slug: "rezero_kara_hajimeru_isekai_seikatsu_2nd_season_part_2",
     animethemes: [
       {
         title: "Long shot",
@@ -10281,6 +10838,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3369,
     site: "AniList",
     name: "Edens Zero",
+    slug: "edens_zero",
     animethemes: [
       {
         title: "Eden through the rough",
@@ -10312,6 +10870,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3355,
     site: "AniList",
     name: "Tokyo Revengers",
+    slug: "tokyo_revengers",
     animethemes: [
       {
         title: "Cry Baby",
@@ -10337,6 +10896,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3874,
     site: "AniList",
     name: "Cyberpunk: Edgerunners",
+    slug: "cyberpunk_edgerunners",
     animethemes: [
       {
         title: "This Fffire",
@@ -10356,6 +10916,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3472,
     site: "AniList",
     name: "Meikyuu Black Company",
+    slug: "meikyuu_black_company",
     animethemes: [
       {
         title: "Shimi",
@@ -10375,6 +10936,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3540,
     site: "AniList",
     name: "Senpai ga Uzai Kouhai no Hanashi",
+    slug: "senpai_ga_uzai_kouhai_no_hanashi",
     animethemes: [
       {
         title: "Annoying! San San Week!",
@@ -10399,6 +10961,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3352,
     site: "AniList",
     name: "Ijiranaide, Nagatoro-san",
+    slug: "ijiranaide_nagatoro_san",
     animethemes: [
       {
         title: "EASY LOVE",
@@ -10424,6 +10987,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3364,
     site: "AniList",
     name: "Date A Bullet: Nightmare or Queen",
+    slug: "date_a_bullet_nightmare_or_queen",
     animethemes: [
       {
         title: "Infermata",
@@ -10443,6 +11007,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3457,
     site: "AniList",
     name: "Kaizoku Oujo",
+    slug: "kaizoku_oujo",
     animethemes: [
       {
         title: "Umi to Shinju",
@@ -10468,6 +11033,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3444,
     site: "AniList",
     name: "Heion Sedai no Idaten-tachi",
+    slug: "heion_sedai_no_idaten_tachi",
     animethemes: [
       {
         title: "Seija no Koushin",
@@ -10487,6 +11053,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 2823,
     site: "AniList",
     name: "Taisou Zamurai",
+    slug: "taisou_zamurai",
     animethemes: [
       {
         title: "Shangai Honey",
@@ -10506,6 +11073,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 1187,
     site: "AniList",
     name: "Horimiya",
+    slug: "horimiya",
     animethemes: [
       {
         title: "Iro Kousui",
@@ -10525,6 +11093,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3854,
     site: "AniList",
     name: "Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria",
+    slug: "sword_art_online_progressive_movie_hoshi_naki_yoru_no_aria",
     animethemes: [
       {
         title: "Yuke",
@@ -10538,6 +11107,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3062,
     site: "AniList",
     name: "Uma Musume: Pretty Derby Season 2",
+    slug: "uma_musume_pretty_derby_season_2",
     animethemes: [
       {
         title: "Yume wo Kakeru!",
@@ -10624,6 +11194,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3819,
     site: "AniList",
     name: "Kanojo, Okarishimasu 2nd Season",
+    slug: "kanojo_okarishimasu_2nd_season",
     animethemes: [
       {
         title: "Himitsu Koigokoro",
@@ -10643,6 +11214,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3312,
     site: "AniList",
     name: "Godzilla: S.P",
+    slug: "godzilla_sp",
     animethemes: [
       {
         title: "in case...",
@@ -10662,6 +11234,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3141,
     site: "AniList",
     name: "Wonder Egg Priority",
+    slug: "wonder_egg_priority",
     animethemes: [
       {
         title: "Sudachi no Uta",
@@ -10681,6 +11254,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3323,
     site: "AniList",
     name: "Yuukoku no Moriarty 2nd Season",
+    slug: "yuukoku_no_moriarty_2nd_season",
     animethemes: [
       {
         title: "TWISTED HEARTS",
@@ -10700,6 +11274,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3353,
     site: "AniList",
     name: "Shadows House",
+    slug: "shadows_house",
     animethemes: [
       {
         title: "a hollow shadow",
@@ -10725,6 +11300,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3756,
     site: "AniList",
     name: "Kaguya-sama wa Kokurasetai: Ultra Romantic",
+    slug: "kaguya_sama_wa_kokurasetai_ultra_romantic",
     animethemes: [
       {
         title: "GIRI GIRI",
@@ -10750,6 +11326,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3344,
     site: "AniList",
     name: "Gokushufudou",
+    slug: "gokushufudou",
     animethemes: [
       {
         title: "Shufu no Michi",
@@ -10769,6 +11346,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3403,
     site: "AniList",
     name: "Kageki Shoujo!!",
+    slug: "kageki_shoujo",
     animethemes: [
       {
         title: "Hoshi no Orchestra",
@@ -10812,6 +11390,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3622,
     site: "AniList",
     name: "Cue!",
+    slug: "cue",
     animethemes: [
       {
         title: "Start Line",
@@ -10861,6 +11440,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3448,
     site: "AniList",
     name: "Deatte 5-byou de Battle",
+    slug: "deatte_5_byou_de_battle",
     animethemes: [
       {
         title: "No Continue",
@@ -10880,6 +11460,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3917,
     site: "AniList",
     name: "Chainsaw Man",
+    slug: "chainsaw_man",
     animethemes: [
       {
         title: "KICK BACK",
@@ -10965,6 +11546,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3473,
     site: "AniList",
     name: "Shuumatsu no Walkure",
+    slug: "shuumatsu_no_walkure",
     animethemes: [
       {
         title: "KAMIGAMI",
@@ -10984,6 +11566,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3541,
     site: "AniList",
     name: "World Trigger 3rd Season",
+    slug: "world_trigger_3rd_season",
     animethemes: [
       {
         title: "Time Factor",
@@ -11003,12 +11586,13 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3534,
     site: "AniList",
     name: "Platinum End",
+    slug: "platinum_end",
     animethemes: [
       {
         title: "Sense",
         type: "OP",
         slug: "OP1",
-        artists: [],
+        artists: ["BAND-MAID"],
       },
       {
         title: "Koufuku Ron",
@@ -11028,6 +11612,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3519,
     site: "AniList",
     name: "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+    slug: "mushoku_tensei_isekai_ittara_honki_dasu_part_2",
     animethemes: [
       {
         title: "Mezame no Uta",
@@ -11071,6 +11656,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3761,
     site: "AniList",
     name: "Kawaii dake ja Nai Shikimori-san",
+    slug: "kawaii_dake_ja_nai_shikimori_san",
     animethemes: [
       {
         title: "Honey Jet Coaster",
@@ -11090,6 +11676,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3616,
     site: "AniList",
     name: "Orient",
+    slug: "orient",
     animethemes: [
       {
         title: "Break out",
@@ -11109,6 +11696,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3845,
     site: "AniList",
     name: "Soredemo Ayumu wa Yosetekuru",
+    slug: "soredemo_ayumu_wa_yosetekuru",
     animethemes: [
       {
         title: "Kakehiki wa Poker Face",
@@ -11128,6 +11716,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3434,
     site: "AniList",
     name: "Shiroi Suna no Aquatope",
+    slug: "shiroi_suna_no_aquatope",
     animethemes: [
       {
         title: "Tayutae, Nanairo",
@@ -11159,6 +11748,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3358,
     site: "AniList",
     name: "Vivy: Fluorite Eye's Song",
+    slug: "vivy_fluorite_eyes_song",
     animethemes: [
       {
         title: "Happy Together",
@@ -11214,6 +11804,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3327,
     site: "AniList",
     name: "Odd Taxi",
+    slug: "odd_taxi",
     animethemes: [
       {
         title: "ODDTAXI",
@@ -11239,6 +11830,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3508,
     site: "AniList",
     name: "Blue Period",
+    slug: "blue_period",
     animethemes: [
       {
         title: "EVERBLUE",
@@ -11258,6 +11850,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3410,
     site: "AniList",
     name: "Tantei wa Mou, Shindeiru.",
+    slug: "tantei_wa_mou_shindeiru",
     animethemes: [
       {
         title: "Koko de Ikiteru.",
@@ -11277,6 +11870,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4022,
     site: "AniList",
     name: "Jigokuraku",
+    slug: "jigokuraku",
     animethemes: [
       {
         title: "W●RK",
@@ -11296,6 +11890,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4165,
     site: "AniList",
     name: "Goblin Slayer II",
+    slug: "goblin_slayer_ii",
     animethemes: [
       {
         title: "Entertainment",
@@ -11315,6 +11910,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3732,
     site: "AniList",
     name: "Shokei Shoujo no Virgin Road",
+    slug: "shokei_shoujo_no_virgin_road",
     animethemes: [
       {
         title: "Paper Bouquet",
@@ -11334,6 +11930,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3774,
     site: "AniList",
     name: "Summer Time Render",
+    slug: "summer_time_render",
     animethemes: [
       {
         title: "Hoshi ga Oyogu",
@@ -11372,6 +11969,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3409,
     site: "AniList",
     name: "Shinigami Bocchan to Kuro Maid",
+    slug: "shinigami_bocchan_to_kuro_maid",
     animethemes: [
       {
         title: "Mangetsu to Silhouette no Yoru",
@@ -11397,6 +11995,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3548,
     site: "AniList",
     name: "Kimetsu no Yaiba: Mugen Ressha-hen",
+    slug: "kimetsu_no_yaiba_mugen_ressha_hen",
     animethemes: [
       {
         title: "Akeboshi",
@@ -11422,6 +12021,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3530,
     site: "AniList",
     name: "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru",
+    slug: "sekai_saikou_no_ansatsusha_isekai_kizoku_ni_tensei_suru",
     animethemes: [
       {
         title: "Dark seeks light",
@@ -11447,6 +12047,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3912,
     site: "AniList",
     name: "Bocchi the Rock!",
+    slug: "bocchi_the_rock",
     animethemes: [
       {
         title: "Seishun Complex",
@@ -11484,6 +12085,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4196,
     site: "AniList",
     name: "Summer Ghost",
+    slug: "summer_ghost",
     animethemes: [
       {
         title: "Summer Ghost",
@@ -11497,6 +12099,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3901,
     site: "AniList",
     name: "Kage no Jitsuryokusha ni Naritakute!",
+    slug: "kage_no_jitsuryokusha_ni_naritakute",
     animethemes: [
       {
         title: "HIGHEST",
@@ -11558,6 +12161,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3747,
     site: "AniList",
     name: "RPG Fudousan",
+    slug: "rpg_fudousan",
     animethemes: [
       {
         title: "Make Up Life!",
@@ -11588,6 +12192,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3666,
     site: "AniList",
     name: "Sabikui Bisco",
+    slug: "sabikui_bisco",
     animethemes: [
       {
         title: "Kaze no Oto sae Kikoenai",
@@ -11619,6 +12224,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3859,
     site: "AniList",
     name: "Hataraku Maou-sama!!",
+    slug: "hataraku_maou_sama_2022",
     animethemes: [
       {
         title: "WITH",
@@ -11638,6 +12244,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3518,
     site: "AniList",
     name: "Mieruko-chan",
+    slug: "mieruko_chan",
     animethemes: [
       {
         title: "Mienaikara ne!?",
@@ -11657,6 +12264,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3395,
     site: "AniList",
     name: "Higurashi no Naku Koro ni Sotsu",
+    slug: "higurashi_no_naku_koro_ni_sotsu",
     animethemes: [
       {
         title: "Analogy",
@@ -11682,6 +12290,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3898,
     site: "AniList",
     name: "Yama no Susume: Next Summit",
+    slug: "yama_no_susume_next_summit",
     animethemes: [
       {
         title: "Omoi Nochi Hare",
@@ -11719,6 +12328,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3904,
     site: "AniList",
     name: "Do It Yourself!!",
+    slug: "do_it_yourself",
     animethemes: [
       {
         title: "Dokidoki Idea wo Yoroshiku!",
@@ -11738,6 +12348,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4041,
     site: "AniList",
     name: "Dr. Stone: New World",
+    slug: "dr_stone_new_world",
     animethemes: [
       {
         title: "Wasuregataki",
@@ -11757,6 +12368,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4001,
     site: "AniList",
     name: "Eiga Gotoubun no Hanayome",
+    slug: "eiga_gotoubun_no_hanayome",
     animethemes: [
       {
         title: "Gotoubun no Kiseki",
@@ -11776,6 +12388,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3625,
     site: "AniList",
     name: "Akebi-chan no Sailor-fuku",
+    slug: "akebi_chan_no_sailor_fuku",
     animethemes: [
       {
         title: "Baton",
@@ -11807,6 +12420,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3546,
     site: "AniList",
     name: "Takt Op. Destiny",
+    slug: "takt_op_destiny",
     animethemes: [
       {
         title: "takt",
@@ -11826,6 +12440,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3945,
     site: "AniList",
     name: "Jujutsu Kaisen 0",
+    slug: "jujutsu_kaisen_0",
     animethemes: [
       {
         title: "Greatest Strength",
@@ -11851,6 +12466,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3513,
     site: "AniList",
     name: "86 2nd Season",
+    slug: "86_2nd_season",
     animethemes: [
       {
         title: "Kyoukaisen",
@@ -11882,6 +12498,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3633,
     site: "AniList",
     name: "Shingeki no Kyojin: The Final Season Part 2",
+    slug: "shingeki_no_kyojin_the_final_season_part_2",
     animethemes: [
       {
         title: "The Rumbling",
@@ -11901,6 +12518,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4113,
     site: "AniList",
     name: "Liar Liar",
+    slug: "liar_liar",
     animethemes: [
       {
         title: "LIES GOES ON",
@@ -11920,6 +12538,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3583,
     site: "AniList",
     name: "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
+    slug: "jo_jo_no_kimyou_na_bouken_part_6_stone_ocean",
     animethemes: [
       {
         title: "STONE OCEAN",
@@ -11951,6 +12570,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3783,
     site: "AniList",
     name: "Kakkou no Iinazuke",
+    slug: "kakkou_no_iinazuke",
     animethemes: [
       {
         title: "Dekoboko",
@@ -11982,6 +12602,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3447,
     site: "AniList",
     name: "Sonny Boy",
+    slug: "sonny_boy",
     animethemes: [
       {
         title: "Shounen Shoujo",
@@ -12001,6 +12622,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3763,
     site: "AniList",
     name: "Kono Healer, Mendokusai",
+    slug: "kono_healer_mendokusai",
     animethemes: [
       {
         title: "Jellyfish na Kimi e",
@@ -12020,6 +12642,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3627,
     site: "AniList",
     name: "Sono Bisque Doll wa Koi wo Suru",
+    slug: "sono_bisque_doll_wa_koi_wo_suru",
     animethemes: [
       {
         title: "San San Days",
@@ -12039,6 +12662,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3445,
     site: "AniList",
     name: "Jahy-sama wa Kujikenai!",
+    slug: "jahy_sama_wa_kujikenai",
     animethemes: [
       {
         title: "Fightin★Pose",
@@ -12070,6 +12694,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3539,
     site: "AniList",
     name: "Saihate no Paladin",
+    slug: "saihate_no_paladin",
     animethemes: [
       {
         title: "The Sacred Torch",
@@ -12095,6 +12720,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3746,
     site: "AniList",
     name: "Deaimon",
+    slug: "deaimon",
     animethemes: [
       {
         title: "Sumire",
@@ -12120,6 +12746,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3858,
     site: "AniList",
     name: "Overlord IV",
+    slug: "overlord_iv",
     animethemes: [
       {
         title: "HOLLOW HUNGER",
@@ -12139,6 +12766,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3528,
     site: "AniList",
     name: "Komi-san wa, Comyushou desu.",
+    slug: "komi_san_wa_comyushou_desu",
     animethemes: [
       {
         title: "Cinderella",
@@ -12164,6 +12792,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4052,
     site: "AniList",
     name: "Mahou Shoujo Magical Destroyers",
+    slug: "mahou_shoujo_magical_destroyers",
     animethemes: [
       {
         title: "MAGICAL DESTROYER",
@@ -12183,6 +12812,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3988,
     site: "AniList",
     name: "High Card",
+    slug: "high_card",
     animethemes: [
       {
         title: "Trickster",
@@ -12202,6 +12832,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3837,
     site: "AniList",
     name: "Isekai Ojisan",
+    slug: "isekai_ojisan",
     animethemes: [
       {
         title: "story",
@@ -12221,6 +12852,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3947,
     site: "AniList",
     name: "Goodbye, Don Glees!",
+    slug: "goodbye_don_glees",
     animethemes: [
       {
         title: "Rock The World",
@@ -12234,6 +12866,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3630,
     site: "AniList",
     name: "Kaijin Kaihatsu-bu no Kuroitsu-san",
+    slug: "kaijin_kaihatsu_bu_no_kuroitsu_san",
     animethemes: [
       {
         title: "Special Force",
@@ -12259,6 +12892,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3986,
     site: "AniList",
     name: "Vinland Saga Season 2",
+    slug: "vinland_saga_season_2",
     animethemes: [
       {
         title: "River",
@@ -12290,6 +12924,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3982,
     site: "AniList",
     name: "Mou Ippon!",
+    slug: "mou_ippon",
     animethemes: [
       {
         title: "Stand By Me",
@@ -12321,6 +12956,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3851,
     site: "AniList",
     name: "Isekai Yakkyoku",
+    slug: "isekai_yakkyoku",
     animethemes: [
       {
         title: "Musouteki Chronicle",
@@ -12340,6 +12976,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3836,
     site: "AniList",
     name: "Mamahaha no Tsurego ga Motokano datta",
+    slug: "mamahaha_no_tsurego_ga_motokano_datta",
     animethemes: [
       {
         title: "Deneb to Spica",
@@ -12359,6 +12996,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3731,
     site: "AniList",
     name: "Aharen-san wa Hakarenai",
+    slug: "aharen_san_wa_hakarenai",
     animethemes: [
       {
         title: "Hanarenai Kyori",
@@ -12384,6 +13022,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3878,
     site: "AniList",
     name: "Uchi no Shishou wa Shippo ga Nai",
+    slug: "uchi_no_shishou_wa_shippo_ga_nai",
     animethemes: [
       {
         title: "Genai Yuugi",
@@ -12403,6 +13042,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3914,
     site: "AniList",
     name: "Blue Lock",
+    slug: "blue_lock",
     animethemes: [
       {
         title: "Chaos ga Kiwamaru",
@@ -12434,6 +13074,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3624,
     site: "AniList",
     name: "Karakai Jouzu no Takagi-san 3",
+    slug: "karakai_jouzu_no_takagi_san_3",
     animethemes: [
       {
         title: "Massugu",
@@ -12509,6 +13150,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4006,
     site: "AniList",
     name: "Karakai Jouzu no Takagi-san Movie",
+    slug: "karakai_jouzu_no_takagi_san_movie",
     animethemes: [
       {
         title: "Hajimari no Natsu",
@@ -12546,6 +13188,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3498,
     site: "AniList",
     name: "Heike Monogatari",
+    slug: "heike_monogatari",
     animethemes: [
       {
         title: "Hikaru Toki",
@@ -12565,6 +13208,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4163,
     site: "AniList",
     name: "Under Ninja",
+    slug: "under_ninja",
     animethemes: [
       {
         title: "Hyper",
@@ -12584,6 +13228,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3847,
     site: "AniList",
     name: "Shadows House 2nd Season",
+    slug: "shadows_house_2nd_season",
     animethemes: [
       {
         title: "Shall We Dance?",
@@ -12603,6 +13248,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3888,
     site: "AniList",
     name: "Mobile Suit Gundam: The Witch from Mercury",
+    slug: "mobile_suit_gundam_the_witch_from_mercury",
     animethemes: [
       {
         title: "Shukufuku",
@@ -12622,6 +13268,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4078,
     site: "AniList",
     name: "Boku ga Aishita Subete no Kimi e",
+    slug: "boku_ga_aishita_subete_no_kimi_e",
     animethemes: [
       {
         title: "Kumo wo Kou",
@@ -12635,6 +13282,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4079,
     site: "AniList",
     name: "Kimi wo Aishita Hitori no Boku e",
+    slug: "kimi_wo_aishita_hitori_no_boku_e",
     animethemes: [
       {
         title: "Shion",
@@ -12648,6 +13296,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3889,
     site: "AniList",
     name: "Shinmai Renkinjutsushi no Tenpo Keiei",
+    slug: "shinmai_renkinjutsushi_no_tenpo_keiei",
     animethemes: [
       {
         title: "Hajimaru Welcome",
@@ -12663,10 +13312,25 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "139498": {
+    id: 4296,
+    site: "AniList",
+    name: "Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
+    slug: "tensei_shitara_slime_datta_ken_movie_guren_no_kizuna_hen",
+    animethemes: [
+      {
+        title: "Make Me Feel Better",
+        type: "ED",
+        slug: "ED1",
+        artists: ["MindaRyn"],
+      },
+    ],
+  },
   "139587": {
     id: 3877,
     site: "AniList",
     name: "Tensei shitara Ken Deshita",
+    slug: "tensei_shitara_ken_deshita",
     animethemes: [
       {
         title: "Tensei shitara Ken Deshita",
@@ -12686,6 +13350,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4118,
     site: "AniList",
     name: "Eiyuu Kyoushitsu",
+    slug: "eiyuu_kyoushitsu",
     animethemes: [
       {
         title: "Bravery? Naturally?",
@@ -12705,6 +13370,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3937,
     site: "AniList",
     name: "Ame wo Tsugeru Hyouryuu Danchi",
+    slug: "ame_wo_tsugeru_hyouryuu_danchi",
     animethemes: [
       {
         title: "Kiete Shimai Sou Desu",
@@ -12718,6 +13384,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3963,
     site: "AniList",
     name: "Sugar Apple Fairy Tale",
+    slug: "sugar_apple_fairy_tale",
     animethemes: [
       {
         title: "Musical",
@@ -12743,6 +13410,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3903,
     site: "AniList",
     name: "Mob Psycho 100 III",
+    slug: "mob_psycho_100_iii",
     animethemes: [
       {
         title: "1",
@@ -12768,6 +13436,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3973,
     site: "AniList",
     name: "Ijiranaide, Nagatoro-san 2nd Attack",
+    slug: "ijiranaide_nagatoro_san_2nd_attack",
     animethemes: [
       {
         title: "LOVE CRAZY",
@@ -12792,6 +13461,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3617,
     site: "AniList",
     name: "Tokyo 24-ku",
+    slug: "tokyo_24_ku",
     animethemes: [
       {
         title: "Papersky",
@@ -12811,6 +13481,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3929,
     site: "AniList",
     name: "Arknights: Reimei Zensou",
+    slug: "arknights_reimei_zensou",
     animethemes: [
       {
         title: "Alive",
@@ -12830,6 +13501,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3857,
     site: "AniList",
     name: "Shine Post",
+    slug: "shine_post",
     animethemes: [
       {
         title: "Wonder・Starter",
@@ -12861,6 +13533,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3780,
     site: "AniList",
     name: "Spy x Family",
+    slug: "spy_x_family",
     animethemes: [
       {
         title: "Mixed Nuts",
@@ -12880,6 +13553,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4076,
     site: "AniList",
     name: "Sword Art Online: Progressive Movie - Kuraki Yuuyami no Scherzo",
+    slug: "sword_art_online_progressive_movie_kuraki_yuuyami_no_scherzo",
     animethemes: [
       {
         title: "Shinzou",
@@ -12893,6 +13567,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3741,
     site: "AniList",
     name: "Tomodachi Game",
+    slug: "tomodachi_game",
     animethemes: [
       {
         title: "Double Shuffle",
@@ -12912,6 +13587,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3765,
     site: "AniList",
     name: "Kunoichi Tsubaki no Mune no Uchi",
+    slug: "kunoichi_tsubaki_no_mune_no_uchi",
     animethemes: [
       {
         title: "Akane-gumi Katsudou Nisshi ~Inu-han~",
@@ -13041,6 +13717,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3868,
     site: "AniList",
     name: "Kakegurui Twin",
+    slug: "kakegurui_twin",
     animethemes: [
       {
         title: "Sono Otome Musou",
@@ -13060,6 +13737,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3843,
     site: "AniList",
     name: "Yofukashi no Uta",
+    slug: "yofukashi_no_uta",
     animethemes: [
       {
         title: "Daten",
@@ -13079,6 +13757,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4095,
     site: "AniList",
     name: "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
+    slug: "mushoku_tensei_isekai_ittara_honki_dasu_eris_no_goblin_toubatsu",
     animethemes: [
       {
         title: "Inori no Uta",
@@ -13098,6 +13777,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3752,
     site: "AniList",
     name: "Paripi Koumei",
+    slug: "paripi_koumei",
     animethemes: [
       {
         title: "Chiki Chiki Ban Ban",
@@ -13135,6 +13815,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4035,
     site: "AniList",
     name: "Skip to Loafer",
+    slug: "skip_to_loafer",
     animethemes: [
       {
         title: "Mellow",
@@ -13154,6 +13835,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3907,
     site: "AniList",
     name: "Fuufu Ijou, Koibito Miman.",
+    slug: "fuufu_ijou_koibito_miman",
     animethemes: [
       {
         title: "Stuck on you",
@@ -13179,6 +13861,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3736,
     site: "AniList",
     name: "Otome Game Sekai wa Mob ni Kibishii Sekai desu",
+    slug: "mobseka",
     animethemes: [
       {
         title: "Silent Minority",
@@ -13198,6 +13881,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3589,
     site: "AniList",
     name: "Kimetsu no Yaiba: Yuukaku-hen",
+    slug: "kimetsu_no_yaiba_yuukaku_hen",
     animethemes: [
       {
         title: "Zankyou Zanka",
@@ -13217,6 +13901,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4107,
     site: "AniList",
     name: "Nanatsu no Maken ga Shihai suru",
+    slug: "nanatsu_no_maken_ga_shihai_suru",
     animethemes: [
       {
         title: "Kenka",
@@ -13242,6 +13927,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4147,
     site: "AniList",
     name: "Migi to Dali",
+    slug: "migi_to_dali",
     animethemes: [
       {
         title: "Yuuma ga Doki",
@@ -13261,6 +13947,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3884,
     site: "AniList",
     name: "Koukyuu no Karasu",
+    slug: "koukyuu_no_karasu",
     animethemes: [
       {
         title: "MYSTERIOUS",
@@ -13280,6 +13967,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4133,
     site: "AniList",
     name: "Suzume no Tojimari",
+    slug: "suzume_no_tojimari",
     animethemes: [
       {
         title: "Kanata Haluka",
@@ -13299,6 +13987,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3883,
     site: "AniList",
     name: "Spy x Family Part 2",
+    slug: "spy_x_family_part_2",
     animethemes: [
       {
         title: "SOUVENIR",
@@ -13318,6 +14007,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3972,
     site: "AniList",
     name: "Tokyo Revengers: Seiya Kessen-hen",
+    slug: "tokyo_revengers_seiya_kessen_hen",
     animethemes: [
       {
         title: "White Noise",
@@ -13337,6 +14027,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3852,
     site: "AniList",
     name: "Dr. Stone: Ryuusui",
+    slug: "dr_stone_ryuusui",
     animethemes: [
       {
         title: "Good Morning [New] World!",
@@ -13350,6 +14041,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4104,
     site: "AniList",
     name: "Rurouni Kenshin: Meiji Kenkaku Romantan (2023)",
+    slug: "rurouni_kenshin_meiji_kenkaku_romantan_2023",
     animethemes: [
       {
         title: "Hiten",
@@ -13381,6 +14073,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3745,
     site: "AniList",
     name: "Komi-san wa, Comyushou desu. 2nd Season",
+    slug: "komi_san_wa_comyushou_desu_2nd_season",
     animethemes: [
       {
         title: "Koshaberi Biyori",
@@ -13400,6 +14093,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3822,
     site: "AniList",
     name: "Lycoris Recoil",
+    slug: "lycoris_recoil",
     animethemes: [
       {
         title: "Hana no Tou",
@@ -13419,6 +14113,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3919,
     site: "AniList",
     name: "Urusei Yatsura (2022)",
+    slug: "urusei_yatsura_2022",
     animethemes: [
       {
         title: "Aiue feat. Minami, SAKURAmoti",
@@ -13450,6 +14145,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4138,
     site: "AniList",
     name: "MF Ghost",
+    slug: "mf_ghost",
     animethemes: [
       {
         title: "Stereo Sunset (Prod. AmPm)",
@@ -13469,6 +14165,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3969,
     site: "AniList",
     name: "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken",
+    slug: "otonari_no_tenshi_sama_ni_itsunomanika_dame_ningen_ni_sareteita_ken",
     animethemes: [
       {
         title: "Gift",
@@ -13500,6 +14197,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4062,
     site: "AniList",
     name: "Kimi wa Houkago Insomnia",
+    slug: "kimi_wa_houkago_insomnia",
     animethemes: [
       {
         title: "Itsu Aetara",
@@ -13525,6 +14223,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3981,
     site: "AniList",
     name: "Benriya Saitou-san, Isekai ni Iku",
+    slug: "benriya_saitou_san_isekai_ni_iku",
     animethemes: [
       {
         title: "kaleidoscope",
@@ -13544,6 +14243,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3995,
     site: "AniList",
     name: "Ooyukiumi no Kaina",
+    slug: "ooyukiumi_no_kaina",
     animethemes: [
       {
         title: "Telepath",
@@ -13563,6 +14263,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3848,
     site: "AniList",
     name: "Hoshi no Samidare",
+    slug: "hoshi_no_samidare",
     animethemes: [
       {
         title: "Gyouko",
@@ -13600,6 +14301,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3827,
     site: "AniList",
     name: "Prima Doll",
+    slug: "prima_doll",
     animethemes: [
       {
         title: "Usuhanazakura",
@@ -13655,6 +14357,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4102,
     site: "AniList",
     name: "Jujutsu Kaisen 2nd Season",
+    slug: "jujutsu_kaisen_2nd_season",
     animethemes: [
       {
         title: "Ao no Sumika",
@@ -13686,6 +14389,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4058,
     site: "AniList",
     name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+    slug: "kimetsu_no_yaiba_katanakaji_no_sato_hen",
     animethemes: [
       {
         title: "Kizuna no Kiseki",
@@ -13705,6 +14409,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4123,
     site: "AniList",
     name: "Helck",
+    slug: "helck",
     animethemes: [
       {
         title: "It's My Soul",
@@ -13736,6 +14441,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3850,
     site: "AniList",
     name: "Kuro no Shoukanshi",
+    slug: "kuro_no_shoukanshi",
     animethemes: [
       {
         title: "Atamannaka DEAD END",
@@ -13761,6 +14467,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3832,
     site: "AniList",
     name: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
+    slug: "youkoso_jitsuryoku_shijou_shugi_no_kyoushitsu_e_2nd_season",
     animethemes: [
       {
         title: "Dance In The Game",
@@ -13780,6 +14487,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3896,
     site: "AniList",
     name: "Shinobi no Ittoki",
+    slug: "shinobi_no_ittoki",
     animethemes: [
       {
         title: "Hikari",
@@ -13799,6 +14507,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4119,
     site: "AniList",
     name: "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+    slug: "mushoku_tensei_ii_isekai_ittara_honki_dasu",
     animethemes: [
       {
         title: "spiral",
@@ -13824,6 +14533,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3902,
     site: "AniList",
     name: "Futoku no Guild",
+    slug: "futoku_no_guild",
     animethemes: [
       {
         title: "Never the Fever!!",
@@ -13855,6 +14565,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4045,
     site: "AniList",
     name: "Isekai One Turn Kill Neesan: Ane Douhan no Isekai Seikatsu Hajimemashita",
+    slug: "isekai_one_turn_kill_neesan_ane_douhan_no_isekai_seikatsu_hajimemashita",
     animethemes: [
       {
         title: "Karei One Turn",
@@ -13880,6 +14591,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3949,
     site: "AniList",
     name: "Spy Kyoushitsu",
+    slug: "spy_kyoushitsu",
     animethemes: [
       {
         title: "Tomoshibi",
@@ -13923,6 +14635,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3959,
     site: "AniList",
     name: "Inu ni Nattara Suki na Hito ni Hirowareta.",
+    slug: "inu_ni_nattara_suki_na_hito_ni_hirowareta",
     animethemes: [
       {
         title: "Gyakkyou☆Fuwaku☆Fraction",
@@ -13976,6 +14689,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3821,
     site: "AniList",
     name: "Engage Kiss",
+    slug: "engage_kiss",
     animethemes: [
       {
         title: "Darekare Scramble",
@@ -13995,6 +14709,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3918,
     site: "AniList",
     name: "Renai Flops",
+    slug: "renai_flops",
     animethemes: [
       {
         title: "Love? Reason why!!",
@@ -14061,6 +14776,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4091,
     site: "AniList",
     name: "Lv1 Maou to One Room Yuusha",
+    slug: "lv1_maou_to_one_room_yuusha",
     animethemes: [
       {
         title: "One Room Adventure",
@@ -14080,6 +14796,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4090,
     site: "AniList",
     name: "Masamune-kun no Revenge R",
+    slug: "masamune_kun_no_revenge_r",
     animethemes: [
       {
         title: "Please, please!",
@@ -14099,6 +14816,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3920,
     site: "AniList",
     name: "4-nin wa Sorezore Uso wo Tsuku",
+    slug: "4_nin_wa_sorezore_uso_wo_tsuku",
     animethemes: [
       {
         title: "Eclipse",
@@ -14123,6 +14841,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4038,
     site: "AniList",
     name: "The IDOLM@STER Cinderella Girls: U149",
+    slug: "the_idolm_at_ster_cinderella_girls_u149",
     animethemes: [
       {
         title: "Yorimichi Little Star",
@@ -14202,6 +14921,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4016,
     site: "AniList",
     name: "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
+    slug: "shingeki_no_kyojin_the_final_season_kanketsu_hen",
     animethemes: [
       {
         title: "UNDER THE TREE",
@@ -14215,6 +14935,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4098,
     site: "AniList",
     name: "Watashi no Shiawase na Kekkon",
+    slug: "watashi_no_shiawase_na_kekkon",
     animethemes: [
       {
         title: "Anata no Soba ni.",
@@ -14234,6 +14955,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3958,
     site: "AniList",
     name: "Oniichan wa Oshimai!",
+    slug: "oniichan_wa_oshimai",
     animethemes: [
       {
         title: "Identeitei Meltdown",
@@ -14253,6 +14975,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4039,
     site: "AniList",
     name: "Kaminaki Sekai no Kamisama Katsudou",
+    slug: "kaminaki_sekai_no_kamisama_katsudou",
     animethemes: [
       {
         title: "I wish",
@@ -14272,6 +14995,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4054,
     site: "AniList",
     name: "Otonari ni Ginga",
+    slug: "otonari_ni_ginga",
     animethemes: [
       {
         title: "Tonari Awase",
@@ -14291,6 +15015,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4044,
     site: "AniList",
     name: "Yuusha ga Shinda!",
+    slug: "yuusha_ga_shinda",
     animethemes: [
       {
         title: "Shinda!",
@@ -14310,6 +15035,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4068,
     site: "AniList",
     name: "Uma Musume: Pretty Derby - Road to the Top",
+    slug: "uma_musume_pretty_derby_road_to_the_top",
     animethemes: [
       {
         title: "Glorious Moment!",
@@ -14338,6 +15064,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3923,
     site: "AniList",
     name: "Umayuru",
+    slug: "umayuru",
     animethemes: [
       {
         title: "Yurupaka HAPPY DAYS!",
@@ -14462,6 +15189,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3991,
     site: "AniList",
     name: "Kubo-san wa Mob wo Yurusanai",
+    slug: "kubo_san_wa_mob_wo_yurusanai",
     animethemes: [
       {
         title: "Dramatic ja Nakute mo",
@@ -14481,6 +15209,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4042,
     site: "AniList",
     name: "Watashi no Yuri wa Oshigoto desu!",
+    slug: "watashi_no_yuri_wa_oshigoto_desu",
     animethemes: [
       {
         title: "Himitsu♡Melody",
@@ -14500,6 +15229,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3863,
     site: "AniList",
     name: "Saikin Yatotta Maid ga Ayashii",
+    slug: "saikin_yatotta_maid_ga_ayashii",
     animethemes: [
       {
         title: "Su, Suki ja Nai!",
@@ -14519,6 +15249,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3839,
     site: "AniList",
     name: "Warau Arsnotoria Sun!",
+    slug: "warau_arsnotoria_sun",
     animethemes: [
       {
         title: "Hajimari e to Tsuzuku Basho",
@@ -14538,6 +15269,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4109,
     site: "AniList",
     name: "Dekiru Neko wa Kyou mo Yuuutsu",
+    slug: "dekiru_neko_wa_kyou_mo_yuuutsu",
     animethemes: [
       {
         title: "Ureu Kado ni wa Fuku Kitaru",
@@ -14557,6 +15289,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4037,
     site: "AniList",
     name: "Kono Subarashii Sekai ni Bakuen wo!",
+    slug: "kono_subarashii_sekai_ni_bakuen_wo",
     animethemes: [
       {
         title: "STAY FREE",
@@ -14576,6 +15309,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4131,
     site: "AniList",
     name: "Hibike! Euphonium: Ensemble Contest-hen",
+    slug: "hibike_euphonium_ensemble_contest_hen",
     animethemes: [
       {
         title: "Omens of Love",
@@ -14595,6 +15329,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4065,
     site: "AniList",
     name: '"Oshi no Ko"',
+    slug: "oshi_no_ko",
     animethemes: [
       {
         title: "Idol",
@@ -14614,6 +15349,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3882,
     site: "AniList",
     name: "Yuusha Party wo Tsuihou Sareta Beast Tamer, Saikyoushu no Nekomimi Shoujo to Deau",
+    slug: "yuusha_party_wo_tsuihou_sareta_beast_tamer_saikyoushu_no_nekomimi_shoujo_to_deau",
     animethemes: [
       {
         title: "Change The World",
@@ -14633,6 +15369,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4053,
     site: "AniList",
     name: "Edomae Elf",
+    slug: "edomae_elf",
     animethemes: [
       {
         title: "Kien Romance",
@@ -14652,6 +15389,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4125,
     site: "AniList",
     name: "Shiro Seijo to Kuro Bokushi",
+    slug: "shiro_seijo_to_kuro_bokushi",
     animethemes: [
       {
         title: "Koi Sekai",
@@ -14671,6 +15409,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3978,
     site: "AniList",
     name: "Trigun Stampede",
+    slug: "trigun_stampede",
     animethemes: [
       {
         title: "TOMBI",
@@ -14696,6 +15435,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4029,
     site: "AniList",
     name: "My Home Hero",
+    slug: "my_home_hero",
     animethemes: [
       {
         title: "Ai no Uta",
@@ -14715,6 +15455,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3908,
     site: "AniList",
     name: "Akiba Maid Sensou",
+    slug: "akiba_maid_sensou",
     animethemes: [
       {
         title: "Maid Daikaiten",
@@ -14746,6 +15487,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4184,
     site: "AniList",
     name: "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
+    slug: "kaguya_sama_wa_kokurasetai_first_kiss_wa_owaranai",
     animethemes: [
       {
         title: "Love is Show",
@@ -14765,6 +15507,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3983,
     site: "AniList",
     name: "Nokemono-tachi no Yoru",
+    slug: "nokemono_tachi_no_yoru",
     animethemes: [
       {
         title: "Ashita no Katachi",
@@ -14784,6 +15527,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4047,
     site: "AniList",
     name: "Mashle",
+    slug: "mashle",
     animethemes: [
       {
         title: "Knock Out",
@@ -14803,6 +15547,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3955,
     site: "AniList",
     name: "Tomo-chan wa Onnanoko!",
+    slug: "tomo_chan_wa_onnanoko",
     animethemes: [
       {
         title: "Kurae! Telepathy",
@@ -14828,6 +15573,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4060,
     site: "AniList",
     name: "Kanojo ga Koushaku-tei ni Itta Riyuu",
+    slug: "kanojo_ga_koushaku_tei_ni_itta_riyuu",
     animethemes: [
       {
         title: "SURVIVE",
@@ -14853,6 +15599,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4141,
     site: "AniList",
     name: "Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su",
+    slug: "shangri_la_frontier_kusoge_hunter_kamige_ni_idoman_to_su",
     animethemes: [
       {
         title: "BROKEN GAMES",
@@ -14884,6 +15631,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3922,
     site: "AniList",
     name: "Aru Asa Dummy Head Mic ni Natteita Ore-kun no Jinsei",
+    slug: "aru_asa_dummy_head_mic_ni_natteita_ore_kun_no_jinsei",
     animethemes: [
       {
         title: "Katachi ni Dekinai Monologue",
@@ -14897,6 +15645,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3977,
     site: "AniList",
     name: "Rougo ni Sonaete Isekai de 8-manmai no Kinka wo Tamemasu",
+    slug: "rougo_ni_sonaete_isekai_de_8_manmai_no_kinka_wo_tamemasu",
     animethemes: [
       {
         title: "Hikatta Coin ga Shimesu Hou",
@@ -14916,6 +15665,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4120,
     site: "AniList",
     name: "Dark Gathering",
+    slug: "dark_gathering",
     animethemes: [
       {
         title: "Kakuriyo",
@@ -14941,6 +15691,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4025,
     site: "AniList",
     name: "Boku no Kokoro no Yabai Yatsu",
+    slug: "boku_no_kokoro_no_yabai_yatsu",
     animethemes: [
       {
         title: "Shayou",
@@ -14960,6 +15711,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4066,
     site: "AniList",
     name: "Ousama Ranking: Yuuki no Takarabako",
+    slug: "ousama_ranking_yuuki_no_takarabako",
     animethemes: [
       {
         title: "GOLD",
@@ -14979,6 +15731,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3951,
     site: "AniList",
     name: "Tensei Oujo to Tensai Reijou no Mahou Kakumei",
+    slug: "tensei_oujo_to_tensai_reijou_no_mahou_kakumei",
     animethemes: [
       {
         title: "Arc-en-ciel",
@@ -14998,6 +15751,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4033,
     site: "AniList",
     name: "Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta",
+    slug: "isekai_de_cheat_skill_wo_te_ni_shita_ore_wa_genjitsu_sekai_wo_mo_musou_suru_level_up_wa_jinsei_wo_kaeta",
     animethemes: [
       {
         title: "Gyakuten Geki",
@@ -15017,6 +15771,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3927,
     site: "AniList",
     name: "Romantic Killer",
+    slug: "romantic_killer",
     animethemes: [
       {
         title: "ROMA☆KiRA",
@@ -15036,6 +15791,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4187,
     site: "AniList",
     name: "Undead Unluck",
+    slug: "undead_unluck",
     animethemes: [
       {
         title: "01",
@@ -15067,6 +15823,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4051,
     site: "AniList",
     name: "Megami no Café Terrace",
+    slug: "megami_no_cafe_terrace",
     animethemes: [
       {
         title: "Unmei Kyoudoutai!",
@@ -15086,6 +15843,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4144,
     site: "AniList",
     name: "Dekoboko Majo no Oyako Jijou",
+    slug: "dekoboko_majo_no_oyako_jijou",
     animethemes: [
       {
         title: "Sugar Doughnuts",
@@ -15101,10 +15859,43 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "154587": {
+    id: 4136,
+    site: "AniList",
+    name: "Sousou no Frieren",
+    slug: "sousou_no_frieren",
+    animethemes: [
+      {
+        title: "Yuusha",
+        type: "OP",
+        slug: "OP1",
+        artists: ["YOASOBI"],
+      },
+      {
+        title: "Anytime Anywhere",
+        type: "ED",
+        slug: "ED1",
+        artists: ["milet"],
+      },
+      {
+        title: "bliss",
+        type: "ED",
+        slug: "ED1-TV",
+        artists: ["milet"],
+      },
+      {
+        title: "Haru",
+        type: "OP",
+        slug: "OP2",
+        artists: ["Yorushika"],
+      },
+    ],
+  },
   "154643": {
     id: 4122,
     site: "AniList",
     name: "Synduality: Noir",
+    slug: "synduality_noir",
     animethemes: [
       {
         title: "Eureka",
@@ -15124,6 +15915,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4023,
     site: "AniList",
     name: "Yamada-kun to Lv999 no Koi wo Suru",
+    slug: "yamada_kun_to_lv999_no_koi_wo_suru",
     animethemes: [
       {
         title: "Gradation feat. Yuuho Kitazawa",
@@ -15143,6 +15935,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4199,
     site: "AniList",
     name: "Seishun Buta Yarou wa Odekake Sister no Yume wo Minai",
+    slug: "seishun_buta_yarou_wa_odekake_sister_no_yume_wo_minai",
     animethemes: [
       {
         title: "Fukashigi no Karte",
@@ -15156,6 +15949,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4046,
     site: "AniList",
     name: "Kawaisugi Crisis",
+    slug: "kawaisugi_crisis",
     animethemes: [
       {
         title: "Space Cat Big Bang",
@@ -15175,6 +15969,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3967,
     site: "AniList",
     name: "Ars no Kyojuu",
+    slug: "ars_no_kyojuu",
     animethemes: [
       {
         title: "Hengenjizai",
@@ -15200,6 +15995,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4056,
     site: "AniList",
     name: "Mobile Suit Gundam: The Witch from Mercury Season 2",
+    slug: "mobile_suit_gundam_the_witch_from_mercury_season_2",
     animethemes: [
       {
         title: "slash",
@@ -15225,6 +16021,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4127,
     site: "AniList",
     name: "Hataraku Maou-sama!! 2nd Season",
+    slug: "hataraku_maou_sama_2nd_season",
     animethemes: [
       {
         title: "Hikari no Nai Machi",
@@ -15244,6 +16041,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3956,
     site: "AniList",
     name: "Revenger",
+    slug: "revenger",
     animethemes: [
       {
         title: "Down Timer",
@@ -15263,6 +16061,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4181,
     site: "AniList",
     name: "Shy",
+    slug: "shy",
     animethemes: [
       {
         title: "Shiny Girl",
@@ -15294,6 +16093,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4179,
     site: "AniList",
     name: "Hoshikuzu Telepath",
+    slug: "hoshikuzu_telepath",
     animethemes: [
       {
         title: "Ten to Sen",
@@ -15313,6 +16113,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4086,
     site: "AniList",
     name: "Uchi no Kaisha no Chiisai Senpai no Hanashi",
+    slug: "uchi_no_kaisha_no_chiisai_senpai_no_hanashi",
     animethemes: [
       {
         title: "HONEY",
@@ -15332,6 +16133,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4021,
     site: "AniList",
     name: "Tengoku Daimakyou",
+    slug: "tengoku_daimakyou",
     animethemes: [
       {
         title: "innocent arrogance",
@@ -15357,6 +16159,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3966,
     site: "AniList",
     name: "Buddy Daddies",
+    slug: "buddy_daddies",
     animethemes: [
       {
         title: "SHOCK!",
@@ -15376,6 +16179,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 3992,
     site: "AniList",
     name: "Tondemo Skill de Isekai Hourou Meshi",
+    slug: "tondemo_skill_de_isekai_hourou_meshi",
     animethemes: [
       {
         title: "Zeitaku na Saji",
@@ -15395,6 +16199,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4157,
     site: "AniList",
     name: "Uma Musume: Pretty Derby Season 3",
+    slug: "uma_musume_pretty_derby_season_3",
     animethemes: [
       {
         title: "Lost Shine",
@@ -15492,6 +16297,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4063,
     site: "AniList",
     name: "The Marginal Service",
+    slug: "the_marginal_service",
     animethemes: [
       {
         title: "Quiet explosion",
@@ -15511,6 +16317,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4034,
     site: "AniList",
     name: "Kizuna no Allele",
+    slug: "kizuna_no_allele",
     animethemes: [
       {
         title: "mirAI wave!",
@@ -15530,6 +16337,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4028,
     site: "AniList",
     name: "Jijou wo Shiranai Tenkousei ga Guigui Kuru.",
+    slug: "jijou_wo_shiranai_tenkousei_ga_guigui_kuru",
     animethemes: [
       {
         title: "Alcor to Polaris",
@@ -15549,6 +16357,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4094,
     site: "AniList",
     name: "Yumemiru Danshi wa Genjitsushugisha",
+    slug: "yumemiru_danshi_wa_genjitsushugisha",
     animethemes: [
       {
         title: "Paraglider",
@@ -15568,6 +16377,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4160,
     site: "AniList",
     name: "Bullbuster",
+    slug: "bullbuster",
     animethemes: [
       {
         title: "Try-ry-ry",
@@ -15587,6 +16397,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4057,
     site: "AniList",
     name: "World Dai Star",
+    slug: "world_dai_star",
     animethemes: [
       {
         title: "Wanna Be Star!",
@@ -15619,6 +16430,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4108,
     site: "AniList",
     name: "AI no Idenshi",
+    slug: "ai_no_idenshi",
     animethemes: [
       {
         title: "No Frontier",
@@ -15638,6 +16450,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4137,
     site: "AniList",
     name: "Megumi no Daigo: Kyuukoku no Orange",
+    slug: "megumi_no_daigo_kyuukoku_no_orange",
     animethemes: [
       {
         title: "Anthropos",
@@ -15657,6 +16470,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4178,
     site: "AniList",
     name: "Kamonohashi Ron no Kindan Suiri",
+    slug: "kamonohashi_ron_no_kindan_suiri",
     animethemes: [
       {
         title: "Ikenai fool logic",
@@ -15676,6 +16490,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4172,
     site: "AniList",
     name: "Spy x Family Season 2",
+    slug: "spy_x_family_season_2",
     animethemes: [
       {
         title: "Kura Kura",
@@ -15695,6 +16510,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4185,
     site: "AniList",
     name: "Houkago Shounen Hanako-kun",
+    slug: "houkago_shounen_hanako_kun",
     animethemes: [
       {
         title: "Koi! Koi Koi",
@@ -15713,6 +16529,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4158,
     site: "AniList",
     name: "16bit Sensation: Another Layer",
+    slug: "16bit_sensation_another_layer",
     animethemes: [
       {
         title: "65535",
@@ -15732,6 +16549,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4188,
     site: "AniList",
     name: "Hikikomari Kyuuketsuki no Monmon",
+    slug: "hikikomari_kyuuketsuki_no_monmon",
     animethemes: [
       {
         title: "Red Liberation",
@@ -15751,6 +16569,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4116,
     site: "AniList",
     name: "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+    slug: "zom_100_zombie_ni_naru_made_ni_shitai_100_no_koto",
     animethemes: [
       {
         title: "Song of the Dead",
@@ -15766,10 +16585,25 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "159886": {
+    id: 4291,
+    site: "AniList",
+    name: "Ooyukiumi no Kaina: Hoshi no Kenja",
+    slug: "ooyukiumi_no_kaina_hoshi_no_kenja",
+    animethemes: [
+      {
+        title: "Gekkouyoku",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Yorushika"],
+      },
+    ],
+  },
   "160188": {
     id: 4096,
     site: "AniList",
     name: "Suki na Ko ga Megane wo Wasureta",
+    slug: "suki_na_ko_ga_megane_wo_wasureta",
     animethemes: [
       {
         title: "NAME",
@@ -15789,6 +16623,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4115,
     site: "AniList",
     name: "Temple",
+    slug: "temple",
     animethemes: [
       {
         title: "Bonnou☆Paradise",
@@ -15826,6 +16661,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4169,
     site: "AniList",
     name: "Hametsu no Oukoku",
+    slug: "hametsu_no_oukoku",
     animethemes: [
       {
         title: "Kieru made",
@@ -15845,6 +16681,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4193,
     site: "AniList",
     name: "Kusuriya no Hitorigoto",
+    slug: "kusuriya_no_hitorigoto",
     animethemes: [
       {
         title: "Hana ni Natte",
@@ -15876,6 +16713,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4186,
     site: "AniList",
     name: "Dr. Stone: New World Part 2",
+    slug: "dr_stone_new_world_part_2",
     animethemes: [
       {
         title: "Haruka",
@@ -15895,6 +16733,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4177,
     site: "AniList",
     name: "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+    slug: "kimi_no_koto_ga_daidaidaidaidaisuki_na_100_nin_no_kanojo",
     animethemes: [
       {
         title: "Sweet Sign",
@@ -15923,10 +16762,43 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "162780": {
+    id: 4203,
+    site: "AniList",
+    name: "Mahou Shoujo ni Akogarete",
+    slug: "mahou_shoujo_ni_akogarete",
+    animethemes: [
+      {
+        title: "My dream girls",
+        type: "OP",
+        slug: "OP1",
+        artists: ["NACHERRY"],
+      },
+      {
+        title: "Toge Toge Sadistic",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Aoi Koga", "Fuuka Izumi", "Shiori Sugiura"],
+      },
+      {
+        title: "Toge Toge Sadistic",
+        type: "ED",
+        slug: "ED2",
+        artists: [
+          "Minami Tsuda",
+          "Aoi Koga",
+          "Yuuka Aisaka",
+          "Fuuka Izumi",
+          "Shiori Sugiura",
+        ],
+      },
+    ],
+  },
   "162893": {
     id: 4084,
     site: "AniList",
     name: "Ryza no Atelier: Tokoyami no Joou to Himitsu no Kakurega",
+    slug: "ryza_no_atelier_tokoyami_no_joou_to_himitsu_no_kakurega",
     animethemes: [
       {
         title: "Golden Ray",
@@ -15946,6 +16818,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4100,
     site: "AniList",
     name: "Undead Girl Murder Farce",
+    slug: "undead_girl_murder_farce",
     animethemes: [
       {
         title: "Crack - Crack - Crackle",
@@ -15965,6 +16838,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4105,
     site: "AniList",
     name: "Sugar Apple Fairy Tale Part 2",
+    slug: "sugar_apple_fairy_tale_part_2",
     animethemes: [
       {
         title: "Surprise",
@@ -15984,6 +16858,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4251,
     site: "AniList",
     name: "Gotoubun no Hanayome∽",
+    slug: "gotoubun_no_hanayome_2023",
     animethemes: [
       {
         title: "Gotoubun no Mirai",
@@ -16003,6 +16878,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4153,
     site: "AniList",
     name: "Tokyo Revengers: Tenjiku-hen",
+    slug: "tokyo_revengers_tenjiku_hen",
     animethemes: [
       {
         title: "White Noise",
@@ -16022,6 +16898,7 @@ export const exampleAnimeInfo: AnimeInfo = {
     id: 4126,
     site: "AniList",
     name: "Spy Kyoushitsu 2nd Season",
+    slug: "spy_kyoushitsu_2nd_season",
     animethemes: [
       {
         title: "Rakuen",
@@ -16061,10 +16938,31 @@ export const exampleAnimeInfo: AnimeInfo = {
       },
     ],
   },
+  "166216": {
+    id: 4212,
+    site: "AniList",
+    name: "Boku no Kokoro no Yabai Yatsu Season 2",
+    slug: "boku_no_kokoro_no_yabai_yatsu_season_2",
+    animethemes: [
+      {
+        title: "Boku wa...",
+        type: "OP",
+        slug: "OP1",
+        artists: ["Atarayo"],
+      },
+      {
+        title: "Koishiteru Jibun Sura Aiserunda",
+        type: "ED",
+        slug: "ED1",
+        artists: ["Lam Kohana"],
+      },
+    ],
+  },
   "166896": {
     id: 4175,
     site: "AniList",
     name: "Bokura no Ameiro Protocol",
+    slug: "bokura_no_ameiro_protocol",
     animethemes: [
       {
         title: "S9aiR",
