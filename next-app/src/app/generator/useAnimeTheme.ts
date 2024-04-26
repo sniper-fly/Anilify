@@ -3,7 +3,7 @@ import axios from "axios";
 import { AnimeInfo, Media } from "@/types";
 import { extractAnimeInfo } from "./extractAnimeInfo";
 
-export function useAnimeTheme(medium: Media): [AnimeInfo, boolean] {
+export function useAnimeTheme(medium: Media[]): [AnimeInfo, boolean] {
   const [animeInfo, setAnimeInfo] = useState<AnimeInfo>({});
   const [loading, setLoading] = useState(false);
 
