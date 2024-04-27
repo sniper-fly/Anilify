@@ -85,17 +85,25 @@ function AnimeRow({
       <div>
         {animeInfo[media.id]?.animethemes.map((theme) => {
           return (
-            <div key={theme.title + theme.slug} className="flex flex-row gap-3 mb-3">
+            <div
+              key={theme.title + theme.slug}
+              className="mb-3 flex flex-row gap-3"
+            >
               <div className={TypeW}>{theme.slug}</div>
               <div className={SongW}>
-                <p>{theme.title}</p>
+                <a
+                  target="_blank" rel="noopener noreferrer" href={theme.link}
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  {theme.title}
+                </a>
                 <p className="text-gray-500">
                   {joinAppropriate(theme.artists)}
                 </p>
               </div>
               <div className={StreamW + "flex w-80 flex-col"}>
                 {searchResult[theme.title]
-                  ?.slice(0, 3)
+                  ?.slice(0, 1)
                   .map((track) => (
                     <StreamingEntry key={track.uri} track={track} />
                   ))}
