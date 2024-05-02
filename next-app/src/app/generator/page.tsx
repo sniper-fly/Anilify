@@ -66,7 +66,7 @@ export default function Home() {
     // const data = await dynamoBatchGet(params);
     // console.log(searchResult);
 
-    return
+    return;
     (async () => {
       if (Object.keys(animeInfo).length === 0) return;
       setSearchResult(await searchTrackInfo(animeInfo));
@@ -86,7 +86,6 @@ export default function Home() {
   return (
     <>
       <button onClick={handleClick}>hoge</button>
-
 
       <UsernameInput findUserAnimeList={findUserAnimeList} />
 

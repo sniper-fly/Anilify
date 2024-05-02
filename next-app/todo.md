@@ -32,8 +32,8 @@
 - 将来の持続可能なDB作成について、とにかく案を書きなぐってまとめる(4/22~4/24)
 - a linkでanimetheme.moe に対しての導線を設置する(4/26 ~ 4/27)
 
-- cockroachDBのローカルセットアップチュートリアル
-https://www.cockroachlabs.com/docs/stable/start-a-local-cluster-in-docker-mac
+- TiDBの導入(5/1)
+- prismaの導入(5/2 ~)
 - SQLからデータを引き出す
 - Aniplaylist APIのスクレイピング
 - cockroachDBのオンライン利用
