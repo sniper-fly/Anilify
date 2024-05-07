@@ -1,7 +1,7 @@
 x-common-environment: &common-environment
   MYSQL_ROOT_PASSWORD: dev
   MYSQL_DATABASE: dev
-  MYSQL_USER: docker
+  MYSQL_USER: dev
   MYSQL_PASSWORD: dev
   MYSQL_PORT: 3306
 
@@ -32,6 +32,7 @@ services:
       <<: *common-environment
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
 
 volumes:
   mysql-data:
