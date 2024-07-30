@@ -1,4 +1,5 @@
-FROM node:20-alpine
+FROM public.ecr.aws/docker/library/node:20.9.0-slim
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.8.4 /lambda-adapter /opt/extensions/lambda-adapter
 
 WORKDIR /app
 
@@ -6,9 +7,8 @@ WORKDIR /app
 # Uncomment the following line to disable telemetry at run time
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN apk add --no-cache \
-  su-exec \
-  shadow
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  gosu
 
 # ビルド時、 UID 1000 の node が存在する
 # entrypointで UID/GID の変更を行うため、root でないと実行できない

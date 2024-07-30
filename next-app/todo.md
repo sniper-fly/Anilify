@@ -33,13 +33,11 @@
 - a linkでanimetheme.moe に対しての導線を設置する(4/26 ~ 4/27)
 
 - TiDBの導入(5/1)
-- prismaの導入(5/2 ~)
+- prismaの導入(5/2)
 - SQLからデータを引き出す
-- Aniplaylist APIのスクレイピング
-- cockroachDBのオンライン利用
+- Aniplaylist APIのスクレイピング(6/14 ~ )
 
 - .tsファイルで作成した関数に関してのロジックをテストする
-- Next.jsのcache関数を使って他APIとの通信を高速化する
 - DynamoDBに情報が含まれていない場合にSpotify APIと通信して取得する
 
 期待通りの画面になったら
