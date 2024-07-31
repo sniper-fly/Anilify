@@ -7,7 +7,6 @@ import {
   BatchWriteCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { exampleSearchResult } from "@/example/searchResult";
-import { exampleThemesWithSpotify } from "@/example/themes";
 
 export async function createDynamoCache() {
   const client = new DynamoDBClient({ region: "ap-northeast-1" });

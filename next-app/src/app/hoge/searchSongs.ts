@@ -39,7 +39,7 @@ export default async function searchSongs(token: AccessToken) {
       available_markets: item.available_markets,
     }));
 
-    theme.spotify = searchResult[theme.title];
+    // theme.spotify = searchResult[theme.title];
   }
   console.log("====================================")
 

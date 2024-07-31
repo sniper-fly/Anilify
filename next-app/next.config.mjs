@@ -15,7 +15,8 @@ const nextConfig = {
         pathname: '/image/**',
       }
     ]
-  }
+  },
+  output: "standalone"
 };
 
 export default nextConfig;
