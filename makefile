@@ -13,3 +13,9 @@ sh:
 
 test:
 	docker compose exec next-app gosu node npm run test
+
+prodbuild:
+	docker compose -f docker-compose-prod.yml build
+
+produp:
+	docker compose -f docker-compose-prod.yml up
