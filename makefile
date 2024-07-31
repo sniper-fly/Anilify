@@ -19,3 +19,6 @@ prodbuild:
 
 produp:
 	docker compose -f docker-compose-prod.yml up
+
+prodown:
+	docker compose -f docker-compose-prod.yml down

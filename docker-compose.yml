@@ -11,7 +11,7 @@ services:
     build:
       context: ./next-app
       dockerfile: docker/Dockerfile
-    image: anitunes:1.4
+    image: anitunes_dev:1.4
     command: [npm, run, debug]
     init: true
     volumes:
