@@ -28,6 +28,9 @@ FROM base AS runner
 COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.8.4 /lambda-adapter /opt/extensions/lambda-adapter
 WORKDIR /app
 
+ENV PORT=3000 NODE_ENV=production
+ENV AWS_LWA_ENABLE_COMPRESSION=true
+
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
