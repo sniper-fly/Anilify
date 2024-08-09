@@ -8,7 +8,8 @@ WORKDIR /app
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  gosu
+  gosu \
+  openssl
 
 # ビルド時、 UID 1000 の node が存在する
 # entrypointで UID/GID の変更を行うため、root でないと実行できない
