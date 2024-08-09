@@ -54,7 +54,7 @@ export type Media = extractTypeName<User_Anime_ListQuery, "Media">;
 
 type newTable = {
   id: number;
-  anilist_id: number;
+  anilist_id: number; // これをプライマリキーにしてもいいかも
   myanimelist_id: number;
   anime_title: string;
   songs: [
@@ -79,7 +79,7 @@ type newTable = {
             available_markets: string[];
 
             added_count: number; // ユーザーがプレイリストに追加した回数を記録してレコメンドに活かす
-            is_official: boolean; // 公式の音楽かどうか
+            // is_official: boolean; // 公式の音楽かどうか
             vote_as_official: number; // ユーザーが公式として投票した回数
           },
         ];

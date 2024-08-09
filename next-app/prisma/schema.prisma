@@ -13,28 +13,64 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
-  content   String?
-  published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
+model Media {
+  id            Int    @id @default(autoincrement())
+  anilistId     Int    @unique
+  myanimelistId Int
+  animeTitle    String
+  songs         Song[]
 }
 
-model Profile {
-  id     Int     @id @default(autoincrement())
-  bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
+model Song {
+  id             Int             @id @default(autoincrement())
+  searchedBySong Boolean
+  title          String
+  jpTitle        String?
+  slug           String?
+  artists        SongArtists[]
+  mediaAnilistId Int
+  streamingSong  StreamingSong[]
+
+  media Media @relation(fields: [mediaAnilistId], references: [anilistId])
 }
 
-model User {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique
-  name    String?
-  posts   Post[]
-  profile Profile?
+model StreamingSong {
+  id             Int                @id @default(autoincrement())
+  provider       String
+  uri            String
+  name           String
+  artists        StreamingArtists[]
+  openLink       String
+  previewUrl     String
+  image          String
+  durationMs     Int
+  addedCount     Int
+  voteAsOfficial Int
+  songId         Int
+
+  Song            Song              @relation(fields: [songId], references: [id])
+  AvailableMarket AvailableMarket[]
+
+  @@unique([provider, uri]) // Composite unique constraint
+}
+
+model SongArtists {
+  id     Int    @id @default(autoincrement())
+  name   String
+  songId Int
+  song   Song   @relation(fields: [songId], references: [id])
+}
+
+model StreamingArtists {
+  id          Int           @id @default(autoincrement())
+  name        String
+  streamingId Int
+  song        StreamingSong @relation(fields: [streamingId], references: [id])
+}
+
+model AvailableMarket {
+  id          Int           @id @default(autoincrement())
+  name        String
+  streamingId Int
+  song        StreamingSong @relation(fields: [streamingId], references: [id])
 }
