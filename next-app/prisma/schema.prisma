@@ -17,7 +17,7 @@ model Media {
   id            Int    @id @default(autoincrement())
   anilistId     Int    @unique
   myanimelistId Int
-  animeTitle    String
+  title         String
   songs         Song[]
 }
 
