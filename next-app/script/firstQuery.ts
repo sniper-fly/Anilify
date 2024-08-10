@@ -26,11 +26,14 @@ const prisma = new PrismaClient();
 // }
 
 async function main() {
-  const post = await prisma.post.update({
-    where: { id: 1 },
-    data: { published: true },
-  })
-  console.log(post)
+  const media = await prisma.media.create({
+    data: {
+      title: "gintama",
+      anilistId: 1,
+      myanimelistId: 1,
+    },
+  });
+  console.log(media);
 }
 
 main()
