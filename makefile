@@ -17,6 +17,9 @@ test:
 ps:
 	docker compose exec next-app gosu node npx prisma studio
 
+tsx:
+	docker compose exec next-app gosu node npx tsx script/$(q).ts
+
 prodbuild:
 	docker compose -f docker-compose-prod.yml build
 
