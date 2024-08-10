@@ -20,6 +20,7 @@ services:
       - 3000:3000
       - 9229:9229
       - 9230:9230
+      - 5555:5555 # For prisma studio
     environment:
       MYSQL_HOST: db
       <<: *common-environment

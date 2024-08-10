@@ -14,6 +14,9 @@ sh:
 test:
 	docker compose exec next-app gosu node npm run test
 
+ps:
+	docker compose exec next-app gosu node npx prisma studio
+
 prodbuild:
 	docker compose -f docker-compose-prod.yml build
 
