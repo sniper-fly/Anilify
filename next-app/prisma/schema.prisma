@@ -13,25 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Media {
+model Anime {
   id             Int             @id @default(autoincrement())
   anilistId      Int
   myanimelistId  Int
   title          String
-  songs          Song[]
+  animeThemes    AnimeTheme[]
   streamingSongs StreamingSong[]
 }
 
-model Song {
-  id            Int             @id @default(autoincrement())
+model AnimeTheme {
+  id            Int                 @id @unique
   title         String
   jpTitle       String?
   slug          String?
-  artists       SongArtists[]
-  mediaId       Int
+  artists       AnimeThemeArtists[]
+  animeId       Int
   streamingSong StreamingSong[]
 
-  media Media @relation(fields: [mediaId], references: [id])
+  anime Anime @relation(fields: [animeId], references: [id])
 }
 
 model StreamingSong {
@@ -49,33 +49,33 @@ model StreamingSong {
   songType   String
   addedCount Int
 
-  songId  Int?
-  mediaId Int
+  animeThemeId Int?
+  animeId      Int
 
-  Media            Media             @relation(fields: [mediaId], references: [id])
-  Song             Song?             @relation(fields: [songId], references: [id])
-  AvailableMarkets AvailableMarket[]
+  anime            Anime             @relation(fields: [animeId], references: [id])
+  animeTheme       AnimeTheme?       @relation(fields: [animeThemeId], references: [id])
+  availableMarkets AvailableMarket[]
 
   @@unique([provider, uri]) // Composite unique constraint
 }
 
-model SongArtists {
-  id     Int    @id @default(autoincrement())
-  name   String
-  songId Int
-  song   Song   @relation(fields: [songId], references: [id])
+model AnimeThemeArtists {
+  id           Int        @id @default(autoincrement())
+  name         String
+  animeThemeId Int
+  animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
 }
 
 model StreamingArtists {
-  id          Int           @id @default(autoincrement())
-  name        String
-  streamingId Int
-  song        StreamingSong @relation(fields: [streamingId], references: [id])
+  id            Int           @id @default(autoincrement())
+  name          String
+  streamingId   Int
+  streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }
 
 model AvailableMarket {
-  id          Int           @id @default(autoincrement())
-  name        String
-  streamingId Int
-  song        StreamingSong @relation(fields: [streamingId], references: [id])
+  id            Int           @id @default(autoincrement())
+  name          String
+  streamingId   Int
+  streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }
