@@ -61,19 +61,22 @@ model StreamingSong {
 }
 
 model AnimeThemeArtists {
+  id           Int        @id @unique
   name         String
-  animeThemeId Int        @id
+  animeThemeId Int
   animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
 }
 
 model StreamingArtists {
+  id            Int           @id @unique
   name          String
-  streamingId   Int           @id
+  streamingId   Int
   streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }
 
 model AvailableMarket {
+  id            Int           @id @default(autoincrement())
   name          String
-  streamingId   Int           @id
+  streamingId   Int
   streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }

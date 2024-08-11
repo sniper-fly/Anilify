@@ -7,9 +7,9 @@ up:
 down:
 	docker compose down
 
-# node userとして sh を実行
-sh:
-	docker compose exec next-app gosu node sh
+# node userとして bash を実行
+bash:
+	docker compose exec next-app gosu node bash
 
 test:
 	docker compose exec next-app gosu node npm run test

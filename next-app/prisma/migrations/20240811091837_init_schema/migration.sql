@@ -1,8 +1,10 @@
 -- CreateTable
 CREATE TABLE `Anime` (
     `id` INTEGER NOT NULL,
-    `anilistId` INTEGER NOT NULL,
-    `myanimelistId` INTEGER NOT NULL,
+    `anilistId` INTEGER NULL,
+    `myanimelistId` INTEGER NULL,
+    `kitsuId` INTEGER NULL,
+    `anidbId` INTEGER NULL,
     `title` VARCHAR(191) NOT NULL,
 
     UNIQUE INDEX `Anime_id_key`(`id`),
@@ -13,8 +15,7 @@ CREATE TABLE `Anime` (
 CREATE TABLE `AnimeTheme` (
     `id` INTEGER NOT NULL,
     `title` VARCHAR(191) NOT NULL,
-    `jpTitle` VARCHAR(191) NULL,
-    `slug` VARCHAR(191) NULL,
+    `slug` VARCHAR(191) NOT NULL,
     `animeId` INTEGER NOT NULL,
 
     UNIQUE INDEX `AnimeTheme_id_key`(`id`),
@@ -42,26 +43,31 @@ CREATE TABLE `StreamingSong` (
 
 -- CreateTable
 CREATE TABLE `AnimeThemeArtists` (
+    `id` INTEGER NOT NULL,
     `name` VARCHAR(191) NOT NULL,
     `animeThemeId` INTEGER NOT NULL,
 
-    PRIMARY KEY (`animeThemeId`)
+    UNIQUE INDEX `AnimeThemeArtists_id_key`(`id`),
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
 CREATE TABLE `StreamingArtists` (
+    `id` INTEGER NOT NULL,
     `name` VARCHAR(191) NOT NULL,
     `streamingId` INTEGER NOT NULL,
 
-    PRIMARY KEY (`streamingId`)
+    UNIQUE INDEX `StreamingArtists_id_key`(`id`),
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
 CREATE TABLE `AvailableMarket` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(191) NOT NULL,
     `streamingId` INTEGER NOT NULL,
 
-    PRIMARY KEY (`streamingId`)
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
