@@ -8,7 +8,7 @@ down:
 	docker compose down
 
 # node userとして sh を実行
-sh:
+nextapp:
 	docker compose exec next-app gosu node sh
 
 test:
@@ -19,6 +19,9 @@ ps:
 
 tsx:
 	docker compose exec next-app gosu node npx tsx script/$(q).ts
+
+db:
+	docker compose exec db sh
 
 migrate:
 	docker compose exec next-app gosu node npx prisma migrate dev
@@ -31,3 +34,5 @@ produp:
 
 prodown:
 	docker compose -f docker-compose-prod.yml down
+
+.PHONY: build up down nextapp test ps tsx db migrate prodbuild produp prodown
