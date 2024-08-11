@@ -15,7 +15,7 @@ datasource db {
 
 model Media {
   id             Int             @id @default(autoincrement())
-  anilistId      Int             @unique
+  anilistId      Int
   myanimelistId  Int
   title          String
   songs          Song[]
@@ -23,15 +23,15 @@ model Media {
 }
 
 model Song {
-  id             Int             @id @default(autoincrement())
-  title          String
-  jpTitle        String?
-  slug           String?
-  artists        SongArtists[]
-  mediaAnilistId Int
-  streamingSong  StreamingSong[]
+  id            Int             @id @default(autoincrement())
+  title         String
+  jpTitle       String?
+  slug          String?
+  artists       SongArtists[]
+  mediaId       Int
+  streamingSong StreamingSong[]
 
-  media Media @relation(fields: [mediaAnilistId], references: [anilistId])
+  media Media @relation(fields: [mediaId], references: [id])
 }
 
 model StreamingSong {
@@ -46,11 +46,11 @@ model StreamingSong {
   image      String
   durationMs Int
 
-  songType       String
-  addedCount     Int
+  songType   String
+  addedCount Int
 
-  songId         Int?
-  mediaId        Int
+  songId  Int?
+  mediaId Int
 
   Media            Media             @relation(fields: [mediaId], references: [id])
   Song             Song?             @relation(fields: [songId], references: [id])
