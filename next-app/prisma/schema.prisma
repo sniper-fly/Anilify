@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Anime {
-  id             Int             @id @default(autoincrement())
+  id             Int             @id @unique // animetheme api's anime id
   anilistId      Int
   myanimelistId  Int
   title          String
@@ -23,7 +23,7 @@ model Anime {
 }
 
 model AnimeTheme {
-  id            Int                 @id @unique
+  id            Int                 @id @unique // animetheme api's song id
   title         String
   jpTitle       String?
   slug          String?
@@ -60,22 +60,19 @@ model StreamingSong {
 }
 
 model AnimeThemeArtists {
-  id           Int        @id @default(autoincrement())
   name         String
-  animeThemeId Int
+  animeThemeId Int        @id
   animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
 }
 
 model StreamingArtists {
-  id            Int           @id @default(autoincrement())
   name          String
-  streamingId   Int
+  streamingId   Int           @id
   streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }
 
 model AvailableMarket {
-  id            Int           @id @default(autoincrement())
   name          String
-  streamingId   Int
+  streamingId   Int           @id
   streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
 }

@@ -8,13 +8,13 @@ down:
 	docker compose down
 
 # node userとして sh を実行
-nextapp:
+sh:
 	docker compose exec next-app gosu node sh
 
 test:
 	docker compose exec next-app gosu node npm run test
 
-ps:
+studio:
 	docker compose exec next-app gosu node npx prisma studio
 
 tsx:
