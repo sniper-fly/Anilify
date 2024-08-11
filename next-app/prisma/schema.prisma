@@ -15,8 +15,10 @@ datasource db {
 
 model Anime {
   id             Int             @id @unique // animetheme api's anime id
-  anilistId      Int
-  myanimelistId  Int
+  anilistId      Int?
+  myanimelistId  Int?
+  kitsuId        Int?
+  anidbId        Int?
   title          String
   animeThemes    AnimeTheme[]
   streamingSongs StreamingSong[]
@@ -25,8 +27,7 @@ model Anime {
 model AnimeTheme {
   id            Int                 @id @unique // animetheme api's song id
   title         String
-  jpTitle       String?
-  slug          String?
+  slug          String
   artists       AnimeThemeArtists[]
   animeId       Int
   streamingSong StreamingSong[]
