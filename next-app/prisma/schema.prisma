@@ -14,16 +14,16 @@ datasource db {
 }
 
 model Media {
-  id            Int    @id @default(autoincrement())
-  anilistId     Int    @unique
-  myanimelistId Int
-  title         String
-  songs         Song[]
+  id             Int             @id @default(autoincrement())
+  anilistId      Int             @unique
+  myanimelistId  Int
+  title          String
+  songs          Song[]
+  streamingSongs StreamingSong[]
 }
 
 model Song {
   id             Int             @id @default(autoincrement())
-  searchedBySong Boolean
   title          String
   jpTitle        String?
   slug           String?
@@ -35,21 +35,26 @@ model Song {
 }
 
 model StreamingSong {
-  id             Int                @id @default(autoincrement())
-  provider       String
-  uri            String
-  name           String
-  artists        StreamingArtists[]
-  openLink       String
-  previewUrl     String
-  image          String
-  durationMs     Int
-  addedCount     Int
-  voteAsOfficial Int
-  songId         Int
+  id       Int    @id @default(autoincrement())
+  provider String
 
-  Song            Song              @relation(fields: [songId], references: [id])
-  AvailableMarket AvailableMarket[]
+  uri        String
+  name       String
+  artists    StreamingArtists[]
+  openLink   String
+  previewUrl String
+  image      String
+  durationMs Int
+
+  songType       String
+  addedCount     Int
+
+  songId         Int?
+  mediaId        Int
+
+  Media            Media             @relation(fields: [mediaId], references: [id])
+  Song             Song?             @relation(fields: [songId], references: [id])
+  AvailableMarkets AvailableMarket[]
 
   @@unique([provider, uri]) // Composite unique constraint
 }

@@ -20,6 +20,9 @@ ps:
 tsx:
 	docker compose exec next-app gosu node npx tsx script/$(q).ts
 
+migrate:
+	docker compose exec next-app gosu node npx prisma migrate dev
+
 prodbuild:
 	docker compose -f docker-compose-prod.yml build
 
