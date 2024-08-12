@@ -1,6 +1,10 @@
 import { Prisma, PrismaClient } from "@prisma/client";
 import axios from "axios";
 
+function pp(val: any) {
+  console.dir(val, { depth: null });
+}
+
 const prisma = new PrismaClient();
 
 const exampleJson = {
@@ -84,9 +88,20 @@ async function main() {
 }
 
 async function bulkInsert(json: AnimeThemeJson[]) {
-  // エラーが発生した際のレコードを出力する
   for (const record of json) {
     try {
+      const data = record.animethemes.flatMap((theme) =>
+        theme.song.artists.map((artist) => ({
+          id: artist.id,
+          name: artist.name,
+        })),
+      );
+
+      await prisma.animeThemeArtist.createMany({
+        data: data,
+        skipDuplicates: true,
+      });
+
       await prisma.anime.create({
         data: {
           id: record.id,
@@ -107,9 +122,8 @@ async function bulkInsert(json: AnimeThemeJson[]) {
                 title: song.title,
                 slug: theme.slug,
                 artists: {
-                  create: song.artists.map((artist) => ({
+                  connect: song.artists.map((artist) => ({
                     id: artist.id,
-                    name: artist.name,
                   })),
                 },
               };
@@ -119,8 +133,7 @@ async function bulkInsert(json: AnimeThemeJson[]) {
       });
     } catch (e) {
       console.error(e);
-      console.log(record.animethemes);
-      console.log(record.animethemes.map((theme) => theme.song.artists));
+      pp(record);
     }
   }
 }
