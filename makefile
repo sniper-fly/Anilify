@@ -23,6 +23,9 @@ tsx:
 db:
 	docker compose exec db sh
 
+dbreset:
+	docker compose exec next-app gosu node npx prisma migrate reset
+
 migrate:
 	docker compose exec next-app gosu node npx prisma migrate dev
 

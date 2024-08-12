@@ -25,58 +25,51 @@ model Anime {
 }
 
 model AnimeTheme {
-  id            Int                 @id // animetheme api's song id
-  title         String
-  slug          String
-  artists       AnimeThemeArtists[]
-  animeId       Int
-  streamingSong StreamingSong[]
-
-  anime Anime @relation(fields: [animeId], references: [id])
+  id             Int                @id // animetheme api's song id
+  title          String
+  slug           String
+  artists        AnimeThemeArtist[]
+  streamingSongs StreamingSong[]
+  animeId        Int
+  anime          Anime              @relation(fields: [animeId], references: [id])
 }
 
 model StreamingSong {
   id       Int    @id @default(autoincrement())
   provider String
 
-  uri        String
-  name       String
-  artists    StreamingArtists[]
-  openLink   String
-  previewUrl String
-  image      String
-  durationMs Int
-
-  songType   String
-  addedCount Int
-
-  animeThemeId Int?
-  animeId      Int
-
-  anime            Anime             @relation(fields: [animeId], references: [id])
-  animeTheme       AnimeTheme?       @relation(fields: [animeThemeId], references: [id])
+  uri              String
+  name             String
+  openLink         String
+  previewUrl       String
+  image            String
+  durationMs       Int
+  artists          StreamingArtist[]
   availableMarkets AvailableMarket[]
+
+  songType   String?
+  addedTimes Int     @default(0)
+
+  anime       Anime[]
+  animeThemes AnimeTheme[]
 
   @@unique([provider, uri]) // Composite unique constraint
 }
 
-model AnimeThemeArtists {
-  id           Int        @id
-  name         String
-  animeThemeId Int
-  animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
+model AnimeThemeArtist {
+  id          Int          @id
+  name        String
+  animeThemes AnimeTheme[]
 }
 
-model StreamingArtists {
-  id            Int           @id
+model StreamingArtist {
+  id            Int             @id
   name          String
-  streamingId   Int
-  streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
+  streamingSong StreamingSong[]
 }
 
 model AvailableMarket {
-  id            Int           @id @default(autoincrement())
-  name          String
-  streamingId   Int
-  streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
+  id             Int             @id @default(autoincrement())
+  name           String
+  streamingSongs StreamingSong[]
 }
