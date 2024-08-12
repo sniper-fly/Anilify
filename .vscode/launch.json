@@ -11,13 +11,11 @@
       "name": "Next.js: debug server-side",
       "type": "node",
       "request": "attach",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "port": 9230,
       "address": "localhost",
       "localRoot": "${workspaceFolder}/next-app/",
-      "remoteRoot": "/app",
+      "remoteRoot": "/app"
       // "resolveSourceMapLocations": [
       //   "${workspaceFolder}/next-app/**",
       //   "!**/node_modules/**"
