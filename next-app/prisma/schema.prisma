@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Anime {
-  id             Int             @id @unique // animetheme api's anime id
+  id             Int             @id // animetheme api's anime id
   anilistId      Int?
   myanimelistId  Int?
   kitsuId        Int?
@@ -25,7 +25,7 @@ model Anime {
 }
 
 model AnimeTheme {
-  id            Int                 @id @unique // animetheme api's song id
+  id            Int                 @id // animetheme api's song id
   title         String
   slug          String
   artists       AnimeThemeArtists[]
@@ -61,14 +61,14 @@ model StreamingSong {
 }
 
 model AnimeThemeArtists {
-  id           Int        @id @unique
+  id           Int        @id
   name         String
   animeThemeId Int
   animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
 }
 
 model StreamingArtists {
-  id            Int           @id @unique
+  id            Int           @id
   name          String
   streamingId   Int
   streamingSong StreamingSong @relation(fields: [streamingId], references: [id])
