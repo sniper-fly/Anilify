@@ -22,7 +22,7 @@ fi
 
 # node_modules/ が存在しない場合、npm install を実行する
 if [ ! -d "node_modules" ]; then
-  su-exec $USER npm ci
+  su-exec $USER npm i
 fi
 
 # このスクリプト自体は root で実行されているので、uid/gid 調整済みの node ユーザー
