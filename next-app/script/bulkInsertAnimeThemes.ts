@@ -81,7 +81,7 @@ async function main() {
 async function bulkInsert(json: AnimeJson[], errorLog: any[]) {
   for (const record of json) {
     try {
-      const data = record.animethemes.reduce(
+      const artistData = record.animethemes.reduce(
         (acc, theme) => {
           const song = theme.song;
           if (!song || !song.artists) return acc;
@@ -97,9 +97,37 @@ async function bulkInsert(json: AnimeJson[], errorLog: any[]) {
       );
 
       await prisma.animeThemeArtist.createMany({
-        data: data,
+        data: artistData,
         skipDuplicates: true,
       });
+
+      const animeThemesCreateData = record.animethemes.reduce(
+        (accumulator, theme) => {
+          const song = theme.song;
+          // songやsong.titleがnullでない場合にのみ処理を続行
+          if (!song || !song.title) return accumulator;
+          accumulator.push({
+            id: theme.id,
+            title: song.title,
+            slug: theme.slug,
+            artists: {
+              connect: song.artists?.map((artist) => ({
+                id: artist.id,
+              })),
+            },
+          });
+          return accumulator;
+        },
+        [] as Array<{
+          id: number;
+          title: string;
+          slug: string;
+          artists: {
+            connect: Array<{ id: number }>;
+          };
+        }>,
+      );
+
       await prisma.anime.create({
         data: {
           id: record.id,
@@ -113,32 +141,7 @@ async function bulkInsert(json: AnimeJson[], errorLog: any[]) {
             ?.external_id,
           title: record.name,
           animeThemes: {
-            create: record.animethemes.reduce(
-              (accumulator, theme) => {
-                const song = theme.song;
-                // songやsong.titleがnullでない場合にのみ処理を続行
-                if (!song || !song.title) return accumulator;
-                accumulator.push({
-                  id: theme.id,
-                  title: song.title,
-                  slug: theme.slug,
-                  artists: {
-                    connect: song.artists?.map((artist) => ({
-                      id: artist.id,
-                    })),
-                  },
-                });
-                return accumulator;
-              },
-              [] as Array<{
-                id: number;
-                title: string;
-                slug: string;
-                artists: {
-                  connect: Array<{ id: number }>;
-                };
-              }>,
-            ),
+            create: animeThemesCreateData,
           },
         },
       });
