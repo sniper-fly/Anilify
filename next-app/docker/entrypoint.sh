@@ -22,7 +22,9 @@ fi
 
 # node_modules/ が存在しない場合、npm install を実行する
 if [ ! -d "node_modules" ]; then
-  su-exec $USER npm i
+  gosu $USER npm i
+  # "next": "14.1.0" では以下のコマンドがないとDockerデバッグができない
+  sed -Ei '/NODE_OPTIONS.*nodeDebugType.*/s//NODE_OPTIONS = `${NODE_OPTIONS} --${nodeDebugType}=0.0.0.0:9230`;/' node_modules/next/dist/cli/next-dev.js
 fi
 
 # このスクリプト自体は root で実行されているので、uid/gid 調整済みの node ユーザー
