@@ -32,16 +32,25 @@ model AnimeTheme {
   slug           String
   artists        AnimeThemeArtist[]
   streamingSongs StreamingSong[]
+  appleMusicUrls AppleMusicUrl[]
   animeId        Int
   anime          Anime              @relation(fields: [animeId], references: [id])
   createdAt      DateTime           @default(now())
   updatedAt      DateTime           @updatedAt
 }
 
-model StreamingSong {
-  id       Int    @id @default(autoincrement())
-  provider String
+model AppleMusicUrl {
+  id           Int        @id @default(autoincrement())
+  url          String
+  animeThemeId Int
+  animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
 
+model StreamingSong {
+  id               Int               @id @default(autoincrement())
+  provider         String
   uri              String
   name             String
   openLink         String
@@ -50,15 +59,12 @@ model StreamingSong {
   durationMs       Int
   artists          StreamingArtist[]
   availableMarkets AvailableMarket[]
-
-  songType   String?
-  addedTimes Int     @default(0)
-
-  anime       Anime[]
-  animeThemes AnimeTheme[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  songType         String?
+  addedTimes       Int               @default(0)
+  anime            Anime[]
+  animeThemes      AnimeTheme[]
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
 
   @@unique([provider, uri]) // Composite unique constraint
 }
