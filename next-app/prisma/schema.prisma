@@ -22,6 +22,8 @@ model Anime {
   title          String
   animeThemes    AnimeTheme[]
   streamingSongs StreamingSong[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 }
 
 model AnimeTheme {
@@ -32,6 +34,8 @@ model AnimeTheme {
   streamingSongs StreamingSong[]
   animeId        Int
   anime          Anime              @relation(fields: [animeId], references: [id])
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
 }
 
 model StreamingSong {
@@ -53,6 +57,9 @@ model StreamingSong {
   anime       Anime[]
   animeThemes AnimeTheme[]
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   @@unique([provider, uri]) // Composite unique constraint
 }
 
@@ -60,16 +67,22 @@ model AnimeThemeArtist {
   id          Int          @id
   name        String
   animeThemes AnimeTheme[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
 }
 
 model StreamingArtist {
   id            Int             @id
   name          String
   streamingSong StreamingSong[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
 }
 
 model AvailableMarket {
   id             Int             @id @default(autoincrement())
   name           String
   streamingSongs StreamingSong[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 }
