@@ -25,7 +25,7 @@ model Anime {
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 
-  @@index([anilistId, myanimelistId, kitsuId, anidbId])
+  @@index([anilistId, myanimelistId, kitsuId, anidbId, createdAt, updatedAt])
 }
 
 model AnimeTheme {
@@ -39,6 +39,8 @@ model AnimeTheme {
   anime          Anime              @relation(fields: [animeId], references: [id])
   createdAt      DateTime           @default(now())
   updatedAt      DateTime           @updatedAt
+
+  @@index([createdAt, updatedAt])
 }
 
 model AppleMusicUrl {
