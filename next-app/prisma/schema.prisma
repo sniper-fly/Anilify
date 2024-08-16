@@ -63,8 +63,6 @@ model SpotifySong {
   animeThemes      AnimeTheme[]
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
-
-  @@map("StreamingSong")
 }
 
 model AnimeThemeArtist {
@@ -88,6 +86,4 @@ model CountryCode {
   spotifySongs SpotifySong[]
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
-
-  @@map("AvailableMarket")
 }
