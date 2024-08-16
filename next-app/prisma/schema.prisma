@@ -24,6 +24,8 @@ model Anime {
   spotifySongs  SpotifySong[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
+
+  @@index([anilistId, myanimelistId, kitsuId, anidbId])
 }
 
 model AnimeTheme {
