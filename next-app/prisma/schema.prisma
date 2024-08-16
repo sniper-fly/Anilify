@@ -14,16 +14,16 @@ datasource db {
 }
 
 model Anime {
-  id             Int             @id // animetheme api's anime id
-  anilistId      Int?
-  myanimelistId  Int?
-  kitsuId        Int?
-  anidbId        Int?
-  title          String
-  animeThemes    AnimeTheme[]
-  streamingSongs StreamingSong[]
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
+  id            Int           @id // animetheme api's anime id
+  anilistId     Int?
+  myanimelistId Int?
+  kitsuId       Int?
+  anidbId       Int?
+  title         String
+  animeThemes   AnimeTheme[]
+  spotifySongs  SpotifySong[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
 }
 
 model AnimeTheme {
@@ -31,7 +31,7 @@ model AnimeTheme {
   title          String
   slug           String
   artists        AnimeThemeArtist[]
-  streamingSongs StreamingSong[]
+  spotifySongs   SpotifySong[]
   appleMusicUrls AppleMusicUrl[]
   animeId        Int
   anime          Anime              @relation(fields: [animeId], references: [id])
@@ -48,25 +48,23 @@ model AppleMusicUrl {
   updatedAt    DateTime   @updatedAt
 }
 
-model StreamingSong {
-  id               Int               @id @default(autoincrement())
-  provider         String
-  uri              String
+model SpotifySong {
+  id               String          @id // uri
   name             String
-  openLink         String
-  previewUrl       String
+  previewUrl       String?
   image            String
   durationMs       Int
-  artists          StreamingArtist[]
-  availableMarkets AvailableMarket[]
+  isrc             String?
+  artists          SpotifyArtist[]
+  availableMarkets CountryCode[]
   songType         String?
-  addedTimes       Int               @default(0)
+  // addedTimes       Int               @default(0)
   anime            Anime[]
   animeThemes      AnimeTheme[]
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
 
-  @@unique([provider, uri]) // Composite unique constraint
+  @@map("StreamingSong")
 }
 
 model AnimeThemeArtist {
@@ -77,18 +75,19 @@ model AnimeThemeArtist {
   updatedAt   DateTime     @updatedAt
 }
 
-model StreamingArtist {
-  id            Int             @id
-  name          String
-  streamingSong StreamingSong[]
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @updatedAt
+model SpotifyArtist {
+  id        String        @id // spotify uri
+  name      String
+  songs     SpotifySong[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
 }
 
-model AvailableMarket {
-  id             Int             @id @default(autoincrement())
-  name           String
-  streamingSongs StreamingSong[]
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
+model CountryCode {
+  code         String        @id // JP, US, UK などcountry codeをidとする
+  spotifySongs SpotifySong[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@map("AvailableMarket")
 }
