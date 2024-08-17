@@ -21,7 +21,7 @@ model Anime {
   anidbId       Int?
   title         String
   animeThemes   AnimeTheme[]
-  spotifySongs  SpotifySong[]
+  spotifyTracks  SpotifyTrack[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 
@@ -33,7 +33,7 @@ model AnimeTheme {
   title          String
   slug           String
   artists        AnimeThemeArtist[]
-  spotifySongs   SpotifySong[]
+  spotifyTracks   SpotifyTrack[]
   appleMusicUrls AppleMusicUrl[]
   animeId        Int
   anime          Anime              @relation(fields: [animeId], references: [id])
@@ -52,7 +52,7 @@ model AppleMusicUrl {
   updatedAt    DateTime   @updatedAt
 }
 
-model SpotifySong {
+model SpotifyTrack {
   id               String          @id @db.VarChar(25) // uri
   name             String
   previewUrl       String?
@@ -80,14 +80,14 @@ model AnimeThemeArtist {
 model SpotifyArtist {
   id        String        @id // spotify uri
   name      String
-  songs     SpotifySong[]
+  tracks     SpotifyTrack[]
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
 }
 
 model CountryCode {
   code         String        @id @db.VarChar(3) // JP, US, UK などcountry codeをidとする
-  spotifySongs SpotifySong[]
+  spotifyTracks SpotifyTrack[]
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
 }
