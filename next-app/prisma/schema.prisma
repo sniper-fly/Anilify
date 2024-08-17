@@ -53,7 +53,7 @@ model AppleMusicUrl {
 }
 
 model SpotifySong {
-  id               String          @id // uri
+  id               String          @id @db.VarChar(25) // uri
   name             String
   previewUrl       String?
   image            String
@@ -86,7 +86,7 @@ model SpotifyArtist {
 }
 
 model CountryCode {
-  code         String        @id // JP, US, UK などcountry codeをidとする
+  code         String        @id @db.VarChar(3) // JP, US, UK などcountry codeをidとする
   spotifySongs SpotifySong[]
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
