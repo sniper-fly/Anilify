@@ -14,16 +14,16 @@ datasource db {
 }
 
 model Anime {
-  id            Int           @id // animetheme api's anime id
+  id            Int            @id // animetheme api's anime id
   anilistId     Int?
   myanimelistId Int?
   kitsuId       Int?
   anidbId       Int?
   title         String
   animeThemes   AnimeTheme[]
-  spotifyTracks  SpotifyTrack[]
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
+  spotifyTracks SpotifyTrack[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
 
   @@index([anilistId, myanimelistId, kitsuId, anidbId, createdAt, updatedAt])
 }
@@ -33,7 +33,7 @@ model AnimeTheme {
   title          String
   slug           String
   artists        AnimeThemeArtist[]
-  spotifyTracks   SpotifyTrack[]
+  spotifyTracks  SpotifyTrack[]
   appleMusicUrls AppleMusicUrl[]
   animeId        Int
   anime          Anime              @relation(fields: [animeId], references: [id])
@@ -78,16 +78,16 @@ model AnimeThemeArtist {
 }
 
 model SpotifyArtist {
-  id        String        @id // spotify uri
+  id        String         @id // spotify uri
   name      String
-  tracks     SpotifyTrack[]
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
+  tracks    SpotifyTrack[]
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
 }
 
 model CountryCode {
-  code         String        @id @db.VarChar(3) // JP, US, UK などcountry codeをidとする
+  code          String         @id @db.VarChar(3) // JP, US, UK などcountry codeをidとする
   spotifyTracks SpotifyTrack[]
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
 }
