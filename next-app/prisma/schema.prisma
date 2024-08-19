@@ -60,6 +60,8 @@ model APSong {
   spotifyAlbum  SpotifyAlbum?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
+
+  @@unique([type, animeTitle], name: "aniplaylistIdentifier")
 }
 
 model AppleMusicUrl {
