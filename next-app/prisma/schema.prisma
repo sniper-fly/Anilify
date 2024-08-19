@@ -53,22 +53,13 @@ model APSong {
   id            Int            @id @default(autoincrement())
   type          String
   title         String
-  animeTitleId  Int
-  animeTitle    APAnimeTitle   @relation(fields: [animeTitleId], references: [id])
+  animeTitle    String
   anime         Anime[]
   appleMusicUrl AppleMusicUrl?
   spotifyTrack  SpotifyTrack?
   spotifyAlbum  SpotifyAlbum?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
-}
-
-model APAnimeTitle {
-  id        Int      @id @default(autoincrement())
-  title     String
-  apSongs   APSong[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model AppleMusicUrl {
