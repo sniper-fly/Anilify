@@ -14,59 +14,31 @@ datasource db {
 }
 
 model Anime {
-  id            Int            @id // animetheme api's anime id
+  id            Int          @id // animetheme api's anime id
   anilistId     Int?
   myanimelistId Int?
   kitsuId       Int?
   anidbId       Int?
   title         String
   animeThemes   AnimeTheme[]
-  spotifyTracks SpotifyTrack[]
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  apSongs       APSong[]
 
   @@index([anilistId, myanimelistId, kitsuId, anidbId, createdAt, updatedAt])
 }
 
 model AnimeTheme {
-  id             Int                @id // animetheme api's song id
-  title          String
-  slug           String
-  artists        AnimeThemeArtist[]
-  spotifyTracks  SpotifyTrack[]
-  appleMusicUrls AppleMusicUrl[]
-  animeId        Int
-  anime          Anime              @relation(fields: [animeId], references: [id])
-  createdAt      DateTime           @default(now())
-  updatedAt      DateTime           @updatedAt
+  id        Int                @id // animetheme api's song id
+  title     String
+  slug      String
+  artists   AnimeThemeArtist[]
+  animeId   Int
+  anime     Anime              @relation(fields: [animeId], references: [id])
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
 
   @@index([createdAt, updatedAt])
-}
-
-model AppleMusicUrl {
-  id           Int        @id @default(autoincrement())
-  url          String
-  animeThemeId Int
-  animeTheme   AnimeTheme @relation(fields: [animeThemeId], references: [id])
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
-}
-
-model SpotifyTrack {
-  id               String          @id @db.VarChar(25) // uri
-  name             String
-  previewUrl       String?
-  image            String
-  durationMs       Int
-  isrc             String?
-  artists          SpotifyArtist[]
-  availableMarkets CountryCode[]
-  songType         String?
-  // addedTimes       Int               @default(0)
-  anime            Anime[]
-  animeThemes      AnimeTheme[]
-  createdAt        DateTime        @default(now())
-  updatedAt        DateTime        @updatedAt
 }
 
 model AnimeThemeArtist {
@@ -77,10 +49,70 @@ model AnimeThemeArtist {
   updatedAt   DateTime     @updatedAt
 }
 
+model APSong {
+  id            Int            @id @default(autoincrement())
+  type          String
+  title         String
+  animeTitleId  Int
+  animeTitle    APAnimeTitle   @relation(fields: [animeTitleId], references: [id])
+  anime         Anime[]
+  appleMusicUrl AppleMusicUrl?
+  spotifyTrack  SpotifyTrack?
+  spotifyAlbum  SpotifyAlbum?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model APAnimeTitle {
+  id        Int      @id @default(autoincrement())
+  title     String
+  apSongs   APSong[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AppleMusicUrl {
+  id        Int      @id @default(autoincrement())
+  url       String
+  apSongId  Int      @unique
+  apSong    APSong   @relation(fields: [apSongId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SpotifyTrack {
+  id               String          @id @db.VarChar(25) // uri
+  name             String
+  previewUrl       String?
+  image            String
+  durationMs       Int
+  isrc             String?
+  artists          SpotifyArtist[]
+  albums           SpotifyAlbum[]
+  availableMarkets CountryCode[]
+  // addedTimes       Int               @default(0)
+  apSongId         Int             @unique
+  apSong           APSong          @relation(fields: [apSongId], references: [id])
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
+
+model SpotifyAlbum {
+  id        String          @id @db.VarChar(25) // uri
+  name      String
+  artists   SpotifyArtist[]
+  tracks    SpotifyTrack[]
+  apSongId  Int             @unique
+  apSong    APSong          @relation(fields: [apSongId], references: [id])
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
 model SpotifyArtist {
   id        String         @id // spotify uri
   name      String
   tracks    SpotifyTrack[]
+  albums    SpotifyAlbum[]
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
 }
