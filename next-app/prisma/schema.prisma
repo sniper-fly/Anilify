@@ -106,6 +106,7 @@ model SpotifyAlbum {
   apSong    APSong          @relation(fields: [apSongId], references: [id])
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
+  upc       String? // universal product code
 }
 
 model SpotifyArtist {
