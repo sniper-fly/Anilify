@@ -67,10 +67,8 @@ model APSong {
 
 model APAnimeTitle {
   id    Int      @id @default(autoincrement())
-  title String
+  title String   @unique
   songs APSong[]
-
-  @@unique([title], name: "titleIdentifier")
 }
 
 model AppleMusicUrl {
