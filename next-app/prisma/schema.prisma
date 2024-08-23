@@ -55,7 +55,7 @@ model APSong {
   title         String
   anime         Anime[]
   appleMusicUrl AppleMusicUrl?
-  spotifyTrack  SpotifyTrack?
+  spotifyTrack  SpotifyTrack[]
   spotifyAlbum  SpotifyAlbum?
   animeTitle    APAnimeTitle   @relation(fields: [animeTitleId], references: [id])
   animeTitleId  Int
@@ -91,7 +91,7 @@ model SpotifyTrack {
   albums           SpotifyAlbum[]
   availableMarkets CountryCode[]
   // addedTimes       Int               @default(0)
-  apSongId         Int             @unique
+  apSongId         Int
   apSong           APSong          @relation(fields: [apSongId], references: [id])
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
