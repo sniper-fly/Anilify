@@ -50,19 +50,16 @@ model AnimeThemeArtist {
 }
 
 model APSong {
-  id            Int            @id @default(autoincrement())
+  id            Int            @id
   type          String
   title         String
   anime         Anime[]
   appleMusicUrl AppleMusicUrl?
   spotifyTrack  SpotifyTrack[]
   spotifyAlbum  SpotifyAlbum?
-  animeTitle    APAnimeTitle   @relation(fields: [animeTitleId], references: [id])
-  animeTitleId  Int
+  animeTitles   APAnimeTitle[]
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
-
-  @@unique([type, animeTitleId], name: "aniplaylistIdentifier")
 }
 
 model APAnimeTitle {
