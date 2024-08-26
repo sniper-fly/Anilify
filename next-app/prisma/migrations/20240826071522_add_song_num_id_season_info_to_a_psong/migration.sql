@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `APSong` ADD COLUMN `seasonInfo` VARCHAR(191) NULL,
+    ADD COLUMN `songNumId` VARCHAR(191) NULL;

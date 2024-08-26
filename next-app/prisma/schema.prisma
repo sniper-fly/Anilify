@@ -60,6 +60,8 @@ model APSong {
   animeTitles   APAnimeTitle[]
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
+  songNumId     String?
+  seasonInfo    String?
 }
 
 model APAnimeTitle {
