@@ -7,6 +7,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   for (let offset = 0; ; offset += 100) {
+    console.log(offset);
     const rawRes = await axios.get(
       "https://api.myanimelist.net/v2/anime/ranking",
       {
@@ -26,7 +27,7 @@ async function main() {
       createAnime(anime);
     }
     if (!response.paging.next) return;
-    await wait(1000);
+    await wait(2000);
   }
 }
 
