@@ -139,7 +139,7 @@ model MyAnimeList {
 model AlternativeTitle {
   id    Int         @id @default(autoincrement())
   type  String // synonyms, en, ja
-  title String // Attack on Titan: Final Season
+  title String      @db.VarChar(300) // Attack on Titan: Final Season
   malId Int
   mal   MyAnimeList @relation(fields: [malId], references: [id])
 
