@@ -129,9 +129,9 @@ model MyAnimeList {
   title             String
   alternativeTitles AlternativeTitle[]
   // ↓ mediumで保存 largeは末尾に1を足すだけ 1000/110531.jpg -> 1000/1105311.jpg
-  picture           String
-  startDate         DateTime?
-  endDate           DateTime?
+  picture           String?
+  startDate         String?
+  endDate           String?
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
 }
