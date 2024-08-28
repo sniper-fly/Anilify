@@ -62,15 +62,20 @@ async function createAnime(anime: MalResponse["data"][number]) {
 }
 
 async function upsertAltTitle(type: string, title: string, malId: number) {
-  await prisma.alternativeTitle.upsert({
-    where: { malId_title: { malId, title } },
-    update: {},
-    create: {
-      type: type,
-      title: title,
-      mal: { connect: { id: malId } },
-    },
-  });
+  try {
+    await prisma.alternativeTitle.upsert({
+      where: { malId_title: { malId, title } },
+      update: {},
+      create: {
+        type: type,
+        title: title,
+        mal: { connect: { id: malId } },
+      },
+    });
+  } catch (e) {
+    console.log("malId: ", malId, "title: ", title, "type: ", type);
+    throw e;
+  }
 }
 
 (async () => {
