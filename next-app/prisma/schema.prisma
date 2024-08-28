@@ -142,4 +142,6 @@ model AlternativeTitle {
   title String // Attack on Titan: Final Season
   malId Int
   mal   MyAnimeList @relation(fields: [malId], references: [id])
+
+  @@unique([malId, title])
 }
