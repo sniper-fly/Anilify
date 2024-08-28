@@ -22,7 +22,7 @@ export type MalResponse = {
     };
   }[];
   paging: {
-    next: string;
+    next?: string;
   };
 };
 
