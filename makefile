@@ -29,6 +29,9 @@ dbreset:
 migrate:
 	docker compose exec next-app gosu node npx prisma migrate dev
 
+prigen:
+	docker compose exec next-app gosu node npx prisma generate
+
 prodbuild:
 	docker compose -f docker-compose-prod.yml build
 
