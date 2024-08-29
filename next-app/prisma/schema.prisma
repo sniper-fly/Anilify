@@ -81,7 +81,7 @@ model AppleMusicUrl {
 
 model SpotifyTrack {
   id               String          @id @db.VarChar(25) // uri
-  name             String
+  name             String          @db.VarChar(300)
   previewUrl       String?
   image            String
   durationMs       Int
