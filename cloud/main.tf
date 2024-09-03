@@ -3,8 +3,13 @@ provider "aws" {
 
   default_tags {
     tags = {
-      name = "anitunes"
+      name       = "anitunes"
       created_by = "terraform"
     }
   }
+}
+
+provider "aws" {
+  alias  = "us-east-1"
+  region = "us-east-1"
 }
