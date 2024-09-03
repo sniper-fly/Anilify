@@ -2,7 +2,7 @@ build:
 	docker compose build
 
 up:
-	docker compose up
+	docker compose up ${q}
 
 down:
 	docker compose down
