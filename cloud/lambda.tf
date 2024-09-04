@@ -1,5 +1,4 @@
 resource "aws_ecrpublic_repository" "example_lambda_repo" {
-  provider = aws.us-east-1
   repository_name = "example_lambda_repo"
 }
 
