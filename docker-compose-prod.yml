@@ -1,7 +1,7 @@
 services:
   next-app:
     container_name: next-app
-    image: anitunes:1.5
+    image: anitunes:1.6
     build:
       context: ./next-app
       dockerfile: docker/prod.Dockerfile

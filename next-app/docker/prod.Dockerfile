@@ -13,6 +13,7 @@ COPY tsconfig.json .
 COPY components.json .
 COPY postcss.config.js .
 COPY tailwind.config.ts .
+COPY docker/run.sh .
 
 # Environment variables must be present at build time
 # https://github.com/vercel/next.js/discussions/14030
@@ -43,10 +44,14 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+RUN ln -s /tmp/cache ./.next/cache
+COPY --from=builder /app/run.sh ./
+
 # Environment variables must be redefined at run time
 ARG ENV_VARIABLE
 ENV ENV_VARIABLE=${ENV_VARIABLE}
 ARG NEXT_PUBLIC_ENV_VARIABLE
 ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
 
-CMD ["node", "server.js"]
+ENTRYPOINT [ "sh" ]
+CMD ["run.sh"]
