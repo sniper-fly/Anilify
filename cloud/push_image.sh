@@ -7,7 +7,7 @@ aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --
 # docker build -t $CONTAINER_NAME .
 
 # Tag
-docker tag anitunes:1.5 $REPO_URL:latest
+docker tag anitunes:1.6 $REPO_URL:latest
 
 # Push image
 docker push $REPO_URL:latest
