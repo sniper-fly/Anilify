@@ -16,6 +16,11 @@ resource "terraform_data" "push_image" {
       REPO_URL       = aws_ecr_repository.example_lambda_repo.repository_url
     }
   }
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = "aws ecr batch-delete-image --repository-name example_lambda_repo --image-ids imageTag=latest"
+  }
 }
 
 resource "aws_lambda_function" "example_lambda_repo_function" {
