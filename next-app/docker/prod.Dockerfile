@@ -31,6 +31,7 @@ WORKDIR /app
 
 ENV PORT=3000 NODE_ENV=production
 ENV AWS_LWA_ENABLE_COMPRESSION=true
+ENV AWS_LWA_INVOKE_MODE=response_stream
 
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs
