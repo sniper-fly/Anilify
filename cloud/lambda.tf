@@ -46,6 +46,16 @@ resource "aws_iam_role" "example_lambda_iam" {
   assume_role_policy = data.aws_iam_policy_document.example_lambda_document.json
 }
 
+resource "aws_lambda_function_url" "example_lambda_repo_url" {
+  function_name      = aws_lambda_function.example_lambda_repo_function.function_name
+  authorization_type = "NONE"
+}
+
+output "example_lambda_repo_url" {
+  description = "http url of the lambda function"
+  value       = aws_lambda_function_url.example_lambda_repo_url.function_url
+}
+
 data "aws_iam_policy_document" "example_lambda_document" {
   statement {
     actions = [
