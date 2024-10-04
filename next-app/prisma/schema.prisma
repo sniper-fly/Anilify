@@ -23,7 +23,7 @@ model Anime {
   animeThemes   AnimeTheme[]
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
-  apSongs       APSong[]
+  aniPlSongs    AniPlSong[]
 
   @@index([anilistId, myanimelistId, kitsuId, anidbId, createdAt, updatedAt])
 }
@@ -49,34 +49,48 @@ model AnimeThemeArtist {
   updatedAt   DateTime     @updatedAt
 }
 
-model APSong {
-  id            Int            @id
+model AniPlSong {
+  id            Int             @id
   type          String
   title         String
   anime         Anime[]
-  appleMusicUrl AppleMusicUrl?
+  appleMusicUrl AppleMusicUrl[]
   spotifyTrack  SpotifyTrack[]
-  spotifyAlbum  SpotifyAlbum?
-  animeTitles   APAnimeTitle[]
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  spotifyAlbum  SpotifyAlbum[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
   songNumId     String?
   seasonInfo    String?
+  aniPlAnimeId  Int
+  aniPlAnime    AniPlAnime      @relation(fields: [aniPlAnimeId], references: [id])
 }
 
-model APAnimeTitle {
-  id    Int      @id @default(autoincrement())
-  title String   @unique
-  songs APSong[]
+model AniPlAnime {
+  id          Int               @id @default(autoincrement())
+  title       String            @unique // メインのタイトルはuniqueと仮定する
+  // ex)APでは前編後編分かれていて、MALで分かれていない場合, uniqueじゃなくなる可能性がある
+  // AniPlAnimeTitleが複数のMALに一致する場合は、M:M関係になる可能性がある
+  // → MALのTitleに重複が無いか調べる
+  malId       Int
+  mal         MyAnimeList       @relation(fields: [malId], references: [id])
+  aniPlSong   AniPlSong[]
+  otherTitles AniPlAnimeTitle[]
+}
+
+model AniPlAnimeTitle {
+  id           Int        @id @default(autoincrement())
+  title        String     @unique
+  aniPlanimeId Int
+  aniPlAnime   AniPlAnime @relation(fields: [aniPlanimeId], references: [id])
 }
 
 model AppleMusicUrl {
-  id        Int      @id @default(autoincrement())
-  url       String
-  apSongId  Int      @unique
-  apSong    APSong   @relation(fields: [apSongId], references: [id])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id          Int       @id @default(autoincrement())
+  url         String
+  aniPlSongId Int       @unique
+  aniPlSong   AniPlSong @relation(fields: [aniPlSongId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 model SpotifyTrack {
@@ -90,22 +104,22 @@ model SpotifyTrack {
   albums           SpotifyAlbum[]
   availableMarkets CountryCode[]
   // addedTimes       Int               @default(0)
-  apSongId         Int
-  apSong           APSong          @relation(fields: [apSongId], references: [id])
+  aniPlSongId      Int
+  aniPlSong        AniPlSong?      @relation(fields: [aniPlSongId], references: [id])
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
 }
 
 model SpotifyAlbum {
-  id        String          @id @db.VarChar(25) // uri
-  name      String
-  artists   SpotifyArtist[]
-  tracks    SpotifyTrack[]
-  apSongId  Int             @unique
-  apSong    APSong          @relation(fields: [apSongId], references: [id])
-  createdAt DateTime        @default(now())
-  updatedAt DateTime        @updatedAt
-  upc       String? // universal product code
+  id          String          @id @db.VarChar(25) // uri
+  name        String
+  artists     SpotifyArtist[]
+  tracks      SpotifyTrack[]
+  aniPlSongId Int             @unique
+  aniPlSong   AniPlSong       @relation(fields: [aniPlSongId], references: [id])
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  upc         String? // universal product code
 }
 
 model SpotifyArtist {
@@ -134,6 +148,7 @@ model MyAnimeList {
   endDate           String?
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
+  aniPlAnime        AniPlAnime[]
 }
 
 model AlternativeTitle {
