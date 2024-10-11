@@ -55,8 +55,8 @@ model AniPlSong {
   title         String
   anime         Anime[]
   appleMusicUrl AppleMusicUrl[]
-  spotifyTrack  SpotifyTrack[]
-  spotifyAlbum  SpotifyAlbum[]
+  spotifyTrack  SpotifyTrack[] // 基本的には1対1だが、更新されることで複数になることも
+  spotifyAlbum  SpotifyAlbum[] // 上に同じ
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @updatedAt
   songNumId     String?
@@ -101,25 +101,26 @@ model SpotifyTrack {
   durationMs       Int
   isrc             String?
   artists          SpotifyArtist[]
-  albums           SpotifyAlbum[]
-  availableMarkets CountryCode[]
+  albums           SpotifyAlbum[] // 一つのトラックが複数のアルバムで登場する可能性を考慮
   // addedTimes       Int               @default(0)
-  aniPlSongId      Int
+  aniPlSongId      Int? // aniPlSongがアルバムだった場合、直接は紐付かない
   aniPlSong        AniPlSong?      @relation(fields: [aniPlSongId], references: [id])
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
+  availableMarkets Json            @default("[]")
 }
 
 model SpotifyAlbum {
-  id          String          @id @db.VarChar(25) // uri
-  name        String
-  artists     SpotifyArtist[]
-  tracks      SpotifyTrack[]
-  aniPlSongId Int             @unique
-  aniPlSong   AniPlSong       @relation(fields: [aniPlSongId], references: [id])
-  createdAt   DateTime        @default(now())
-  updatedAt   DateTime        @updatedAt
-  upc         String? // universal product code
+  id               String          @id @db.VarChar(25) // uri
+  name             String
+  artists          SpotifyArtist[]
+  tracks           SpotifyTrack[]
+  aniPlSongId      Int
+  aniPlSong        AniPlSong       @relation(fields: [aniPlSongId], references: [id])
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  upc              String? // universal product code
+  availableMarkets Json            @default("[]")
 }
 
 model SpotifyArtist {
@@ -129,13 +130,6 @@ model SpotifyArtist {
   albums    SpotifyAlbum[]
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
-}
-
-model CountryCode {
-  code          String         @id @db.VarChar(3) // JP, US, UK などcountry codeをidとする
-  spotifyTracks SpotifyTrack[]
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
 }
 
 model MyAnimeList {
